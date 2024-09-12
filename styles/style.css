@@ -579,12 +579,12 @@ a:active {
   width: 100%;
   padding: 1rem;
   /* TODO: Delete background-image and the three linear gradient colors to remove the gradient background on the project page. Be careful not to delete the closing } */
-  /* background-image: linear-gradient(
+  background-image: linear-gradient(
     -225deg,
     var(--linear-gradient-color-1) 0%,
     var(--linear-gradient-color-2) 50%,
     var(--linear-gradient-color-3) 100%
-  ); */
+  );
 }
 
 /* 
