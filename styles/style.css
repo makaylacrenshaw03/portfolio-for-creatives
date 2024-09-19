@@ -606,7 +606,12 @@ a:active {
   width: 100%;
   min-height: 100vh;
   /* TODO: Delete the following if you do not want a grainy gradient background on index.html. Be careful not to delete the closing } */
-  background: linear-gradient(0deg, rgba(0, 0, 0, 1), var(--background-color-holding-page)), url(/assets/temp/noise.svg);
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1),
+      var(--background-color-holding-page)
+    ),
+    url(/assets/temp/noise.svg);
   /* For more on grainy gradients see https://grainy-gradients.vercel.app/ */
 }
 
@@ -733,7 +738,7 @@ a:active {
 
   .about {
     padding: 4rem;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .global-footer {
@@ -742,7 +747,7 @@ a:active {
   }
 
   .about-item-1 {
-    grid-column: 1 / 2;
+    grid-column: 2 / 3;
     grid-row: 1 / 2;
   }
 
@@ -753,7 +758,7 @@ a:active {
 
   .about-item-2 {
     grid-row: 1 / 2;
-    grid-column: 2 / 3;
+    grid-column: 1 / 2;
   }
 
   .footer-item-2 {
@@ -761,22 +766,22 @@ a:active {
     grid-column: 2 / 3;
   }
 
-  .about-item-3 {
+  /* .about-item-3 {
     grid-row: 1 / 2;
     grid-column: 3 / 4;
-  }
+  } */
 
   .footer-item-3 {
     grid-row: 1 / 2;
     grid-column: 3 / 4;
   }
 
-  .about-item-4 {
+  /* .about-item-4 {
     grid-row: 2 / 3;
     grid-column: 1 / 4;
     text-align: center;
     align-self: end;
-  }
+  } */
 
   .footer-item-4 {
     grid-row: 2 / 3;
