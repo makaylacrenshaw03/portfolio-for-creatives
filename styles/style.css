@@ -164,6 +164,7 @@ h2 {
   font-family: var(--heading-typeface);
   margin-bottom: 1rem;
   color: var(--h2-color);
+  margin-top: 2.5rem;
 }
 
 h3 {
@@ -212,7 +213,7 @@ em {
 .project-title {
   font-size: 3.725rem;
   font-family: var(--project-title-typeface);
-  color: white;
+  color: #321575;
   margin-bottom: 1rem;
 }
 
