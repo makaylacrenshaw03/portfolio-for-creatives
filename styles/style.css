@@ -155,7 +155,7 @@ svg {
 h1 {
   font-size: 2rem;
   font-family: var(--heading-typeface);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   color: var(--h1-color);
 }
 
@@ -477,13 +477,13 @@ a:active {
   grid-template-columns: 1fr;
   grid-gap: 3rem;
   min-height: 100vh;
-  background: var(--background-color-footer);
   padding: 1rem;
 }
 
 .footer-item-1 {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+  text-align: center;
 }
 
 .footer-item-2 {
@@ -499,6 +499,22 @@ a:active {
 .footer-item-4 {
   grid-column: 1 / 2;
   grid-row: 4 / 5;
+  text-align: center;
+}
+
+.socials-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-item {
+  display: inline;
+  margin: 0 1rem;
+}
+
+.fineprint {
+  font-size: 0.8rem;
 }
 
 .awards-list {
