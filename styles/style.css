@@ -84,32 +84,32 @@ html {
   --body-typeface: "Space Grotesk", sans-serif;
   --heading-typeface: "Space Grotesk", sans-serif;
   --project-title-typeface: "Space Grotesk", sans-serif;
-  --background-color: #ece9e2;
-  --background-color-about: #ece9e2;
-  --background-color-footer: #ece9e2;
+  --background-color: #0d0c0e;
+  --background-color-about: #0d0c0e;
+  --background-color-footer: #0d0c0e;
   --alt-background-color: #000000;
   --background-color-holding-page: rgba(82, 0, 255, 0.6);
-  --h1-color: #584C9C(0, 0%, 100%);
-  --h2-color: #584c9c;
-  --h3-color: #584c9c;
-  --h4-color: #584c9c;
-  --h5-color: #584c9c;
-  --h6-color: #584c9c;
-  --primary-text-color: #222;
+  --h1-color: #C7C1FF(0, 0%, 100%);
+  --h2-color: #c7c1ff;
+  --h3-color: #c7c1ff;
+  --h4-color: #c7c1ff;
+  --h5-color: #c7c1ff;
+  --h6-color: #c7c1ff;
+  --primary-text-color: #c7c1ff;
   --holding-page-title-color: #ebedf0;
-  /* --accent-color: #5200ff; */
+  /* --accent-color: #c7c1ff; */
   --overlay-color: #9af1c5;
-  --overlay-title-color: #584c9c;
+  --overlay-title-color: #c7c1ff;
   --overlay-description-color: #3b2e83;
-  --hyperlink-color: #5200ff;
+  --hyperlink-color: #c7c1ff;
   --hyperlink-alternate-color: orangered;
   --hover-color: #111;
   --visited-color: #5200ff;
-  --project-title-color: #5200ff;
+  --project-title-color: #c7c1ff;
   --project-sidebar-background-color: transparent;
-  --project-sidebar-text-color: #321575;
-  --heart-color: rgb(44, 15, 72);
-  --holding-page-footer-color: #ece9e2;
+  --project-sidebar-text-color: #c7c1ff;
+  --heart-color: #c7c1f;
+  --holding-page-footer-color: #0d0c0e;
   --text-selection-background-color: #5200ff;
   --linear-gradient-color-1: #ff057c;
   --linear-gradient-color-2: #8d0b93;
@@ -164,7 +164,7 @@ h1 {
 h2 {
   font-size: 2.25rem;
   font-family: var(--heading-typeface);
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   color: var(--h2-color);
   margin-top: 2.5rem;
 }
@@ -196,8 +196,9 @@ h6 {
 
 p {
   font-size: 1rem;
-  line-height: 1.3;
+  line-height: 1.7;
   margin-bottom: 1rem;
+  margin-top: 4rem;
 }
 
 em {
@@ -215,8 +216,9 @@ em {
 .project-title {
   font-size: 3.725rem;
   font-family: var(--project-title-typeface);
-  color: #321575;
+  color: #c7c1ff;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .overlay-title {
@@ -304,7 +306,7 @@ a:active {
 
 .project-description {
   font-size: 1.225rem;
-  line-height: 1.2;
+  line-height: 1.7;
   margin-bottom: 1rem;
 }
 
@@ -317,6 +319,12 @@ a:active {
 ██   ██ ███████ ██   ██  ██████  
                                  
 */
+
+.logo-wrapper {
+  width: 15%;
+
+  align-content: center;
+}
 
 .hero {
   min-height: 80vh;
@@ -371,7 +379,7 @@ a:active {
 ██     ██ ██    ██ ██   ██ ██  ██      ██   ██ ██   ██ ██       ██      
 ██  █  ██ ██    ██ ██████  █████       ██████  ███████ ██   ███ █████   
 ██ ███ ██ ██    ██ ██   ██ ██  ██      ██      ██   ██ ██    ██ ██      
- ███ ███   ██████  ██   ██ ██   ██     ██      ██   ██  ██████  ███████ 
+ ███ ███   ██████  ██   ██ ██   ██     ██      ██   ██  ██████  ███████ /labelled as Home now/
 
 */
 
@@ -438,7 +446,7 @@ a:active {
 .about {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 3rem;
+  grid-gap: 4.5rem;
   background: var(--background-color-about);
   padding: 1rem;
   flex: 1;
