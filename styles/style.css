@@ -411,7 +411,7 @@ a:active {
 
 .work-page-grid-item {
   width: 100%;
-  height: auto;
+  min-height: 200px;
   position: relative;
   border-radius: 25px; /* Adjust the value to your liking */
   overflow: hidden; /* This ensures the overlay respects the rounded corners */
@@ -810,7 +810,7 @@ a:active {
 
   .global-footer {
     padding: 4rem 4rem 0 4rem;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   .about-item-1 {
@@ -853,27 +853,19 @@ a:active {
 
   /* Project Page Flex Direction on Large Devices */
   .project-wrapper {
-    flex-direction: row;
+    flex-direction: column;
+    padding: 4rem;
   }
 
   /* Sidebar on Large Devices */
   .project-aside {
-    width: 35%;
-    height: 65vh;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 5vh;
+    width: 100%;
     padding-right: 2rem;
   }
 
   /* Main Project Image Area on Large Devices */
   .project-details {
-    width: 65%;
-  }
-
-  .project-image {
-    min-height: 70vh;
-    /* TODO: Delete min-height if you want to remove space between project images on project pages on large devices. It is used for the demo page only. */
+    width: 100%;
   }
 
   .project-image-container {
