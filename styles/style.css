@@ -167,6 +167,7 @@ h2 {
   margin-bottom: 3rem;
   color: var(--h2-color);
   margin-top: 2.5rem;
+  font-weight: 500;
 }
 
 h3 {
@@ -194,8 +195,15 @@ h6 {
   color: var(--h6-color);
 }
 
+.h7 {
+  font-size: 5.8rem;
+  color: var(--h6-color);
+  margin-bottom: 2.2rem;
+  font-weight: 700;
+}
+
 p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.7;
   margin-bottom: 1rem;
   margin-top: 4rem;
@@ -238,11 +246,11 @@ a:link {
 }
 
 a:visited {
-  color: var(--visited-color);
+  color: #c7c1ff;
 }
 
 a:hover {
-  color: var(--hover-color);
+  color: #ffffff;
 }
 
 a:focus {
@@ -405,6 +413,8 @@ a:active {
   width: 100%;
   height: auto;
   position: relative;
+  border-radius: 25px; /* Adjust the value to your liking */
+  overflow: hidden; /* This ensures the overlay respects the rounded corners */
   /* Required to contain overlay size */
 }
 
@@ -424,7 +434,7 @@ a:active {
   align-items: center;
   flex-direction: column;
   padding: 1em;
-  background-color: var(--overlay-color);
+  background-color: #645fff;
   transition: opacity 0.3s, visibility 0.3s;
 }
 
@@ -455,6 +465,17 @@ a:active {
 .about-item-1 {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+}
+/* fixed about image border radius here */
+.about-image {
+  overflow: hidden;
+  width: 100%;
+}
+
+.about-image img {
+  border-radius: 25px;
+  width: 100%;
+  height: auto;
 }
 
 .about-item-2 {
@@ -496,6 +517,7 @@ a:active {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   text-align: center;
+  margin-top: 6rem;
 }
 
 .footer-item-2 {
@@ -541,7 +563,7 @@ a:active {
 ██      ██   ██ ██    ██ ██   ██ ██      ██         ██        ██      ██   ██ ██    ██ ██      
 ██      ██   ██  ██████   █████  ███████  ██████    ██        ██      ██   ██  ██████  ███████ 
                                                                                                
-*/
+*/ /* what ive edited for my images boxes */
 
 .project-wrapper {
   display: flex;
@@ -571,25 +593,38 @@ a:active {
   padding: 0;
 }
 
-.project-image-container {
+.project-details {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 1.8rem;
+}
+
+.project-image {
+  background-color: #645fff;
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+  padding: 20px;
+}
+
+.large-box {
+  height: 150px;
+  border-radius: 25px;
+}
+
+.project-image-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 }
 
 .project-image {
   width: 100%;
   min-height: 50vh;
-  /* TODO: Delete min-height if you want to remove space between project images on project pages on mobile devices. It is used for the demo page only. */
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.large-emoji-placeholder {
-  font-size: 12rem;
-  /* TODO: Delete this rule. It is only used for making the placeholder emojis large for demo purposes only. */
 }
 
 .text-section {
@@ -602,11 +637,14 @@ a:active {
   padding: 3rem;
 }
 
+.star {
+  color: #ffffff;
+}
 /* Main Project Image Area */
 
 .project-details {
   width: 100%;
-  padding: 1rem;
+  padding: 1.5rem;
   /* TODO: Delete background-image and the three linear gradient colors to remove the gradient background on the project page. Be careful not to delete the closing } */
   /* background-image: linear-gradient(
     -225deg,
@@ -795,22 +833,10 @@ a:active {
     grid-column: 2 / 3;
   }
 
-  /* .about-item-3 {
-    grid-row: 1 / 2;
-    grid-column: 3 / 4;
-  } */
-
   .footer-item-3 {
     grid-row: 1 / 2;
     grid-column: 3 / 4;
   }
-
-  /* .about-item-4 {
-    grid-row: 2 / 3;
-    grid-column: 1 / 4;
-    text-align: center;
-    align-self: end;
-  } */
 
   .footer-item-4 {
     grid-row: 2 / 3;
