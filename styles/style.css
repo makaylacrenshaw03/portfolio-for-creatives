@@ -615,20 +615,14 @@ a:active {
 
 .project-image {
   background-color: #645fff;
-  display: flex;
+  display: inline-block;
   border-radius: 25px;
-  position: relative;
   overflow: hidden;
-  width: 100%;
-  height: 70vh;
-  align-items: center;
-  justify-content: center;
 }
 
 .project-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  display: block;
+  object-fit: contain;
   object-position: center;
   border-radius: 25px;
 }
@@ -652,17 +646,16 @@ a:active {
 /* project boxes */
 
 .box-container {
-  display: flex;
-  justify-content: space-around;
-  margin: 1rem 180px;
+  display: grid; /* Use grid layout for the boxes */
+  grid-template-columns: repeat(4, 1fr); /* Four columns by default */
+  gap: 1rem; /* Space between the boxes */
+  margin-top: 1rem; /* Margin above the boxes */
 }
 
 .info-box {
   border: 3px solid #c7c1ff;
   border-radius: 14px;
   padding: 1rem;
-  flex: 0.6;
-  margin: 0 10px;
   text-align: center;
 }
 
@@ -775,17 +768,152 @@ a:active {
 ██  ██  ██ ██      ██   ██ ██ ██   ██     ██ ▄▄ ██ ██    ██ ██      ██   ██ ██ ██           ██ 
 ██      ██ ███████ ██████  ██ ██   ██      ██████   ██████  ███████ ██   ██ ██ ███████ ███████ 
 
-*/
+/* Small sized devices (phones 500px and up) */
+
+@media (max-width: 500px) {
+  .project-title {
+    font-size: 1.2rem;
+    padding: 0.5em 0.8em;
+    border-radius: 15px;
+  }
+
+  .project-description {
+    padding-top: 0.1em;
+    font-size: 0.85rem;
+    margin-bottom: 1.3rem;
+  }
+
+  .project-wrapper {
+    padding: 0.5rem;
+  }
+
+  .box-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    overflow-x: auto;
+  }
+
+  .info-box {
+    border: 2px solid #c7c1ff;
+    border-radius: 10px;
+    padding: 0.5rem;
+    text-align: center;
+    width: 90%;
+    max-width: 100px;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  p {
+    margin-top: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  .awardswon-list {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .awardswon-item {
+    margin: 0;
+  }
+
+  a:link {
+    color: var(--hyperlink-color);
+    text-decoration: none;
+    font-size: 1rem;
+  }
+}
 
 /* Medium devices (tablets, 768px and up) */
 
-@media (min-width: 768px) {
-  /* TODO: Add styles here for medium devices. */
+@media (max-width: 768px) {
+  .project-title {
+    font-size: 1.45rem;
+    padding: 0.65em 1em;
+    border-radius: 15px;
+  }
+
+  .project-description {
+    padding-top: 0.2em;
+    font-size: 0.9rem;
+  }
+
+  .project-wrapper {
+    padding: 0.8rem;
+  }
+
+  .box-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    overflow-x: auto;
+  }
+
+  .info-box {
+    border: 2.5px solid #c7c1ff;
+    border-radius: 11px;
+    padding: 0.6rem;
+    text-align: center;
+    width: 80%;
+    max-width: 120px;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  p {
+    margin-top: 3rem;
+  }
+
+  h2 {
+    font-size: 1.65rem;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .awardswon-list {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .awardswon-item {
+    margin: 0;
+  }
+
+  a:link {
+    color: var(--hyperlink-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 
 @media (min-width: 992px) {
+  .box-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .info-box {
+    width: auto;
+    margin: 0;
+    padding: 1rem;
+  }
+
   /* TODO: Add or adjust styles here for large devices. */
 
   .holding-page-title {
