@@ -620,14 +620,17 @@ a:active {
   position: relative;
   overflow: hidden;
   width: 100%;
+  height: 70vh;
   align-items: center;
   justify-content: center;
 }
 
-.large-box {
-  height: 150px;
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   border-radius: 25px;
-  min-height: 70vh;
 }
 
 .project-image-container {
@@ -650,15 +653,15 @@ a:active {
 
 .box-container {
   display: flex;
-  justify-content: space-between;
-  margin-top: 1rem;
+  justify-content: space-around;
+  margin: 1rem 180px;
 }
 
 .info-box {
   border: 3px solid #c7c1ff;
   border-radius: 14px;
   padding: 1rem;
-  flex: 1;
+  flex: 0.6;
   margin: 0 10px;
   text-align: center;
 }
