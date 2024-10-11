@@ -224,9 +224,14 @@ em {
 .project-title {
   font-size: 3.725rem;
   font-family: var(--project-title-typeface);
-  color: #c7c1ff;
-  margin-bottom: 1rem;
+  color: #ffffff;
+  margin: 0;
   text-align: center;
+  display: inline-block;
+  background-color: #3498db;
+  padding: 0.25em 0.5em;
+  border-radius: 25px;
+  position: relative;
 }
 
 .overlay-title {
@@ -316,7 +321,8 @@ a:active {
 .project-description {
   font-size: 1.225rem;
   line-height: 1.7;
-  margin-bottom: 1rem;
+  margin-bottom: 6rem;
+  padding-top: 2rem;
 }
 
 /* Hero 
@@ -569,7 +575,14 @@ a:active {
 .project-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  padding: 0.25rem;
+  padding-top: 4.5rem;
+}
+
+.project-info {
+  text-align: center;
 }
 
 /* Sidebar */
@@ -631,6 +644,23 @@ a:active {
   width: 100%;
   font-size: 3.25rem;
   padding: 3rem;
+}
+
+/* project boxes */
+
+.box-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.info-box {
+  border: 3px solid #c7c1ff;
+  border-radius: 14px;
+  padding: 1rem;
+  flex: 1;
+  margin: 0 10px;
+  text-align: center;
 }
 
 .star {
