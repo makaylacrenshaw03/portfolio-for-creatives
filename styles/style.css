@@ -177,6 +177,12 @@ h3 {
   color: var(--h3-color);
 }
 
+.h3 {
+  font-size: 1.7rem;
+  font-weight: 300;
+  line-height: 2.2rem;
+}
+
 h4 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
@@ -196,10 +202,16 @@ h6 {
 }
 
 .h7 {
-  font-size: 5.8rem;
+  font-size: 7.8rem;
   color: var(--h6-color);
-  margin-bottom: 2.2rem;
+  margin-bottom: 1rem;
   font-weight: 700;
+}
+
+.stroke-shadow {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin-bottom: 5rem;
 }
 
 p {
@@ -400,6 +412,7 @@ a:active {
 
 .work-wrapper {
   flex: 1;
+  margin: 0.5rem;
 }
 
 /* Padding around work grid and project page */
@@ -413,7 +426,6 @@ a:active {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 1rem;
-  /* Magical, media-query-less responsiveness is achieved using the repeat() function and the auto placement keywords. To achieve wrapping, we can use the auto-fit. If you're using auto-fit, the content will stretch to fill the entire row width.  Specify a minimum width for the columns, using the minmax() function. The 1fr is what tells the browser to distribute the space between the columns so that each column equally gets one fraction of that space.  */
 }
 
 .work-page-grid-item {
@@ -618,6 +630,12 @@ a:active {
   display: inline-block;
   border-radius: 25px;
   overflow: hidden;
+}
+
+.large-box {
+  width: 100%;
+  height: 550px;
+  background-color: #645fff;
 }
 
 .project-image img {
@@ -834,8 +852,42 @@ a:active {
   }
 }
 
-/* Medium devices (tablets, 768px and up) */
+/* Medium devices (tablets, 768px and up) home page */
 
+@media (max-width: 768px) {
+  .h3 {
+    font-size: 1.15rem;
+    line-height: 1.6rem;
+  }
+
+  .h7 {
+    font-size: 4.5rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .hero-headline-wrapper {
+    font-size: 1.95rem;
+  }
+
+  .grid {
+    grid-gap: 0.5rem;
+  }
+
+  .footer-item-1 {
+    margin-top: 5rem;
+  }
+
+  .footer-item-4 {
+    margin-top: 2rem;
+  }
+
+  .global-footer {
+    display: inline;
+    min-height: 20vh;
+  }
+}
+
+/* 768px and up, project divisions */
 @media (max-width: 768px) {
   .project-title {
     font-size: 1.45rem;
@@ -879,7 +931,7 @@ a:active {
   h2 {
     font-size: 1.65rem;
     text-align: center;
-    margin-top: 5rem;
+    margin-top: 0.5rem;
     margin-bottom: 1.5rem;
   }
 
@@ -895,7 +947,6 @@ a:active {
   a:link {
     color: var(--hyperlink-color);
     text-decoration: none;
-    font-size: 1.1rem;
   }
 }
 
@@ -942,12 +993,14 @@ a:active {
   }
 
   .hero-headline-wrapper {
-    padding: 4rem 8rem;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+    padding: 2rem 2.2rem;
   }
 
   .grid {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-gap: 1rem;
+    grid-gap: 0.7rem;
   }
 
   /* Grayscale filter with full-colour on hover and tap */
