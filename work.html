@@ -30,32 +30,34 @@
   </head>
 
   <body class="work-page">
-    <div class="hero-background">
-    <section class="hero gradient-animation">
+    <div class="hero-background"> <!-- This is the wrapper for the hero section -->
       <header class="hero-header">
-        <ul class="branding-navigation">
-          <li>
-            <a href="about.html" class="custom-navigation">About</a>
-          </li>
-          <li class="logo">
-            <a href="index.html">
-              <img
-                src="assets/pictures/logo-web.svg"
-                alt="Makayla Crenshaw logo"
-              />
-            </a>
-          </li>
-          <li>
-            <a href="about.html" class="custom-navigation">Icons Here</a>
-          </li>
-        </ul>
+        <div class="navigation-wrapper"> <!-- Wrapper for padding -->
+          <ul class="branding-navigation">
+            <li class="logo">
+              <a href="index.html">
+                <img
+                  src="assets/pictures/logo-web.svg"
+                  alt="Makayla Crenshaw logo"
+                  style="width: 5rem; height: auto;"
+                />
+              </a>
+            </li>
+            <li class="navigation-links"> <!-- Navigation links as a single item -->
+              <a href="about.html" class="custom-navigation">About</a>
+              <a href="about.html" class="custom-navigation">Icons Here</a>
+            </li>
+          </ul>
+        </div> <!-- End of navigation-wrapper -->
       </header>
-
+    </div>
+  </body>
+  
       <div class="hero-headline-wrapper">
-        <div class="h7">Makayla Crenshaw</div>
-        <h3 class="stroke-shadow">
+        <div class="h7">Custom Type Wordmark svg</div>
+        <!-- <h3 class="stroke-shadow">
           Visual Storyteller | Illustrator | Branding Designer
-        </h3>
+        </h3> -->
         <div class="h3">
           I specialize in illustration and branding, and love using both to tell
           great stories that people remember.
@@ -64,8 +66,8 @@
     </div>
     </section>
 
-    <h1 class="hero-headline-wrapper">Branding</h1>
     <main class="work-wrapper">
+      <h1 class="title-section">Branding</h1>
       <section class="portfolio">
         <ul class="grid">
           <li class="work-page-grid-item">
@@ -154,7 +156,7 @@
       <!-- Insert a new section here fix -->
 
       <section class="portfolio">
-        <h1 class="hero-headline-wrapper">Illustration</h1>
+        <h1 class="title-section">Illustration</h1>
         <ul class="grid">
           <li class="work-page-grid-item">
             <figure>

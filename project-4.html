@@ -21,18 +21,30 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
 
-  <body class="project-1">
-    <header class="hero-header">
-      <ul class="branding-navigation">
-        <li><a href="work.html" class="custom-navigation">Work</a></li>
-        <li class="logo">
-          <a href="index.html"
-            ><img src="assets/pictures/logo-web.svg" alt="Describe your image"
-          /></a>
-        </li>
-        <li><a href="about.html" class="custom-navigation">About</a></li>
-      </ul>
-    </header>
+  <body class="work-page">
+    <div class="hero-background"> <!-- This is the wrapper for the hero section -->
+      <header class="hero-header">
+        <div class="navigation-wrapper"> <!-- Wrapper for padding -->
+          <ul class="branding-navigation">
+            <li class="logo">
+              <a href="index.html">
+                <img
+                  src="assets/pictures/logo-web.svg"
+                  alt="Makayla Crenshaw logo"
+                  style="width: 5rem; height: auto;"
+                />
+              </a>
+            </li>
+            <li class="navigation-links"> <!-- Navigation links as a single item -->
+              <a href="about.html" class="custom-navigation">About</a>
+              <a href="about.html" class="custom-navigation">Icons Here</a>
+            </li>
+          </ul>
+        </div> <!-- End of navigation-wrapper -->
+      </header>
+    </div>
+  </body>
+
     <div class="project-wrapper">
       <aside class="project-aside">
         <div class="project-info">
@@ -44,6 +56,12 @@
             package design invites people to discover BC’s unique adventures and
             tastes.
           </p>
+          <div class="box-container">
+            <div class="info-box">Illustration</div>
+            <div class="info-box">Box 2</div>
+            <div class="info-box">Box 3</div>
+            <div class="info-box">Box 4</div>
+          </div>
         </div>
       </aside>
     </div>
@@ -74,42 +92,37 @@
             height="1500"
           />
         </div>
-        <div class="project-image"></div>
+        <div class="project-image">
+          <img
+            src="assets/pictures/holesome-pastry-coffee-cup-packaging-design.jpg"
+            alt="Describe your project"
+          />
+        </div>
       </div>
-      <div class="project-image large-box"></div>
-    </main>
+      <div class="project-image large-box">
+        <img
+          src="assets/pictures/holesomepastry-croissant-packaging.jpg"
+          alt="Describe your project"
+        />
+      </div>
+      <div class="project-image">
+        <img
+          src="assets/pictures/holesomepastry-outdoor-signage-branding-design.jpg"
+          alt="Describe your project"
+          width="1500"
+          height="1500"
+        />
+      </div>
+      <div class="h3">HoleSome Branded Materials</div>
 
-    <div class="footer-item-2">
       <h2>Awards Won & Recognition</h2>
       <ul class="awardswon-list">
         <li class="awardswon-item"><span class="star">★</span>Insert Here</li>
         <li class="awardswon-item"><span class="star">★</span>Insert Here</li>
         <li class="awardswon-item"><span class="star">★</span>Insert Here</li>
       </ul>
-      <h2>Selected Works</h2>
-      <ul class="footer-nav-list">
-        <li class="footer-nav-item"><a href="index.html">Holding Page</a></li>
-        <li class="footer-nav-item"><a href="work.html">Work</a></li>
-        <li class="footer-nav-item">
-          <a href="work-clean.html">Work Page (Clean Version)</a>
-        </li>
-        <li class="footer-nav-item">
-          <a href="work-clean-flier.html"
-            >Work Page (Clean Version with Flier)</a
-          >
-        </li>
-        <li class="footer-nav-item">
-          <a href="work-grayscale.html">Work Page (Grayscale Filter)</a>
-        </li>
-        <li class="footer-nav-item">
-          <a href="work-ghost.html">Work Page (Ghost Flying Icon)</a>
-        </li>
-        <li class="footer-nav-item">
-          <a href="project-1.html">Project Page</a>
-        </li>
-        <li class="footer-nav-item"><a href="about.html">About</a></li>
-      </ul>
-    </div>
+    </main>
+
     <div class="footer-item-4">
       <p><a href="#top">Smooth scroll to the top</a></p>
       <p class="fineprint">

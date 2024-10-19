@@ -84,10 +84,10 @@ html {
   --body-typeface: "Space Grotesk", sans-serif;
   --heading-typeface: "Space Grotesk", sans-serif;
   --project-title-typeface: "Space Grotesk", sans-serif;
-  --background-color: #0d0c0e;
-  --background-color-about: #0d0c0e;
-  --background-color-footer: #0d0c0e;
-  --alt-background-color: #000000;
+  --background-color: #f5f2f2;
+  --background-color-about: #f5f2f2;
+  --background-color-footer: #f5f2f2;
+  --alt-background-color: #f5f2f2;
   --background-color-holding-page: rgba(82, 0, 255, 0.6);
   --h1-color: #C7C1FF(0, 0%, 100%);
   --h2-color: #c7c1ff;
@@ -96,7 +96,7 @@ html {
   --h5-color: #c7c1ff;
   --h6-color: #c7c1ff;
   --primary-text-color: #c7c1ff;
-  --holding-page-title-color: #ebedf0;
+  --holding-page-title-color: #f5f2f2;
   /* --accent-color: #c7c1ff; */
   --overlay-color: #9af1c5;
   --overlay-title-color: #c7c1ff;
@@ -109,7 +109,7 @@ html {
   --project-sidebar-background-color: transparent;
   --project-sidebar-text-color: #c7c1ff;
   --heart-color: #c7c1f;
-  --holding-page-footer-color: #0d0c0e;
+  --holding-page-footer-color: ##f5f2f2;
   --text-selection-background-color: #5200ff;
   --linear-gradient-color-1: #ff057c;
   --linear-gradient-color-2: #8d0b93;
@@ -120,7 +120,7 @@ html {
 body {
   font-family: var(--body-typeface);
   color: var(--primary-text-color);
-  background: var(--background-color);
+  background: #f5f2f2;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -178,10 +178,11 @@ h3 {
 }
 
 .h3 {
-  font-size: 1.45rem;
+  font-size: 1.3rem;
   font-weight: 300;
-  line-height: 2.2rem;
+  line-height: 2rem;
   padding: 0 5rem;
+  text-align: center;
 }
 
 h4 {
@@ -203,10 +204,11 @@ h6 {
 }
 
 .h7 {
-  font-size: 7.8rem;
+  font-size: 6rem;
   color: var(--h6-color);
   margin-bottom: 1rem;
   font-weight: 700;
+  padding: 1rem;
 }
 
 .stroke-shadow {
@@ -241,7 +243,7 @@ em {
   margin: 0;
   text-align: center;
   display: inline-block;
-  background-color: #3498db;
+  /* background-color: #3498db; */
   padding: 0.25em 0.5em;
   border-radius: 25px;
   position: relative;
@@ -281,6 +283,10 @@ a:active {
   /* Tap on mobile */
 }
 
+.navigation-wrapper {
+  padding: 1rem; /* Add your desired padding around the navigation */
+}
+
 .navigation-arrow {
   color: var(--alt-background-color);
 }
@@ -289,6 +295,13 @@ a:active {
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: var(--accent-color);
   color: transparent;
+}
+
+.navigation-links {
+  display: flex; /* Horizontal layout for links */
+  gap: 2.5rem; /* Space between navigation links */
+  margin-left: 20px;
+  font-weight: 400;
 }
 
 .navigation-arrow:active,
@@ -334,7 +347,7 @@ a:active {
 .project-description {
   font-size: 1.225rem;
   line-height: 1.7;
-  margin-bottom: 6rem;
+  margin-bottom: 3.5rem;
   padding-top: 2rem;
 }
 
@@ -361,29 +374,27 @@ a:active {
 }
 
 .branding-navigation {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 1rem;
-  align-items: flex-start;
+  display: flex; /* Horizontal layout */
+  align-items: center; /* Center items vertically */
+  list-style-type: none; /* Remove default list styling */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
 }
 
 .logo {
-  width: 3rem;
-  /* TODO: Adjust the width of the logo on mobile devices here. */
+  margin-right: auto; /* Ensures logo stays on the left */
 }
 
 /* going to put bckg image on homepage */
 
 .hero-background {
-  background-color: #1d183f;
-  padding: 2rem 0;
+  background-color: #ffff;
   position: relative;
   z-index: 1;
-  margin-bottom: 2rem;
 }
 
 .hero-headline-wrapper {
+  background-color: #ffff;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -391,6 +402,10 @@ a:active {
   justify-content: center;
   padding: 2rem 4rem;
   text-align: center;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
 }
 
 .hero-icon {
@@ -424,6 +439,15 @@ a:active {
 .work-wrapper {
   flex: 1;
   margin: 0.5rem;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+.title-section {
+  font-size: 3rem;
+  text-align: center;
+  padding: 2rem;
+  margin-top: 5rem;
 }
 
 .portfolio,
@@ -435,7 +459,7 @@ a:active {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 1rem;
+  grid-gap: 0.8rem;
 }
 
 .work-page-grid-item {
@@ -484,7 +508,7 @@ a:active {
 .about {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 4.5rem;
+  grid-gap: 3rem;
   background: var(--background-color-about);
   padding: 1rem;
   flex: 1;
@@ -537,8 +561,12 @@ a:active {
   flex-direction: column;
   align-items: center;
   padding: 2rem;
-  background-color: #1d183f;
+  background-color: #ffff;
   margin-top: 8rem;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .footer-content {
@@ -594,7 +622,7 @@ a:active {
   justify-content: center;
   align-items: center;
   padding: 0.25rem;
-  padding-top: 4.5rem;
+  padding-top: 2rem;
 }
 
 .project-info {
@@ -627,6 +655,8 @@ a:active {
   display: grid;
   grid-template-rows: auto auto auto;
   gap: 1.8rem;
+  width: 100%;
+  padding: 2rem;
 }
 
 .project-image {
@@ -672,6 +702,8 @@ a:active {
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   margin-top: 1rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
 }
 
 .info-box {
@@ -685,18 +717,6 @@ a:active {
   color: #ffffff;
 }
 /* Main Project Image Area */
-
-.project-details {
-  width: 100%;
-  padding: 1.5rem;
-  /* TODO: Delete background-image and the three linear gradient colors to remove the gradient background on the project page. Be careful not to delete the closing } */
-  /* background-image: linear-gradient(
-    -225deg,
-    var(--linear-gradient-color-1) 0%,
-    var(--linear-gradient-color-2) 50%,
-    var(--linear-gradient-color-3) 100%
-  ); */
-}
 
 /* 
 
