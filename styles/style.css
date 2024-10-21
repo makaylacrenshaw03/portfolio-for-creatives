@@ -161,12 +161,30 @@ h1 {
   font-weight: 500;
 }
 
+.h1 {
+  font-size: 2rem;
+  font-family: var(--heading-typeface);
+  margin-bottom: 1rem;
+  color: var(--h1-color);
+  font-weight: 500;
+  padding-top: 4rem;
+}
+
 h2 {
   font-size: 2.25rem;
   font-family: var(--heading-typeface);
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   color: var(--h2-color);
-  margin-top: 2.5rem;
+  font-weight: 500;
+}
+
+.h2 {
+  text-align: center;
+  font-size: 2.25rem;
+  font-family: var(--heading-typeface);
+  margin-bottom: 2rem;
+  color: var(--h2-color);
+  margin-top: 0.5rem;
   font-weight: 500;
 }
 
@@ -175,14 +193,6 @@ h3 {
   margin-bottom: 1rem;
   line-height: 1.3;
   color: var(--h3-color);
-}
-
-.h3 {
-  font-size: 1.3rem;
-  font-weight: 300;
-  line-height: 2rem;
-  padding: 0 5rem;
-  text-align: center;
 }
 
 h4 {
@@ -218,8 +228,8 @@ h6 {
 }
 
 p {
-  font-size: 1.5rem;
-  line-height: 1.7;
+  font-size: 1rem;
+  line-height: 1.8;
   margin-bottom: 1rem;
   margin-top: 4rem;
 }
@@ -237,14 +247,13 @@ em {
 }
 
 .project-title {
-  font-size: 3.725rem;
+  font-size: 2.2rem;
   font-family: var(--project-title-typeface);
   color: #ffffff;
   margin: 0;
   text-align: center;
   display: inline-block;
   /* background-color: #3498db; */
-  padding: 0.25em 0.5em;
   border-radius: 25px;
   position: relative;
 }
@@ -284,7 +293,7 @@ a:active {
 }
 
 .navigation-wrapper {
-  padding: 1rem; /* Add your desired padding around the navigation */
+  padding: 0rem;
 }
 
 .navigation-arrow {
@@ -292,14 +301,14 @@ a:active {
 }
 
 .navigation-arrow:link {
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 1px; /* Change this to a smaller value */
   -webkit-text-stroke-color: var(--accent-color);
   color: transparent;
 }
 
 .navigation-links {
-  display: flex; /* Horizontal layout for links */
-  gap: 2.5rem; /* Space between navigation links */
+  display: flex;
+  gap: 2.5rem;
   margin-left: 20px;
   font-weight: 400;
 }
@@ -307,8 +316,8 @@ a:active {
 .navigation-arrow:active,
 .navigation-arrow:hover {
   color: var(--accent-color);
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--accent-color);
+  /* Remove stroke to avoid thickening effect */
+  -webkit-text-stroke-width: 0;
 }
 
 .colored-link {
@@ -345,10 +354,7 @@ a:active {
 }
 
 .project-description {
-  font-size: 1.225rem;
-  line-height: 1.7;
   margin-bottom: 3.5rem;
-  padding-top: 2rem;
 }
 
 /* Hero 
@@ -363,7 +369,6 @@ a:active {
 
 .logo-wrapper {
   width: 15%;
-
   align-content: center;
 }
 
@@ -373,27 +378,34 @@ a:active {
   flex-direction: column;
 }
 
+.hero-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem;
+}
+
 .branding-navigation {
-  display: flex; /* Horizontal layout */
-  align-items: center; /* Center items vertically */
-  list-style-type: none; /* Remove default list styling */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  padding: 1rem 2rem 1rem 2rem;
 }
 
 .logo {
-  margin-right: auto; /* Ensures logo stays on the left */
+  margin-right: auto;
 }
 
 /* going to put bckg image on homepage */
 
 .hero-background {
-  background-color: #ffff;
+  background-color: transparent;
   position: relative;
   z-index: 1;
 }
 
 .hero-headline-wrapper {
+  position: relative;
   background-color: #ffff;
   display: flex;
   flex-direction: column;
@@ -402,10 +414,19 @@ a:active {
   justify-content: center;
   padding: 2rem 4rem;
   text-align: center;
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
+}
+
+.hero-headline-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -110px;
+  left: 0;
+  right: 0;
+  height: 110px;
+  background-color: #ffffff;
+  z-index: -1;
 }
 
 .hero-icon {
@@ -426,6 +447,185 @@ a:active {
   padding: 1rem;
 }
 
+.section-one {
+  background-color: #f5f2f2;
+}
+
+.section-two {
+  background-color: #f5f2f2;
+}
+
+.section-three {
+  background-color: #f5f2f2;
+}
+
+.section-four {
+  background-color: #f5f2f2;
+}
+
+.section-five {
+  background-color: #f5f2f2;
+}
+
+.section-six {
+  background-color: #f5f2f2;
+}
+
+.section-seven {
+  background-color: #f5f2f2;
+}
+
+.section-eight {
+  background-color: #f5f2f2;
+}
+
+.one {
+  position: relative;
+  background-color: #571919;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.one::before {
+  content: "";
+  position: absolute;
+  top: -110px;
+  left: 0;
+  right: 0;
+  height: 110px;
+  background-color: #571919;
+  z-index: -1;
+}
+
+.two {
+  position: relative;
+  background-color: #1b3e74;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.two::before {
+  content: "";
+  position: absolute;
+  top: -110px;
+  left: 0;
+  right: 0;
+  height: 110px;
+  background-color: #1b3e74;
+  z-index: -1;
+}
+
+.three {
+  position: relative;
+  background-color: #151331;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.three::before {
+  content: "";
+  position: absolute;
+  top: -110px;
+  left: 0;
+  right: 0;
+  height: 110px;
+  background-color: #151331;
+  z-index: -1;
+}
+
+.four {
+  position: relative;
+  background-color: #152311;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.four::before {
+  content: "";
+  position: absolute;
+  top: -110px;
+  left: 0;
+  right: 0;
+  height: 110px;
+  background-color: #152311;
+  z-index: -1;
+}
+
+.five {
+  position: relative;
+  background-color: #2a143e;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.five::before {
+  content: "";
+  position: absolute;
+  top: -110px;
+  left: 0;
+  right: 0;
+  height: 110px;
+  background-color: #2a143e;
+  z-index: -1;
+}
+
+.six {
+  position: relative;
+  background-color: #14216b;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  padding-bottom: 50px;
+}
+
+.six::before {
+  content: "";
+  position: absolute;
+  top: -110px;
+  left: 0;
+  right: 0;
+  height: 110px;
+  background-color: #14216b;
+  z-index: -1;
+}
+
+.seven {
+  position: relative;
+  background-color: #000000;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  padding-bottom: 50px;
+}
+
+.seven::before {
+  content: "";
+  position: absolute;
+  top: -110px;
+  left: 0;
+  right: 0;
+  height: 110px;
+  background-color: #000000;
+  z-index: -1;
+}
+
+.eight {
+  background-color: #04071e;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.eight::before {
+  content: "";
+  position: absolute;
+  top: -110px;
+  left: 0;
+  right: 0;
+  height: 110px;
+  background-color: #04071e;
+  z-index: -1;
+}
+
 /* Work Page Layout
 
 ██     ██  ██████  ██████  ██   ██     ██████   █████   ██████  ███████ 
@@ -443,10 +643,25 @@ a:active {
   margin-bottom: 1rem;
 }
 
+.specialization-section {
+  font-weight: 300;
+  padding-top: 8rem;
+  margin-left: 6rem;
+  margin-right: 6rem;
+  text-align: center;
+}
+
+.wrapper {
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  max-width: 1200px;
+  padding: 3.5rem 4rem 7rem 4rem;
+}
+
 .title-section {
   font-size: 3rem;
   text-align: center;
-  padding: 2rem;
+  padding: 2rem 2rem 4rem 2rem;
   margin-top: 5rem;
 }
 
@@ -508,9 +723,9 @@ a:active {
 .about {
   display: grid;
   grid-template-columns: 1fr;
-  grid-gap: 3rem;
+  grid-gap: 5rem;
   background: var(--background-color-about);
-  padding: 1rem;
+  padding: 3.5rem;
   flex: 1;
 }
 
@@ -519,7 +734,7 @@ a:active {
   grid-row: 1 / 2;
   padding-top: 3.1rem;
 }
-/* fixed about image border radius here */
+
 .about-image {
   overflow: hidden;
   width: 100%;
@@ -557,21 +772,31 @@ a:active {
 */
 
 .global-footer {
-  display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
   padding: 2rem;
   background-color: #ffff;
-  margin-top: 8rem;
+  margin-top: 3rem;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
+.footer-wrapper {
+  padding-bottom: 2rem;
+}
+
 .footer-content {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
+}
+
+.footer-text {
+  flex: 1;
 }
 
 .socials-list {
@@ -584,6 +809,29 @@ a:active {
 .social-item {
   display: inline;
   margin: 0 1rem;
+}
+
+.socials-container {
+  display: flex;
+  gap: 10px;
+}
+
+.social-box {
+  border: 2px solid #000;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  width: 80px;
+  transition: background-color 0.3s;
+}
+
+.social-box a {
+  text-decoration: none;
+  color: #000;
+}
+
+.social-box:hover {
+  background-color: #e0e0e0;
 }
 
 .footer-links {
@@ -635,16 +883,8 @@ a:active {
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  color: var(--project-sidebar-text-color);
+  color: #fff;
   background: var(--project-sidebar-background-color);
-}
-
-.project-navigation {
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  align-items: flex-end;
-  justify-content: space-between;
 }
 
 .arrow {
@@ -654,7 +894,7 @@ a:active {
 .project-details {
   display: grid;
   grid-template-rows: auto auto auto;
-  gap: 1.8rem;
+  gap: 0.8rem;
   width: 100%;
   padding: 2rem;
 }
@@ -677,6 +917,10 @@ a:active {
   object-fit: contain;
   object-position: center;
   border-radius: 25px;
+}
+
+.project-image img:hover {
+  transform: scale(1.05);
 }
 
 .project-image-container {
@@ -702,20 +946,26 @@ a:active {
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   margin-top: 1rem;
-  padding-left: 5rem;
-  padding-right: 5rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
 }
 
 .info-box {
-  border: 3px solid #c7c1ff;
+  font-size: 0.85rem;
+  border: 2.5px solid #ffff;
   border-radius: 14px;
-  padding: 1rem;
+  padding: 0.3rem;
   text-align: center;
 }
 
 .star {
   color: #ffffff;
 }
+
+.awardswon-list {
+  text-align: center;
+}
+
 /* Main Project Image Area */
 
 /* 
@@ -800,6 +1050,134 @@ a:active {
 
 .play-page-title {
   color: var(--accent-color);
+}
+
+/* Lightbox animation here */
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox-content {
+  position: relative;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 80%;
+}
+
+.lightbox-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  padding: 16px;
+  color: var(--alt-background-color);
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.prev {
+  left: -80px;
+}
+
+.next {
+  right: -80px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: var(--accent-color);
+  -webkit-text-stroke-width: 0;
+}
+
+.prev:active,
+.next:active {
+  transform: scale(0.55);
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+/* project page arrows */
+.project-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 8rem;
+  position: relative;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.nav-arrow {
+  display: flex;
+  align-items: center;
+}
+
+.project-name {
+  margin: 0 0.5rem;
+  color: var(--hyperlink-color);
+  font-size: 1.5rem;
+}
+
+.navigation-arrow {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.navigation-arrow:hover .project-name {
+  color: var(--accent-color);
+}
+
+.left-arrow {
+  position: absolute;
+  left: 0;
+  padding-left: 4rem;
+}
+
+.right-arrow {
+  position: absolute;
+  right: 0;
+  padding-right: 4rem;
 }
 
 /*
@@ -1017,9 +1395,10 @@ a:active {
   }
 
   .hero-headline-wrapper {
-    margin-top: 6rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     padding: 2rem 2.2rem;
+    padding-bottom: 10rem;
+    padding-top: 8rem;
   }
 
   .grid {
@@ -1038,7 +1417,6 @@ a:active {
   }
 
   .about {
-    padding: 4rem;
     grid-template-columns: 1fr 1fr;
   }
 

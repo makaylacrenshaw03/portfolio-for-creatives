@@ -19,12 +19,18 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <link rel="stylesheet" href="./styles/style.css" />
+    <style>
+      .no-scroll {
+        overflow: hidden;
+        height: 100%;
+      }
+    </style>
   </head>
 
   <body class="work-page">
-    <div class="hero-background"> <!-- This is the wrapper for the hero section -->
+    <div class="hero-background"> 
       <header class="hero-header">
-        <div class="navigation-wrapper"> <!-- Wrapper for padding -->
+        <div class="navigation-wrapper"> 
           <ul class="branding-navigation">
             <li class="logo">
               <a href="index.html">
@@ -35,17 +41,15 @@
                 />
               </a>
             </li>
-            <li class="navigation-links"> <!-- Navigation links as a single item -->
+            <li class="navigation-links"> 
               <a href="about.html" class="custom-navigation">About</a>
               <a href="about.html" class="custom-navigation">Icons Here</a>
             </li>
           </ul>
-        </div> <!-- End of navigation-wrapper -->
+        </div>
       </header>
-    </div>
-  </body>
 
-    <div class="project-wrapper">
+    <div class="project-wrapper four">
       <aside class="project-aside">
         <div class="project-info">
           <h1 class="project-title">HoleSome Pastry</h1>
@@ -67,20 +71,6 @@
     </div>
 
     <!-- this is where my project boxes are -->
-
-    <ul class="project-navigation">
-      <li class="arrow">
-        <a href="#" class="navigation-arrow"
-          ><i class="fas fa-arrow-left fa-2x"></i
-        ></a>
-      </li>
-      <li class="arrow">
-        <a href="project-2.html" class="navigation-arrow"
-          ><i class="fas fa-arrow-right fa-2x"></i
-        ></a>
-      </li>
-    </ul>
-
     <main class="project-details">
       <div class="project-image large-box"></div>
       <div class="project-image-container">
@@ -90,12 +80,14 @@
             alt="Describe your project"
             width="1500"
             height="1500"
+            class="lightbox-trigger"
           />
         </div>
         <div class="project-image">
           <img
             src="assets/pictures/holesome-pastry-coffee-cup-packaging-design.jpg"
             alt="Describe your project"
+            class="lightbox-trigger"
           />
         </div>
       </div>
@@ -103,6 +95,7 @@
         <img
           src="assets/pictures/holesomepastry-croissant-packaging.jpg"
           alt="Describe your project"
+          class="lightbox-trigger"
         />
       </div>
       <div class="project-image">
@@ -111,28 +104,61 @@
           alt="Describe your project"
           width="1500"
           height="1500"
+          class="lightbox-trigger"
         />
       </div>
-      <div class="h3">HoleSome Branded Materials</div>
 
-      <h2>Awards Won & Recognition</h2>
-      <ul class="awardswon-list">
-        <li class="awardswon-item"><span class="star">★</span>Insert Here</li>
-        <li class="awardswon-item"><span class="star">★</span>Insert Here</li>
-        <li class="awardswon-item"><span class="star">★</span>Insert Here</li>
-      </ul>
+      <!-- Lightbox HTML Structure -->
+      <div class="lightbox" id="lightbox">
+        <span class="close">&times;</span>
+        <div class="lightbox-content">
+          <img class="lightbox-image" id="lightboxImage" src="" alt="" />
+          <a class="prev" id="prevBtn">&#10094;</a>
+          <a class="next" id="nextBtn">&#10095;</a>
+        </div>
+      </div>
     </main>
 
-    <div class="footer-item-4">
-      <p><a href="#top">Smooth scroll to the top</a></p>
-      <p class="fineprint">
-        &copy; 2024. Hand crafted with <span class="heart">❤</span> by Makayla
-        Crenshaw.
-      </p>
-    </div>
+    <div class="h2">Awards & Recognition</div>
+    <ul class="awardswon-list">
+      <li class="awardswon-item"><span class="star">★</span>Insert Here</li>
+      <li class="awardswon-item"><span class="star">★</span>Insert Here</li>
+      <li class="awardswon-item"><span class="star">★</span>Insert here</li>
+    </ul>
+
+    <footer class="global-footer">
+      <div class="footer-wrapper">
+        <div class="footer-content">
+          <div class="footer-text">
+            <h2>Spark a convo with me!</h2>
+            <p class="fineprint">
+              &copy; 2024. Hand crafted with <span class="heart">❤</span> by
+              Makayla Crenshaw.
+            </p>
+            <p class="smooth-scroll"></p>
+          </div>
+
+          <div class="socials-container">
+            <div class="social-group">
+              <div class="social-box"><a href="#">Instagram</a></div>
+              <div class="social-box"><a href="#">LinkedIn</a></div>
+            </div>
+            <div class="social-group">
+              <div class="social-box"><a href="#">Behance</a></div>
+              <div class="social-box"><a href="#">Email</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <div id="myID" class="bottomMenu hide">
       <a href="project-5.html">Next Project</a>
     </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script>
       myID = document.getElementById("myID");
 
@@ -146,6 +172,48 @@
       };
 
       window.addEventListener("scroll", myScrollFunc);
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        let currentIndex = 0;
+        const images = $(".lightbox-trigger");
+
+        images.click(function () {
+          currentIndex = images.index(this);
+          showLightbox(images.eq(currentIndex).attr("src"));
+          $("body").addClass("no-scroll");
+        });
+
+        $(".close").click(function () {
+          $("#lightbox").fadeOut();
+          $("body").removeClass("no-scroll");
+        });
+
+        function showLightbox(src) {
+          $("#lightboxImage").attr("src", src);
+          $("#lightbox").fadeIn();
+        }
+
+        $("#lightbox").click(function (event) {
+          if ($(event.target).is("#lightbox")) {
+            $("#lightbox").fadeOut();
+            $("body").removeClass("no-scroll");
+          }
+        });
+
+        $("#prevBtn").click(function () {
+          currentIndex =
+            currentIndex > 0 ? currentIndex - 1 : images.length - 1;
+          showLightbox(images.eq(currentIndex).attr("src"));
+        });
+
+        $("#nextBtn").click(function () {
+          currentIndex =
+            currentIndex < images.length - 1 ? currentIndex + 1 : 0;
+          showLightbox(images.eq(currentIndex).attr("src"));
+        });
+      });
     </script>
   </body>
 </html>

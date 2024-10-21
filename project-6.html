@@ -22,106 +22,130 @@
   </head>
 
   <body class="work-page">
-    <div class="hero-background"> <!-- This is the wrapper for the hero section -->
+    <div class="hero-background">
       <header class="hero-header">
-        <div class="navigation-wrapper"> <!-- Wrapper for padding -->
+        <div class="navigation-wrapper">
           <ul class="branding-navigation">
             <li class="logo">
               <a href="index.html">
                 <img
                   src="assets/pictures/logo-web.svg"
                   alt="Makayla Crenshaw logo"
-                  style="width: 5rem; height: auto;"
+                  style="width: 5rem; height: auto"
                 />
               </a>
             </li>
-            <li class="navigation-links"> <!-- Navigation links as a single item -->
+            <li class="navigation-links">
               <a href="about.html" class="custom-navigation">About</a>
               <a href="about.html" class="custom-navigation">Icons Here</a>
             </li>
           </ul>
-        </div> <!-- End of navigation-wrapper -->
-      </header>
-    </div>
-  </body>
-
-    <div class="project-wrapper">
-      <aside class="project-aside">
-        <div class="project-info">
-          <h1 class="project-title">Creative Mornings Vancouver Portrait</h1>
-          <p class="project-description">
-            Collaborating with Creative Mornings Vancouver, I had the exciting opportunity to create a portrait of guest speaker Uytae Lee—a columnist and filmmaker celebrated for his unique insights on Vancouver’s urban landscape. The portrait reflects key elements of his work, featuring a cityscape background, Uytae with his camera, and textures that evoke the essence of Vancouver's urban environment.
-          </p>
-          <!-- New container for boxes -->
-          <div class="box-container"> 
-          <div class="info-box">Illustration</div>
-          <div class="info-box">Concepting</div>
-          <div class="info-box">Box 3</div>
-          <div class="info-box">Box 4</div>
         </div>
+      </header>
+
+      <div class="project-wrapper six">
+        <aside class="project-aside">
+          <div class="project-info">
+            <h1 class="project-title">Creative Mornings Vancouver Portrait</h1>
+            <p class="project-description">
+              Collaborating with Creative Mornings Vancouver, I had the exciting
+              opportunity to create a portrait of guest speaker Uytae Lee—a
+              columnist and filmmaker celebrated for his unique insights on
+              Vancouver’s urban landscape. The portrait reflects key elements of
+              his work, featuring a cityscape background, Uytae with his camera,
+              and textures that evoke the essence of Vancouver's urban
+              environment.
+            </p>
+            <div class="box-container">
+              <div class="info-box">Illustration</div>
+              <div class="info-box">Concepting</div>
+              <div class="info-box">Box 3</div>
+              <div class="info-box">Box 4</div>
+            </div>
+          </div>
+        </aside>
       </div>
-    </aside>
-  </div>
-  <!-- this is where my project boxes are -->
 
-  <ul class="project-navigation">
-    <li class="arrow">
-      <a href="#" class="navigation-arrow"
-        ><i class="fas fa-arrow-left fa-2x"></i
-      ></a>
-    </li>
-    <li class="arrow">
-      <a href="project-2.html" class="navigation-arrow"
-        ><i class="fas fa-arrow-right fa-2x"></i
-      ></a>
-    </li>
-  </ul>
-</aside>
-<main class="project-details">
-  <div class="project-image project-feature-box">
-    <img
-      src="assets/pictures/portrait.jpg"
-      alt="Describe your project"
-      width="1500"
-      height="1500"
-    />
-  </div>
-</main>
+      <main class="project-details">
+        <div class="project-image project-feature-box">
+          <img
+            src="assets/pictures/portrait.jpg"
+            alt="Describe your project"
+            width="1500"
+            height="1500"
+          />
+        </div>
+      </main>
 
- 
-<h2>Awards & Recognition</h2>
+      <div class="h2">Awards & Recognition</div>
       <ul class="awardswon-list">
         <li class="awardswon-item"><span class="star">★</span>Insert Here</li>
         <li class="awardswon-item"><span class="star">★</span>Insert Here</li>
         <li class="awardswon-item"><span class="star">★</span>Insert here</li>
       </ul>
     </div>
-</main>
 
-<div class="footer-item-4">
-<p><a href="#top">Smooth scroll to the top</a></p>
-<p class="fineprint">
-  &copy; 2024. Hand crafted with <span class="heart">❤</span> by Makayla Crenshaw.
-</p>
-</div>
+    <!-- Project Navigation -->
+    <div class="project-navigation-wrapper">
+      <div class="project-navigation">
+        <div class="nav-arrow left-arrow">
+          <a href="project-5.html" class="navigation-arrow">
+            <i class="fas fa-arrow-left fa-2x"></i>
+            <span class="project-name p">Spirit Energy</span>
+          </a>
+        </div>
+        <div class="nav-arrow right-arrow">
+          <a href="project-7.html" class="navigation-arrow">
+            <span class="project-name p">Alice in Cyberland</span>
+            <i class="fas fa-arrow-right fa-2x"></i>
+          </a>
+        </div>
+      </div>
+    </div>
 
-<div id="myID" class="bottomMenu hide">
-<a href="project-1.html">Previous Project</a>
-</div>
+    <footer class="global-footer">
+      <div class="footer-wrapper">
+        <div class="footer-content">
+          <div class="footer-text">
+            <h2>Spark a convo with me!</h2>
+            <p class="fineprint">
+              &copy; 2024. Hand crafted with <span class="heart">❤</span> by
+              Makayla Crenshaw.
+            </p>
+            <p class="smooth-scroll"></p>
+          </div>
 
-<script type="text/javascript">
-myID = document.getElementById("myID");
+          <div class="socials-container">
+            <div class="social-group">
+              <div class="social-box"><a href="#">Instagram</a></div>
+              <div class="social-box"><a href="#">LinkedIn</a></div>
+            </div>
+            <div class="social-group">
+              <div class="social-box"><a href="#">Behance</a></div>
+              <div class="social-box"><a href="#">Email</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
 
-var myScrollFunc = function () {
-  var y = window.scrollY;
-  if (y >= 800) {
-    myID.className = "bottomMenu show";
-  } else {
-    myID.className = "bottomMenu hide";
-  }
-};
+    <div id="myID" class="bottomMenu hide">
+      <a href="project-1.html">Previous Project</a>
+    </div>
 
-window.addEventListener("scroll", myScrollFunc);
-</script>
-</body>
+    <script type="text/javascript">
+      myID = document.getElementById("myID");
+
+      var myScrollFunc = function () {
+        var y = window.scrollY;
+        if (y >= 800) {
+          myID.className = "bottomMenu show";
+        } else {
+          myID.className = "bottomMenu hide";
+        }
+      };
+
+      window.addEventListener("scroll", myScrollFunc);
+    </script>
+  </body>
 </html>

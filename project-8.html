@@ -21,10 +21,10 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
 
-  <body class="work-page">
-    <div class="hero-background"> <!-- This is the wrapper for the hero section -->
+  <body class="work-page section-eight">
+    <div class="hero-background"> 
       <header class="hero-header">
-        <div class="navigation-wrapper"> <!-- Wrapper for padding -->
+        <div class="navigation-wrapper"> 
           <ul class="branding-navigation">
             <li class="logo">
               <a href="index.html">
@@ -35,32 +35,31 @@
                 />
               </a>
             </li>
-            <li class="navigation-links"> <!-- Navigation links as a single item -->
+            <li class="navigation-links"> 
               <a href="about.html" class="custom-navigation">About</a>
               <a href="about.html" class="custom-navigation">Icons Here</a>
             </li>
           </ul>
-        </div> <!-- End of navigation-wrapper -->
-      </header>
-    </div>
-  </body>
-
-    <div class="project-wrapper">
-      <aside class="project-aside">
-        <div class="project-info">
-          <h1 class="project-title">Aurora Borealis Animation</h1>
-          <p class="project-description">
-            A snowy winter scene brought to life with an animated aurora borealis, focused on capturing the natural beauty of winter and the night sky.
-          </p>
-          <div class="box-container"> 
-            <div class="info-box">Illustration</div>
-            <div class="info-box">Box 2</div>
-            <div class="info-box">Box 3</div>
-            <div class="info-box">Box 4</div>
-          </div>
         </div>
-      </aside>
-    </div>
+      </header>
+
+      <div class="project-wrapper eight">
+        <aside class="project-aside">
+          <div class="project-info">
+            <h1 class="project-title">Aurora Borealis Animation</h1>
+            <p class="project-description">
+              A snowy winter scene brought to life with an animated aurora borealis, focused on capturing the natural beauty of winter and the night sky.
+            </p>
+            <div class="box-container"> 
+              <div class="info-box">Illustration</div>
+              <div class="info-box">Box 2</div>
+              <div class="info-box">Box 3</div>
+              <div class="info-box">Box 4</div>
+            </div>
+          </div>
+        </aside>
+      </div>
+      
         <!-- this is where my project boxes are -->
 
         <ul class="project-navigation">
@@ -78,44 +77,22 @@
       </aside>
       <main class="project-details">
         <div class="project-image large-box"><img
-            src="__"
+            src="assets/pictures/makayla-crenshaw-aurora-borealis-illustration-animation.jpg"
             alt="Describe your project"
             width="1500"
             height="1500"
           /></div>
 
        
-    <h2>Awards & Recognition</h2>
-            <ul class="awardswon-list">
-              <li class="awardswon-item"><span class="star">★</span>Insert Here</li>
-              <li class="awardswon-item"><span class="star">★</span>Insert Here</li>
-              <li class="awardswon-item"><span class="star">★</span>Insert here</li>
-            </ul>
-          </div>
-
-      <h2>Selected Works</h2>
-      <ul class="footer-nav-list">
-        <li class="footer-nav-item"><a href="index.html">Holding Page</a></li>
-        <li class="footer-nav-item"><a href="work.html">Work Page</a></li>
-        <li class="footer-nav-item">
-          <a href="work-clean.html">Work Page (Clean Version)</a>
-        </li>
-        <li class="footer-nav-item">
-          <a href="work-clean-flier.html">Work Page (Clean Version with Flier)</a>
-        </li>
-        <li class="footer-nav-item">
-          <a href="work-grayscale.html">Work Page (Grayscale Filter)</a>
-        </li>
-        <li class="footer-nav-item">
-          <a href="work-ghost.html">Work Page (Ghost Flying Icon)</a>
-        </li>
-        <li class="footer-nav-item">
-          <a href="project-1.html">Project Page</a>
-        </li>
-        <li class="footer-nav-item"><a href="about.html">About</a></li>
-      </ul>
-      </main>
-    </div>
+          <div class="h2">Awards & Recognition</div>
+          <ul class="awardswon-list">
+            <li class="awardswon-item"><span class="star">★</span>Insert Here</li>
+            <li class="awardswon-item"><span class="star">★</span>Insert Here</li>
+            <li class="awardswon-item"><span class="star">★</span>Insert here</li>
+          </ul>
+        </div>
+    </main>
+  </div>
 
     <!-- <li class="footer-item-1">
       <h2>About Me</h2>
@@ -171,31 +148,50 @@
           <li class="social-item"><a href="#">Behance</a></li>
         </ul>
       </li> -->
-    <div class="footer-item-4">
-      <p><a href="#top">Smooth scroll to the top</a></p>
-      <p class="fineprint">
-        &copy; 2024. Hand crafted with <span class="heart">❤</span> by
-        Makayla Crenshaw.
-      </p>
-    </div>
-
-    <div id="myID" class="bottomMenu hide">
-      <a href="project-1.html">Previous Project</a>
-    </div>
-
-    <script type="text/javascript">
-      myID = document.getElementById("myID");
-
-      var myScrollFunc = function () {
-        var y = window.scrollY;
-        if (y >= 800) {
-          myID.className = "bottomMenu show";
-        } else {
-          myID.className = "bottomMenu hide";
-        }
-      };
-
-      window.addEventListener("scroll", myScrollFunc);
-    </script>
+      <footer class="global-footer">
+        <div class="footer-wrapper">
+          <div class="footer-content">
+            <div class="footer-text">
+              <h2>Spark a convo with me!</h2>
+              <p class="fineprint">
+                &copy; 2024. Hand crafted with <span class="heart">❤</span> by
+                Makayla Crenshaw.
+              </p>
+              <p class="smooth-scroll">
+              </p>
+            </div>
+      
+            <div class="socials-container">
+              <div class="social-group">
+                <div class="social-box"><a href="#">Instagram</a></div>
+                <div class="social-box"><a href="#">LinkedIn</a></div>
+              </div>
+              <div class="social-group">
+                <div class="social-box"><a href="#">Behance</a></div>
+                <div class="social-box"><a href="#">Email</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+      <div id="myID" class="bottomMenu hide">
+        <a href="project-1.html">Previous Project</a>
+      </div>
+      
+      <script type="text/javascript">
+        myID = document.getElementById("myID");
+      
+        var myScrollFunc = function () {
+          var y = window.scrollY;
+          if (y >= 800) {
+            myID.className = "bottomMenu show";
+          } else {
+            myID.className = "bottomMenu hide";
+          }
+        };
+      
+        window.addEventListener("scroll", myScrollFunc);
+      </script>
   </body>
 </html>
