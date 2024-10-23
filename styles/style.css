@@ -184,7 +184,7 @@ h2 {
   font-family: var(--heading-typeface);
   margin-bottom: 2rem;
   color: var(--h2-color);
-  margin-top: 0.5rem;
+  margin-top: 2.5rem;
   font-weight: 500;
 }
 
@@ -354,7 +354,7 @@ a:active {
 }
 
 .project-description {
-  margin-bottom: 3.5rem;
+  margin-bottom: 2.5rem;
 }
 
 /* Hero 
@@ -869,8 +869,9 @@ a:active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0.25rem;
-  padding-top: 2rem;
+  padding-left: 4.5rem;
+  padding-right: 4.5rem;
+  padding-bottom: 2rem;
 }
 
 .project-info {
@@ -946,16 +947,16 @@ a:active {
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   margin-top: 1rem;
-  padding-left: 8rem;
-  padding-right: 8rem;
+  padding-left: 11rem;
+  padding-right: 11rem;
 }
 
 .info-box {
   font-size: 0.85rem;
-  border: 2.5px solid #ffff;
-  border-radius: 14px;
-  padding: 0.3rem;
+  border: 2px solid #ffff;
+  border-radius: 11px;
   text-align: center;
+  padding: 0.7rem;
 }
 
 .star {
@@ -1364,7 +1365,6 @@ a:active {
   .info-box {
     width: auto;
     margin: 0;
-    padding: 1rem;
   }
 
   /* TODO: Add or adjust styles here for large devices. */
@@ -1458,15 +1458,16 @@ a:active {
   }
 
   /* Padding around work grid and project page */
-  .portfolio,
+
+  /* .portfolio,
   .project-wrapper {
-    padding: 0.5rem;
-  }
+    /* padding: 0.5rem; */
+  /* } */
+  */
 
   /* Project Page Flex Direction on Large Devices */
   .project-wrapper {
     flex-direction: column;
-    padding: 4rem;
   }
 
   /* Sidebar on Large Devices */

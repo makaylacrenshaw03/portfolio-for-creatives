@@ -75,6 +75,17 @@
       </div>
       <div class="project-image large-box"></div>
 
+         <!-- Lightbox HTML Structure -->
+         <div class="lightbox" id="lightbox">
+          <span class="close">&times;</span>
+          <div class="lightbox-content">
+            <img class="lightbox-image" id="lightboxImage" src="" alt="" />
+            <a class="prev" id="prevBtn">&#10094;</a>
+            <a class="next" id="nextBtn">&#10095;</a>
+          </div>
+        </div>
+      </main>
+
       <div class="h2">Awards & Recognition</div>
       <ul class="awardswon-list">
         <li class="awardswon-item"><span class="star">★</span>Insert Here</li>
@@ -85,14 +96,32 @@
 </main>
 </div>
 
+
+    <!-- Project Navigation -->
+    <div class="project-navigation-wrapper">
+      <div class="project-navigation">
+        <div class="nav-arrow left-arrow">
+          <a href="project-3.html" class="navigation-arrow">
+            <i class="fas fa-arrow-left fa-2x"></i>
+            <span class="project-name p">Coastal Catch</span>
+          </a>
+        </div>
+        <div class="nav-arrow right-arrow">
+          <a href="project-4.html" class="navigation-arrow">
+            <span class="project-name p">HoleSome Pastry</span>
+            <i class="fas fa-arrow-right fa-2x"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
     <footer class="global-footer">
       <div class="footer-wrapper">
         <div class="footer-content">
           <div class="footer-text">
             <h2>Spark a convo with me!</h2>
             <p class="fineprint">
-              &copy; 2024. Hand crafted with <span class="heart">❤</span> by
-              Makayla Crenshaw.
+              &copy; 2024 Makayla Crenshaw. All rights reserved <span class="heart">❤</span>
             </p>
             <p class="smooth-scroll">
             </p>
@@ -112,9 +141,6 @@
       </div>
     </footer>
 
-    <div id="myID" class="bottomMenu hide">
-      <a href="project-4.html">Next Project</a>
-    </div>
     <script>
       myID = document.getElementById("myID");
 

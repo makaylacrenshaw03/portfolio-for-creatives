@@ -73,9 +73,20 @@
             alt="Describe your project"
             width="1500"
             height="1500"
+            class="lightbox-trigger"
           />
         </div>
       </main>
+
+      <!-- Lightbox HTML Structure -->
+      <div class="lightbox" id="lightbox">
+        <span class="close">&times;</span>
+        <div class="lightbox-content">
+          <img class="lightbox-image" id="lightboxImage" src="" alt="" />
+          <a class="prev" id="prevBtn">&#10094;</a>
+          <a class="next" id="nextBtn">&#10095;</a>
+        </div>
+      </div>
 
       <div class="h2">Awards & Recognition</div>
       <ul class="awardswon-list">
@@ -109,8 +120,8 @@
           <div class="footer-text">
             <h2>Spark a convo with me!</h2>
             <p class="fineprint">
-              &copy; 2024. Hand crafted with <span class="heart">❤</span> by
-              Makayla Crenshaw.
+              &copy; 2024 Makayla Crenshaw. All rights reserved
+              <span class="heart">❤</span>
             </p>
             <p class="smooth-scroll"></p>
           </div>
@@ -129,23 +140,55 @@
       </div>
     </footer>
 
-    <div id="myID" class="bottomMenu hide">
-      <a href="project-1.html">Previous Project</a>
-    </div>
-
     <script type="text/javascript">
-      myID = document.getElementById("myID");
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImage = document.getElementById("lightboxImage");
+      const closeBtn = document.querySelector(".close");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+      const images = document.querySelectorAll(".lightbox-trigger");
+      let currentIndex = 0;
 
-      var myScrollFunc = function () {
-        var y = window.scrollY;
-        if (y >= 800) {
-          myID.className = "bottomMenu show";
-        } else {
-          myID.className = "bottomMenu hide";
+      // Function to open the lightbox
+      function openLightbox(src) {
+        lightboxImage.src = src;
+        lightbox.style.display = "block";
+        document.body.classList.add("no-scroll");
+      }
+
+      // Add click event to images
+      images.forEach((img, index) => {
+        img.addEventListener("click", () => {
+          currentIndex = index;
+          openLightbox(img.src);
+        });
+      });
+
+      // Close lightbox when clicking on close button
+      closeBtn.addEventListener("click", () => {
+        lightbox.style.display = "none";
+        document.body.classList.remove("no-scroll");
+      });
+
+      // Navigate to previous image
+      prevBtn.addEventListener("click", () => {
+        currentIndex = currentIndex > 0 ? currentIndex - 1 : images.length - 1;
+        lightboxImage.src = images[currentIndex].src;
+      });
+
+      // Navigate to next image
+      nextBtn.addEventListener("click", () => {
+        currentIndex = currentIndex < images.length - 1 ? currentIndex + 1 : 0;
+        lightboxImage.src = images[currentIndex].src;
+      });
+
+      // Close lightbox when clicking outside of image
+      lightbox.addEventListener("click", (event) => {
+        if (event.target === lightbox) {
+          lightbox.style.display = "none";
+          document.body.classList.remove("no-scroll");
         }
-      };
-
-      window.addEventListener("scroll", myScrollFunc);
+      });
     </script>
   </body>
 </html>
