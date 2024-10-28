@@ -1060,6 +1060,17 @@ a:active {
   padding-bottom: 3rem;
 }
 
+.section {
+  opacity: 0; /* Start hidden */
+  transition: opacity 0.05s linear; /* Smooth transition */
+  visibility: hidden; /* Prevent interaction when hidden */
+}
+
+.section.active {
+  opacity: 1; /* Fully visible */
+  visibility: visible; /* Allow interaction */
+}
+
 body {
   transition: background-color 0.5s, color 0.5s;
   opacity: 1;
@@ -1491,7 +1502,7 @@ body {
   }
 
   h2 {
-    padding-top: 4rem;
+    padding-top: 2rem;
   }
 
   .fineprint {
