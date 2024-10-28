@@ -176,6 +176,7 @@ h2 {
   margin-bottom: 1rem;
   color: var(--h2-color);
   font-weight: 500;
+  padding-top: 0;
 }
 
 .h2 {
@@ -672,6 +673,17 @@ a:active {
   margin-bottom: 1rem;
 }
 
+.portfolio.section {
+  opacity: 0;
+  transition: opacity 0.05s linear;
+  display: none;
+}
+
+.portfolio.section.active {
+  display: block;
+  opacity: 1;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
@@ -805,8 +817,8 @@ a:active {
   padding: 0;
   margin: 0.5rem 0 4.5rem;
   display: flex;
-  justify-content: center; /* Centers the entire row horizontally */
-  gap: 1.5rem; /* Adjusts spacing between icons */
+  justify-content: center;
+  gap: 30px;
 }
 
 .social-item {
@@ -814,6 +826,7 @@ a:active {
 }
 
 .social-box {
+  font-size: 0rem;
   padding: 0;
   border: none;
   background: none;
@@ -823,12 +836,12 @@ a:active {
 .social-box a {
   text-decoration: none;
   color: #e9e3ff;
-  font-size: 2rem; /* Increases icon size */
+  font-size: 2rem;
   transition: color 0.3s;
 }
 
 .social-box:hover a {
-  color: #8e56e9; /* Changes color on hover */
+  color: #8e56e9;
 }
 
 .footer-links {
@@ -1029,13 +1042,7 @@ a:active {
 ██      ██   ██ ██   ██ ██    ██ ██   ██ 
 ███████ ██   ██ ██   ██  ██████  ██   ██ 
 */
-
-/* TODO: Customize your 404 Error Page */
-
-/* The best 404 pages have become an art in themselves. Your 404 error page is an opportunity to make a memorable impression on your visitors when they don’t land exactly where they hoped. */
-
 /*
-
 ██████  ██       █████  ██    ██ 
 ██   ██ ██      ██   ██  ██  ██  
 ██████  ██      ███████   ████   
@@ -1049,61 +1056,60 @@ a:active {
   padding-bottom: 3rem;
 }
 
-/* Adjust spacing for Illustration section */
 #illustration-section {
-  padding-bottom: 3rem; /* Add padding if needed */
+  padding-bottom: 3rem;
 }
 
 body {
-  transition: background-color 0.5s, color 0.5s; /* Smooth transition for color changes */
+  transition: background-color 0.5s, color 0.5s;
   opacity: 1;
-  transition: opacity 0.5s; /* Fade transition for opacity */
+  transition: opacity 0.5s;
 }
 .dark-mode {
-  background-color: #343a40; /* New background color for dark mode */
-  color: #ffffff; /* New text color for dark mode */
+  background-color: #343a40;
+  color: #ffffff;
 }
-/* Arrow Styles */
+
 .arrow-button {
   cursor: pointer;
-  font-size: 2rem; /* Size of the arrow */
-  margin: 2rem; /* Margin around the arrow */
-  color: #281761; /* Color for the arrow */
-  transition: color 0.3s; /* Transition for hover effect */
+  font-size: 2rem;
+  margin: 2rem;
+  color: #281761;
+  transition: color 0.3s;
 }
 .arrow-button:hover {
-  color: #a047cc; /* Darker blue on hover */
+  color: #a047cc;
 }
-/* Section visibility styles */
+
 .section {
-  display: none; /* Hide all sections by default */
+  display: none;
 }
 .active {
-  display: block; /* Show only the active section */
+  display: block;
 }
-/* Section Title Wrapper */
+
 .section-title-wrapper {
-  text-align: center; /* Center-align titles */
-  margin: 5rem 0; /* Margin for spacing */
+  text-align: center;
+  margin: 5rem 0;
 }
 .section-title {
-  font-size: 2rem; /* Font size for section titles */
-  margin: 0; /* Remove default margin */
+  font-size: 2rem;
+  margin: 0;
 }
 
 .custom-navigation {
-  display: inline-block; /* Allow margin and padding adjustments */
-  position: relative; /* Set position for the floating effect */
-  padding: 10px 15px; /* Add some padding for better click area */
-  text-decoration: none; /* Remove underline from links */
-  color: #000; /* Set default link color */
-  transition: transform 0.3s ease, color 0.3s ease; /* Transition for floating and color change */
+  display: inline-block;
+  position: relative;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #000;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
 
 /* Hover effect */
 .custom-navigation:hover {
-  transform: translateY(-5px); /* Move the link up slightly */
-  color: #ffffff; /* Change text color on hover (you can customize this) */
+  transform: translateY(-5px);
+  color: #ffffff;
 }
 
 .play-page {
@@ -1397,45 +1403,45 @@ body {
   }
 
   .global-footer {
-    text-align: center; /* Center text in the footer */
+    text-align: center;
   }
 
   .footer-wrapper {
     display: flex;
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center items horizontally */
+    flex-direction: column;
+    align-items: center;
   }
 
   .footer-content {
-    margin: 0 auto; /* Center content */
+    margin: 0 auto;
   }
 
   .footer-text {
-    margin-bottom: 10px; /* Space between the heading and social icons */
+    margin-bottom: 10px;
   }
 
   .socials-container {
-    display: flex; /* Use flexbox for social icons */
-    flex-direction: row; /* Align icons in a row */
-    justify-content: center; /* Center the icons */
-    margin-top: 10px; /* Space between text and social icons */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
   }
 
   .socials-list {
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center social icons */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove default margin */
-    list-style: none; /* Remove bullet points */
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
   }
 
   .social-item {
-    margin: 5px 0; /* Add vertical space between social icons */
+    margin: 5px 0;
   }
 
   .fineprint {
-    margin-top: 10px; /* Space above fineprint */
-    font-size: 0.8rem; /* Smaller font size */
+    margin-top: 10px;
+    font-size: 0.8rem;
   }
 }
 
@@ -1443,75 +1449,76 @@ body {
 
 @media (min-width: 768px) {
   .grid {
-    grid-template-columns: repeat(
-      2,
-      minmax(200px, 1fr)
-    ); /* Change to 2 columns */
-    padding: 8rem 3.5rem 4rem 3.5rem;
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    padding: 1rem 3.5rem 4rem 3.5rem;
   }
   .global-footer {
-    text-align: center; /* Center text in the footer */
+    text-align: center;
   }
 
   .footer-wrapper {
     display: flex;
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center items horizontally */
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0rem;
   }
 
   .footer-content {
-    margin: 0 auto; /* Center content */
+    margin: 0 auto;
   }
 
   .footer-text {
-    margin-bottom: 10px; /* Space between the heading and social icons */
+    margin-bottom: 10px;
   }
 
   .socials-container {
-    display: flex; /* Use flexbox for social icons */
-    flex-direction: row; /* Align icons in a row */
-    justify-content: center; /* Center the icons */
-    margin-top: 10px; /* Space between text and social icons */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
   }
 
   .socials-list {
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center social icons */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove default margin */
-    list-style: none; /* Remove bullet points */
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
   }
 
   .social-item {
-    margin: 5px 0; /* Add vertical space between social icons */
+    margin: 5px 0;
+  }
+
+  h2 {
+    padding-top: 4rem;
   }
 
   .fineprint {
-    margin-top: 10px; /* Space above fineprint */
-    font-size: 0.8rem; /* Smaller font size */
+    margin-top: 4rem;
+    font-size: 0.8rem;
   }
 }
 
 @media (max-width: 768px) {
   .navigation-links a:nth-child(2) {
-    /* Target the second link (Icons Here) */
-    display: none; /* Hide the Icons Here link */
+    display: none;
   }
 
   .branding-navigation {
-    justify-content: space-between; /* Keep items on opposite sides */
+    justify-content: space-between;
   }
 
   .logo {
-    margin-left: 0; /* Ensure logo is positioned on the left */
+    margin-left: 0;
   }
 
   .logo a {
-    display: block; /* Ensure the logo link is block for better touch target */
+    display: block;
   }
 
   .navigation-links a {
-    margin-left: 0; /* Remove margin for single link */
+    margin-left: 0;
   }
 
   .h3 {
@@ -1530,7 +1537,7 @@ body {
 
   .wrapper {
     font-size: 1.1rem;
-    line-height: 1.6rem;
+    line-height: 1.9rem;
   }
 
   .work-wrapper {
@@ -1542,14 +1549,6 @@ body {
   .grid {
     grid-gap: 2.2rem;
   }
-
-  /* .footer-item-1 {
-    margin-top: 5rem;
-  }
-
-  .footer-item-4 {
-    margin-top: 2rem;
-  } */
 }
 
 /* 768px and up, project divisions */
@@ -1611,7 +1610,7 @@ body {
   }
 
   h2 {
-    font-size: 1.65rem;
+    font-size: 2.2rem;
     text-align: center;
     margin-top: 0.5rem;
     margin-bottom: 1.5rem;
@@ -1636,50 +1635,61 @@ body {
     font-size: 1.3rem;
   }
 
+  .work-wrapper {
+    margin-bottom: 10rem;
+  }
+
   .global-footer {
-    text-align: center; /* Center text in the footer */
+    text-align: center;
+    padding: 3.5rem 1.5rem 0rem 0rem;
   }
 
   .footer-wrapper {
     display: flex;
-    flex-direction: column; /* Stack children vertically */
-    align-items: center; /* Center items horizontally */
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0rem;
   }
 
   .footer-content {
-    margin: 0 auto; /* Center content */
+    margin: 0 auto;
   }
 
   .footer-text {
-    margin-bottom: 10px; /* Space between the heading and social icons */
+    margin-bottom: 10px;
   }
 
   .socials-container {
-    display: flex; /* Use flexbox for social icons */
-    flex-direction: row; /* Align icons in a row */
-    justify-content: center; /* Center the icons */
-    margin-top: 10px; /* Space between text and social icons */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
   }
 
   .socials-list {
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center social icons */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove default margin */
-    list-style: none; /* Remove bullet points */
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
   }
 
   .social-item {
-    margin: 5px 0; /* Add vertical space between social icons */
+    margin: 5px 0;
+  }
+
+  .social-box a {
+    font-size: 2.3rem;
   }
 
   .fineprint {
-    margin-top: 10px; /* Space above fineprint */
-    font-size: 0.8rem; /* Smaller font size */
+    margin-top: 2.5rem;
+    font-size: 0.8rem;
   }
 
   .project-details {
-    flex-direction: column; /* Stack items vertically */
+    flex-direction: column;
   }
 
   .project-details {
@@ -1698,11 +1708,10 @@ body {
   .project-image img,
   .large-box img,
   .project-image-container img {
-    width: 100%; /* Ensures images take full width */
+    width: 100%;
     height: auto;
   }
 
-  /* Optional: adjust padding/margin to make spacing uniform */
   .project-image-container {
     display: flex;
     flex-direction: column;
@@ -1726,38 +1735,40 @@ body {
     gap: 10px;
   }
   .footer-wrapper {
-    flex-direction: row; /* Align footer elements in a row */
-    justify-content: space-between; /* Space items out */
-    align-items: center; /* Align items vertically centered */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .footer-content {
-    display: flex; /* Use flexbox for the footer content */
-    justify-content: space-between; /* Space text and socials */
-    width: 100%; /* Ensure the content takes full width */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
 
   .footer-text {
-    flex-grow: 1; /* Allow the footer text to take available space */
-    text-align: left; /* Align text to the left */
+    flex-grow: 1;
+    text-align: left;
   }
 
   .socials-container {
-    display: flex; /* Use flexbox for social icons */
-    flex-direction: row; /* Align icons in a row */
-    justify-content: flex-end; /* Align icons to the right */
-    margin-left: auto; /* Push socials to the far right */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-left: auto;
   }
 
   .socials-list {
-    display: flex; /* Use flexbox for layout */
-    list-style: none; /* Remove bullet points */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove default margin */
+    font-size: 3rem;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
   }
 
   .social-item {
-    margin-left: 15px; /* Space between icons */
+    margin-left: 15px;
   }
 
   .info-box {
@@ -1765,6 +1776,9 @@ body {
     margin: 0;
   }
 
+  .navigation-links a {
+    font-size: 1.4rem;
+  }
   /* TODO: Add or adjust styles here for large devices. */
 
   .holding-page-title {
@@ -1797,11 +1811,6 @@ body {
     padding-top: 8rem;
   }
 
-  /* .grid {
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    grid-gap: 0.7rem;
-  } */
-
   /* Grayscale filter with full-colour on hover and tap */
   .work-page-grid-item a.grayscale img {
     filter: grayscale(100);
@@ -1817,7 +1826,7 @@ body {
   }
 
   .global-footer {
-    padding: 4rem 8rem 0 8rem;
+    padding: 4rem 4rem 0 4rem;
     grid-template-columns: 1fr;
   }
 
@@ -1853,12 +1862,6 @@ body {
     align-self: end;
   }
 
-  /* Padding around work grid and project page */
-
-  /* .portfolio,
-  .project-wrapper {
-    /* padding: 0.5rem; */
-  /* } */
   */
 
   /* Project Page Flex Direction on Large Devices */
@@ -1916,7 +1919,7 @@ body {
       3,
       minmax(200px, 1fr)
     ); /* Ensure it's still 3 columns */
-    padding: 0 5rem 4rem 5rem;
+    padding: 0 5rem 5rem 5rem;
   }
 }
 

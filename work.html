@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>
-      Free Creative Portfolio Template: Mar 2024 Version | Project Page
-    </title>
+    <title>Makayla Crenshaw | Creative Portfolio</title>
     <meta
       name="description"
-      content="When writing a meta description, keep it between 140 and 160 characters so Google can display your entire message. Don’t forget to include your keyword!"
+      content="Explore the portfolio of Makayla Crenshaw, specializing in illustration and branding. Discover projects that tell unforgettable stories."
     />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -58,6 +56,7 @@
             <h2 class="section-title">Branding</h2>
           </div>
           <ul class="grid">
+            <!-- Portfolio projects here -->
             <li class="work-page-grid-item">
               <figure>
                 <img
@@ -216,8 +215,6 @@
           <div class="footer-content">
             <div class="footer-text">
               <h2>Spark a convo with me!</h2>
-
-              <!-- Move socials-container here -->
               <div class="socials-container">
                 <ul class="socials-list">
                   <li class="social-item">
@@ -261,19 +258,20 @@
         const body = document.body;
 
         // Fade out effect
-        body.style.opacity = "0"; // Fade out
+        body.style.transition = "opacity 0.5s"; // Set the transition duration
+        body.style.opacity = "0"; // Start fade out
 
         setTimeout(() => {
-          // Toggle section visibility
+          // Toggle section visibility after fade out
           brandingSection.classList.toggle("active");
           illustrationSection.classList.toggle("active");
 
           // Change color scheme
           body.classList.toggle("dark-mode");
 
-          // Fade in effect after switching
-          body.style.opacity = "1"; // Fade back in
-        }, 500); // Match timeout with transition duration
+          // Reset body opacity before fading in
+          body.style.opacity = "1"; // Fade in
+        }, 500); // Match duration of fade out
       }
     </script>
   </body>
