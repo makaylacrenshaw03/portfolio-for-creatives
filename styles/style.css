@@ -310,7 +310,7 @@ a:active {
   display: flex;
   gap: 2.5rem;
   margin-left: 20px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .navigation-arrow:active,
@@ -406,7 +406,7 @@ a:active {
 
 .hero-headline-wrapper {
   position: relative;
-  background-color: #ffff;
+  background-color: #291b85;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -416,6 +416,7 @@ a:active {
   text-align: center;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
+  padding-bottom: 10rem;
 }
 
 .hero-headline-wrapper::before {
@@ -425,7 +426,7 @@ a:active {
   left: 0;
   right: 0;
   height: 110px;
-  background-color: #ffffff;
+  background-color: #291b85;
   z-index: -1;
 }
 
@@ -639,7 +640,7 @@ a:active {
 .work-wrapper {
   flex: 1;
   margin: 0.5rem;
-  padding: 2rem;
+  padding: 1rem;
   margin-bottom: 1rem;
 }
 
@@ -655,7 +656,7 @@ a:active {
   font-size: 1.4rem;
   line-height: 1.8rem;
   max-width: 1200px;
-  padding: 3.5rem 4rem 7rem 4rem;
+  padding: 1rem 4rem 5rem 4rem;
 }
 
 .title-section {
@@ -673,8 +674,8 @@ a:active {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 0.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
+  grid-gap: 1.5rem;
 }
 
 .work-page-grid-item {
@@ -776,7 +777,7 @@ a:active {
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
-  background-color: #ffff;
+  background-color: #291b85;
   margin-top: 3rem;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
@@ -802,36 +803,32 @@ a:active {
 .socials-list {
   list-style-type: none;
   padding: 0;
-  margin: 0.5rem 0;
-  margin-bottom: 4.5rem;
+  margin: 0.5rem 0 4.5rem;
+  display: flex;
+  justify-content: center; /* Centers the entire row horizontally */
+  gap: 1.5rem; /* Adjusts spacing between icons */
 }
 
 .social-item {
-  display: inline;
-  margin: 0 1rem;
-}
-
-.socials-container {
-  display: flex;
-  gap: 10px;
+  display: inline-block;
 }
 
 .social-box {
-  border: 2px solid #000;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 0;
+  border: none;
+  background: none;
   text-align: center;
-  width: 80px;
-  transition: background-color 0.3s;
 }
 
 .social-box a {
   text-decoration: none;
-  color: #000;
+  color: #e9e3ff;
+  font-size: 2rem; /* Increases icon size */
+  transition: color 0.3s;
 }
 
-.social-box:hover {
-  background-color: #e0e0e0;
+.social-box:hover a {
+  color: #8e56e9; /* Changes color on hover */
 }
 
 .footer-links {
@@ -892,12 +889,18 @@ a:active {
   padding: 0;
 }
 
+.info-box {
+  padding-top: 3rem;
+}
+
 .project-details {
   display: grid;
   grid-template-rows: auto auto auto;
   gap: 0.8rem;
   width: 100%;
   padding: 2rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
 }
 
 .project-image {
@@ -946,7 +949,7 @@ a:active {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 4rem;
   padding-left: 11rem;
   padding-right: 11rem;
 }
@@ -1039,6 +1042,69 @@ a:active {
 ██      ██      ██   ██    ██    
 ██      ███████ ██   ██    ██    
 */
+
+/* Homepage Animation */
+
+#branding-section {
+  padding-bottom: 3rem;
+}
+
+/* Adjust spacing for Illustration section */
+#illustration-section {
+  padding-bottom: 3rem; /* Add padding if needed */
+}
+
+body {
+  transition: background-color 0.5s, color 0.5s; /* Smooth transition for color changes */
+  opacity: 1;
+  transition: opacity 0.5s; /* Fade transition for opacity */
+}
+.dark-mode {
+  background-color: #343a40; /* New background color for dark mode */
+  color: #ffffff; /* New text color for dark mode */
+}
+/* Arrow Styles */
+.arrow-button {
+  cursor: pointer;
+  font-size: 2rem; /* Size of the arrow */
+  margin: 2rem; /* Margin around the arrow */
+  color: #281761; /* Color for the arrow */
+  transition: color 0.3s; /* Transition for hover effect */
+}
+.arrow-button:hover {
+  color: #a047cc; /* Darker blue on hover */
+}
+/* Section visibility styles */
+.section {
+  display: none; /* Hide all sections by default */
+}
+.active {
+  display: block; /* Show only the active section */
+}
+/* Section Title Wrapper */
+.section-title-wrapper {
+  text-align: center; /* Center-align titles */
+  margin: 5rem 0; /* Margin for spacing */
+}
+.section-title {
+  font-size: 2rem; /* Font size for section titles */
+  margin: 0; /* Remove default margin */
+}
+
+.custom-navigation {
+  display: inline-block; /* Allow margin and padding adjustments */
+  position: relative; /* Set position for the floating effect */
+  padding: 10px 15px; /* Add some padding for better click area */
+  text-decoration: none; /* Remove underline from links */
+  color: #000; /* Set default link color */
+  transition: transform 0.3s ease, color 0.3s ease; /* Transition for floating and color change */
+}
+
+/* Hover effect */
+.custom-navigation:hover {
+  transform: translateY(-5px); /* Move the link up slightly */
+  color: #ffffff; /* Change text color on hover (you can customize this) */
+}
 
 .play-page {
   display: grid;
@@ -1181,6 +1247,82 @@ a:active {
   padding-right: 4rem;
 }
 
+/* Logo animation here */
+
+.logo:hover {
+  animation: wiggle 0.5s ease forwards;
+}
+
+@keyframes wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(5deg);
+  }
+  30% {
+    transform: rotate(-5deg);
+  }
+  45% {
+    transform: rotate(3deg);
+  }
+  60% {
+    transform: rotate(-3deg);
+  }
+  75% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* nav underline effect here */
+
+.custom-navigation {
+  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.custom-navigation::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: #fff0f0;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.custom-navigation:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.custom-navigation {
+  position: relative;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.custom-navigation::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: #fff0f0;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.custom-navigation:hover::after {
+  width: 100%;
+  left: 0;
+}
+
 /*
 
 ███    ███ ███████ ██████  ██  █████       ██████  ██    ██ ███████ ██████  ██ ███████ ███████ 
@@ -1253,11 +1395,125 @@ a:active {
     text-decoration: none;
     font-size: 1rem;
   }
+
+  .global-footer {
+    text-align: center; /* Center text in the footer */
+  }
+
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .footer-content {
+    margin: 0 auto; /* Center content */
+  }
+
+  .footer-text {
+    margin-bottom: 10px; /* Space between the heading and social icons */
+  }
+
+  .socials-container {
+    display: flex; /* Use flexbox for social icons */
+    flex-direction: row; /* Align icons in a row */
+    justify-content: center; /* Center the icons */
+    margin-top: 10px; /* Space between text and social icons */
+  }
+
+  .socials-list {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center social icons */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove default margin */
+    list-style: none; /* Remove bullet points */
+  }
+
+  .social-item {
+    margin: 5px 0; /* Add vertical space between social icons */
+  }
+
+  .fineprint {
+    margin-top: 10px; /* Space above fineprint */
+    font-size: 0.8rem; /* Smaller font size */
+  }
 }
 
 /* Medium devices (tablets, 768px and up) home page */
 
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(
+      2,
+      minmax(200px, 1fr)
+    ); /* Change to 2 columns */
+    padding: 8rem 3.5rem 4rem 3.5rem;
+  }
+  .global-footer {
+    text-align: center; /* Center text in the footer */
+  }
+
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .footer-content {
+    margin: 0 auto; /* Center content */
+  }
+
+  .footer-text {
+    margin-bottom: 10px; /* Space between the heading and social icons */
+  }
+
+  .socials-container {
+    display: flex; /* Use flexbox for social icons */
+    flex-direction: row; /* Align icons in a row */
+    justify-content: center; /* Center the icons */
+    margin-top: 10px; /* Space between text and social icons */
+  }
+
+  .socials-list {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center social icons */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove default margin */
+    list-style: none; /* Remove bullet points */
+  }
+
+  .social-item {
+    margin: 5px 0; /* Add vertical space between social icons */
+  }
+
+  .fineprint {
+    margin-top: 10px; /* Space above fineprint */
+    font-size: 0.8rem; /* Smaller font size */
+  }
+}
+
 @media (max-width: 768px) {
+  .navigation-links a:nth-child(2) {
+    /* Target the second link (Icons Here) */
+    display: none; /* Hide the Icons Here link */
+  }
+
+  .branding-navigation {
+    justify-content: space-between; /* Keep items on opposite sides */
+  }
+
+  .logo {
+    margin-left: 0; /* Ensure logo is positioned on the left */
+  }
+
+  .logo a {
+    display: block; /* Ensure the logo link is block for better touch target */
+  }
+
+  .navigation-links a {
+    margin-left: 0; /* Remove margin for single link */
+  }
+
   .h3 {
     font-size: 1.15rem;
     line-height: 1.6rem;
@@ -1265,29 +1521,35 @@ a:active {
 
   .h7 {
     font-size: 4.5rem;
-    margin-bottom: 1.6rem;
   }
 
   .hero-headline-wrapper {
     font-size: 1.95rem;
+    padding-bottom: 2rem;
   }
 
+  .wrapper {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+  }
+
+  .work-wrapper {
+    padding: 1.3rem;
+    padding-top: 7.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
   .grid {
-    grid-gap: 0.5rem;
+    grid-gap: 2.2rem;
   }
 
-  .footer-item-1 {
+  /* .footer-item-1 {
     margin-top: 5rem;
   }
 
   .footer-item-4 {
     margin-top: 2rem;
-  }
-
-  .global-footer {
-    display: inline;
-    min-height: 20vh;
-  }
+  } */
 }
 
 /* 768px and up, project divisions */
@@ -1301,6 +1563,9 @@ a:active {
   .project-description {
     padding-top: 0.2em;
     font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .project-wrapper {
@@ -1314,10 +1579,14 @@ a:active {
     gap: 15px;
     padding: 20px;
     overflow-x: auto;
+    padding-bottom: 1.5rem;
+    margin-top: 0.2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
   }
 
   .info-box {
-    border: 2.5px solid #c7c1ff;
+    border: 2.5px solid #fff;
     border-radius: 11px;
     padding: 0.6rem;
     text-align: center;
@@ -1327,8 +1596,18 @@ a:active {
     position: relative;
   }
 
+  .about {
+    padding: 2rem;
+  }
+
   p {
     margin-top: 3rem;
+    font-size: 1.1rem;
+    padding-bottom: 2rem;
+  }
+
+  .h1 {
+    padding-top: 0rem;
   }
 
   h2 {
@@ -1347,9 +1626,94 @@ a:active {
     margin: 0;
   }
 
+  .about-item-1 {
+    padding-top: 0.2rem;
+  }
+
   a:link {
     color: var(--hyperlink-color);
     text-decoration: none;
+    font-size: 1.3rem;
+  }
+
+  .global-footer {
+    text-align: center; /* Center text in the footer */
+  }
+
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center items horizontally */
+  }
+
+  .footer-content {
+    margin: 0 auto; /* Center content */
+  }
+
+  .footer-text {
+    margin-bottom: 10px; /* Space between the heading and social icons */
+  }
+
+  .socials-container {
+    display: flex; /* Use flexbox for social icons */
+    flex-direction: row; /* Align icons in a row */
+    justify-content: center; /* Center the icons */
+    margin-top: 10px; /* Space between text and social icons */
+  }
+
+  .socials-list {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center social icons */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove default margin */
+    list-style: none; /* Remove bullet points */
+  }
+
+  .social-item {
+    margin: 5px 0; /* Add vertical space between social icons */
+  }
+
+  .fineprint {
+    margin-top: 10px; /* Space above fineprint */
+    font-size: 0.8rem; /* Smaller font size */
+  }
+
+  .project-details {
+    flex-direction: column; /* Stack items vertically */
+  }
+
+  .project-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-image,
+  .large-box,
+  .project-image-container {
+    width: 100%;
+    margin: 0;
+  }
+
+  .project-image img,
+  .large-box img,
+  .project-image-container img {
+    width: 100%; /* Ensures images take full width */
+    height: auto;
+  }
+
+  /* Optional: adjust padding/margin to make spacing uniform */
+  .project-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-name {
+    font-size: 1rem;
+    font-weight: 300;
+  }
+  .navigation-arrow:link {
+    font-size: 0.8rem;
   }
 }
 
@@ -1360,6 +1724,40 @@ a:active {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
+  }
+  .footer-wrapper {
+    flex-direction: row; /* Align footer elements in a row */
+    justify-content: space-between; /* Space items out */
+    align-items: center; /* Align items vertically centered */
+  }
+
+  .footer-content {
+    display: flex; /* Use flexbox for the footer content */
+    justify-content: space-between; /* Space text and socials */
+    width: 100%; /* Ensure the content takes full width */
+  }
+
+  .footer-text {
+    flex-grow: 1; /* Allow the footer text to take available space */
+    text-align: left; /* Align text to the left */
+  }
+
+  .socials-container {
+    display: flex; /* Use flexbox for social icons */
+    flex-direction: row; /* Align icons in a row */
+    justify-content: flex-end; /* Align icons to the right */
+    margin-left: auto; /* Push socials to the far right */
+  }
+
+  .socials-list {
+    display: flex; /* Use flexbox for layout */
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove default margin */
+  }
+
+  .social-item {
+    margin-left: 15px; /* Space between icons */
   }
 
   .info-box {
@@ -1395,16 +1793,14 @@ a:active {
   }
 
   .hero-headline-wrapper {
-    margin-bottom: 3rem;
-    padding: 2rem 2.2rem;
-    padding-bottom: 10rem;
+    margin-bottom: 6.5rem;
     padding-top: 8rem;
   }
 
-  .grid {
+  /* .grid {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-gap: 0.7rem;
-  }
+  } */
 
   /* Grayscale filter with full-colour on hover and tap */
   .work-page-grid-item a.grayscale img {
@@ -1421,7 +1817,7 @@ a:active {
   }
 
   .global-footer {
-    padding: 4rem 4rem 0 4rem;
+    padding: 4rem 8rem 0 8rem;
     grid-template-columns: 1fr;
   }
 
@@ -1476,6 +1872,19 @@ a:active {
     padding-right: 2rem;
   }
 
+  .project-description {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .box-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 4rem;
+    padding-left: 16rem;
+    padding-right: 16rem;
+  }
+
   /* Main Project Image Area on Large Devices */
   .project-details {
     width: 100%;
@@ -1499,8 +1908,15 @@ a:active {
 @media (min-width: 1200px) {
   /* TODO: Add styles here for X-large devices. */
 
-  .grid {
+  /* .grid {
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  } */
+  .grid {
+    grid-template-columns: repeat(
+      3,
+      minmax(200px, 1fr)
+    ); /* Ensure it's still 3 columns */
+    padding: 0 5rem 4rem 5rem;
   }
 }
 
@@ -1508,8 +1924,4 @@ a:active {
 
 @media (min-width: 1400px) {
   /* TODO: Add styles here for XX-large devices. */
-
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  }
 }

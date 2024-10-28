@@ -19,6 +19,33 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <link rel="stylesheet" href="./styles/style.css" />
+    <style>
+      /* Additional Styles */
+      body {
+        transition: background-color 0.5s, color 0.5s; /* Smooth transition for color changes */
+      }
+      .dark-mode {
+        background-color: #343a40; /* New background color for dark mode */
+        color: #ffffff; /* New text color for dark mode */
+      }
+      .arrow-button {
+        cursor: pointer;
+        padding: 1rem;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem 0;
+        font-size: 1.5rem;
+        transition: background-color 0.3s;
+      }
+      .arrow-button:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+      }
+    </style>
   </head>
 
   <body class="work-page">
@@ -50,19 +77,15 @@
           great stories that people remember.
         </div>
       </div>
-
       <main class="work-wrapper">
-        <!-- Branding Section -->
-        <section class="portfolio section active" id="branding-section">
-          <div class="section-title-wrapper">
-            <h2 class="section-title">Branding</h2>
-          </div>
+        <section class="portfolio">
           <ul class="grid">
+            <!-- Project cards -->
             <li class="work-page-grid-item">
               <figure>
                 <img
                   src="assets/pictures/progress.jpg"
-                  alt="Capstone Project"
+                  alt="Describe your project"
                   width="1500"
                   height="1500"
                 />
@@ -78,7 +101,7 @@
               <figure>
                 <img
                   src="assets/pictures/makayla-crenshaw-coastalcatch-packaging-design-branding.jpg"
-                  alt="Coastal Catch"
+                  alt="Describe your project"
                   width="1500"
                   height="1500"
                 />
@@ -94,7 +117,7 @@
               <figure>
                 <img
                   src="assets/pictures/galaxtea.jpg"
-                  alt="GalaxTea"
+                  alt="Describe your project"
                   width="1500"
                   height="1500"
                 />
@@ -110,7 +133,7 @@
               <figure>
                 <img
                   src="assets/pictures/makayla-crenshaw-holesome-donut-packaging-design-branding.jpg"
-                  alt="HoleSome Pastry"
+                  alt="Describe your project"
                   width="1500"
                   height="1500"
                 />
@@ -126,7 +149,7 @@
               <figure>
                 <img
                   src="assets/pictures/makayla-crenshaw-capilano-university-packaging-design.jpg"
-                  alt="Spirit Energy"
+                  alt="Describe your project"
                   width="1500"
                   height="1500"
                 />
@@ -138,25 +161,11 @@
                 </div>
               </a>
             </li>
-          </ul>
-          <i
-            class="fas fa-arrow-right arrow-button"
-            onclick="toggleSections('illustration')"
-            style="float: right"
-          ></i>
-        </section>
-
-        <!-- Illustration Section -->
-        <section class="portfolio section" id="illustration-section">
-          <div class="section-title-wrapper">
-            <h2 class="section-title">Illustration</h2>
-          </div>
-          <ul class="grid">
             <li class="work-page-grid-item">
               <figure>
                 <img
                   src="assets/pictures/portrait.jpg"
-                  alt="Creative Mornings Vancouver"
+                  alt="Describe your project"
                   width="1500"
                   height="1500"
                 />
@@ -172,7 +181,7 @@
               <figure>
                 <img
                   src="assets/pictures/progress.jpg"
-                  alt="Alice in Cyberland"
+                  alt="Describe your project"
                   width="1500"
                   height="1500"
                 />
@@ -190,7 +199,7 @@
               <figure>
                 <img
                   src="assets/pictures/makayla-crenshaw-aurora-borealis-illustration-animation.jpg"
-                  alt="Aurora Borealis Snowfall"
+                  alt="Describe your project"
                   width="1500"
                   height="1500"
                 />
@@ -203,12 +212,12 @@
               </a>
             </li>
           </ul>
-          <i
-            class="fas fa-arrow-left arrow-button"
-            onclick="toggleSections('branding')"
-            style="float: left"
-          ></i>
         </section>
+
+        <!-- Right Arrow Button -->
+        <div class="arrow-button" onclick="goToIllustrationProjects()">
+          Go to Illustrations <i class="fas fa-arrow-right"></i>
+        </div>
       </main>
 
       <footer class="global-footer">
@@ -216,64 +225,48 @@
           <div class="footer-content">
             <div class="footer-text">
               <h2>Spark a convo with me!</h2>
-
-              <!-- Move socials-container here -->
-              <div class="socials-container">
-                <ul class="socials-list">
-                  <li class="social-item">
-                    <div class="social-box">
-                      <a href="#"><i class="fab fa-instagram"></i></a>
-                    </div>
-                  </li>
-                  <li class="social-item">
-                    <div class="social-box">
-                      <a href="#"><i class="fab fa-behance"></i></a>
-                    </div>
-                  </li>
-                  <li class="social-item">
-                    <div class="social-box">
-                      <a href="#"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                  </li>
-                  <li class="social-item">
-                    <div class="social-box">
-                      <a href="#"><i class="fas fa-envelope"></i></a>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
               <p class="fineprint">
                 &copy; 2024 Makayla Crenshaw. All rights reserved
                 <span class="heart">❤</span>
               </p>
             </div>
+
+            <div class="socials-container">
+              <ul class="socials-list">
+                <li class="social-item">
+                  <div class="social-box">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                  </div>
+                </li>
+                <li class="social-item">
+                  <div class="social-box">
+                    <a href="#"><i class="fab fa-behance"></i></a>
+                  </div>
+                </li>
+                <li class="social-item">
+                  <div class="social-box">
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                  </div>
+                </li>
+                <li class="social-item">
+                  <div class="social-box">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </footer>
     </div>
+
     <script>
-      function toggleSections(section) {
-        const brandingSection = document.getElementById("branding-section");
-        const illustrationSection = document.getElementById(
-          "illustration-section"
-        );
-        const body = document.body;
+      function goToIllustrationProjects() {
+        // Change color scheme
+        document.body.classList.toggle("dark-mode");
 
-        // Fade out effect
-        body.style.opacity = "0"; // Fade out
-
-        setTimeout(() => {
-          // Toggle section visibility
-          brandingSection.classList.toggle("active");
-          illustrationSection.classList.toggle("active");
-
-          // Change color scheme
-          body.classList.toggle("dark-mode");
-
-          // Fade in effect after switching
-          body.style.opacity = "1"; // Fade back in
-        }, 500); // Match timeout with transition duration
+        // Redirect to the illustration section (you can adjust this to whatever you need)
+        window.location.href = "illustration-projects.html"; // Update this to your actual illustration page link
       }
     </script>
   </body>
