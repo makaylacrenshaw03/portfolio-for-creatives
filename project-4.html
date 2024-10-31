@@ -133,126 +133,87 @@
         </div>
       </main>
 
-      <h2>Awards & Recognition</h2>
-      <ul class="awardswon-list">
-        <li class="awardswon-item"><span class="star">★</span> Insert Here</li>
-        <li class="awardswon-item"><span class="star">★</span> Insert Here</li>
-        <li class="awardswon-item"><span class="star">★</span> Insert Here</li>
-      </ul>
+      <div class="awards-section">
+        <h2>Awards & Recognition</h2>
+        <ul class="awardswon-list">
+          <li class="awardswon-item"><span class="star">★</span>Insert Here</li>
+          <li class="awardswon-item"><span class="star">★</span>Insert Here</li>
+          <li class="awardswon-item"><span class="star">★</span>Insert here</li>
+        </ul>
+      </div>
+    </div>
 
-      <!-- Project Navigation -->
-      <div class="project-navigation-wrapper">
-        <div class="project-navigation">
-          <div class="nav-arrow left-arrow">
-            <a href="project-4.html" class="navigation-arrow">
-              <i class="fas fa-arrow-left fa-2x"></i>
-              <span class="project-name">GalaxTea</span>
-            </a>
-          </div>
-          <div class="nav-arrow right-arrow">
-            <a href="project-5.html" class="navigation-arrow">
-              <span class="project-name">Spirit Energy</span>
-              <i class="fas fa-arrow-right fa-2x"></i>
-            </a>
-          </div>
+    <!-- Project Navigation -->
+    <div class="project-navigation-wrapper">
+      <div class="project-navigation">
+        <div class="nav-arrow left-arrow">
+          <a href="project-3.html" class="navigation-arrow">
+            <i class="fas fa-arrow-left fa-2x"></i>
+          </a>
+        </div>
+        <div class="nav-arrow right-arrow">
+          <a href="project-4.html" class="navigation-arrow">
+            <i class="fas fa-arrow-right fa-2x"></i>
+          </a>
         </div>
       </div>
+    </div>
 
-      <footer class="global-footer">
-        <div class="footer-wrapper">
-          <div class="footer-content">
-            <div class="footer-text">
-              <h2>Spark a convo with me!</h2>
+    <footer class="global-footer">
+      <div class="footer-wrapper">
+        <div class="footer-content">
+          <div class="footer-left">
+            <h2>Spark a convo with me!</h2>
+            <div class="footer-description">
+              Feel free to reach out on any of these platforms!
+            </div>
+            <p class="fineprint">
+              &copy; 2024 Makayla Crenshaw. All rights reserved
+              <span class="heart">❤</span>
+            </p>
+          </div>
 
-              <div class="socials-container">
-                <ul class="socials-list">
-                  <li class="social-item">
-                    <div class="social-box">
-                      <a href="#" aria-label="Instagram"
-                        ><i class="fab fa-instagram"></i
-                      ></a>
-                    </div>
-                  </li>
-                  <li class="social-item">
-                    <div class="social-box">
-                      <a href="#" aria-label="Behance"
-                        ><i class="fab fa-behance"></i
-                      ></a>
-                    </div>
-                  </li>
-                  <li class="social-item">
-                    <div class="social-box">
-                      <a href="#" aria-label="LinkedIn"
-                        ><i class="fab fa-linkedin"></i
-                      ></a>
-                    </div>
-                  </li>
-                  <li class="social-item">
-                    <div class="social-box">
-                      <a href="#" aria-label="Email"
-                        ><i class="fas fa-envelope"></i
-                      ></a>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-
-              <p class="fineprint">
-                &copy; 2024 Makayla Crenshaw. All rights reserved
-                <span class="heart">❤</span>
-              </p>
+          <div class="footer-right">
+            <div class="socials-container">
+              <ul class="socials-list">
+                <li class="social-item">
+                  <div class="social-box">
+                    <a href="#" aria-label="Visit Instagram"
+                      ><i class="fab fa-instagram"></i
+                    ></a>
+                  </div>
+                </li>
+                <li class="social-item">
+                  <div class="social-box">
+                    <a href="#" aria-label="Visit Behance"
+                      ><i class="fab fa-behance"></i
+                    ></a>
+                  </div>
+                </li>
+                <li class="social-item">
+                  <div class="social-box">
+                    <a href="#" aria-label="Visit LinkedIn"
+                      ><i class="fab fa-linkedin"></i
+                    ></a>
+                  </div>
+                </li>
+                <li class="social-item">
+                  <div class="social-box">
+                    <a href="#" aria-label="Send an email"
+                      ><i class="fas fa-envelope"></i
+                    ></a>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
-      </footer>
-    </div>
-
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      </div>
+    </footer>
 
     <script>
-      $(document).ready(function () {
-        let currentIndex = 0;
-        const images = $(".lightbox-trigger");
+      var myID = document.getElementById("myID");
 
-        images.click(function () {
-          currentIndex = images.index(this);
-          showLightbox(images.eq(currentIndex).attr("src"));
-          $("body").addClass("no-scroll");
-        });
-
-        $(".close").click(function () {
-          $("#lightbox").fadeOut();
-          $("body").removeClass("no-scroll");
-        });
-
-        function showLightbox(src) {
-          $("#lightboxImage").attr("src", src);
-          $("#lightbox").fadeIn();
-        }
-
-        $("#lightbox").click(function (event) {
-          if ($(event.target).is("#lightbox")) {
-            $("#lightbox").fadeOut();
-            $("body").removeClass("no-scroll");
-          }
-        });
-
-        $("#prevBtn").click(function () {
-          currentIndex =
-            currentIndex > 0 ? currentIndex - 1 : images.length - 1;
-          showLightbox(images.eq(currentIndex).attr("src"));
-        });
-
-        $("#nextBtn").click(function () {
-          currentIndex =
-            currentIndex < images.length - 1 ? currentIndex + 1 : 0;
-          showLightbox(images.eq(currentIndex).attr("src"));
-        });
-      });
-
-      // Function to show/hide bottom menu on scroll
-      let myID = document.getElementById("myID");
       var myScrollFunc = function () {
         var y = window.scrollY;
         if (y >= 800) {

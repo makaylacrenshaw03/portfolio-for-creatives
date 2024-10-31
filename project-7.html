@@ -60,7 +60,7 @@
 
       <main class="project-details">
         <div class="project-image large-box">
-          <img src="" alt="Describe your project" width="1500" height="1500" />
+          <img src="assets/pictures/project-image.jpg" alt="Describe your project" width="1500" height="1500" />
         </div>
 
         <!-- Lightbox HTML Structure -->
@@ -73,85 +73,92 @@
           </div>
         </div>
 
-        <h2>Awards & Recognition</h2>
-        <ul class="awardswon-list">
-          <li class="awardswon-item"><span class="star">★</span>Insert Here</li>
-          <li class="awardswon-item"><span class="star">★</span>Insert Here</li>
-          <li class="awardswon-item"><span class="star">★</span>Insert Here</li>
-        </ul>
+        <div class="awards-section">
+          <h2>Awards & Recognition</h2>
+          <ul class="awardswon-list">
+            <li class="awardswon-item"><span class="star">★</span>Insert Here</li>
+            <li class="awardswon-item"><span class="star">★</span>Insert Here</li>
+            <li class="awardswon-item"><span class="star">★</span>Insert Here</li>
+          </ul>
+        </div>
       </main>
-    </div>
 
-    <!-- Project Navigation -->
-    <div class="project-navigation-wrapper">
-      <div class="project-navigation">
-        <div class="nav-arrow left-arrow">
-          <a href="project-6.html" class="navigation-arrow">
-            <i class="fas fa-arrow-left fa-2x"></i>
-            <span class="project-name p">Creative Mornings</span>
-          </a>
-        </div>
-        <div class="nav-arrow right-arrow">
-          <a href="project-8.html" class="navigation-arrow">
-            <span class="project-name p">Aurora Borealis</span>
-            <i class="fas fa-arrow-right fa-2x"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <footer class="global-footer">
-      <div class="footer-wrapper">
-        <div class="footer-content">
-          <div class="footer-text">
-            <h2>Spark a convo with me!</h2>
-            <div class="socials-container">
-              <ul class="socials-list">
-                <li class="social-item">
-                  <div class="social-box">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                  </div>
-                </li>
-                <li class="social-item">
-                  <div class="social-box">
-                    <a href="#"><i class="fab fa-behance"></i></a>
-                  </div>
-                </li>
-                <li class="social-item">
-                  <div class="social-box">
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                  </div>
-                </li>
-                <li class="social-item">
-                  <div class="social-box">
-                    <a href="#"><i class="fas fa-envelope"></i></a>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <p class="fineprint">
-              &copy; 2024 Makayla Crenshaw. All rights reserved
-              <span class="heart">❤</span>
-            </p>
+      <!-- Project Navigation -->
+      <div class="project-navigation-wrapper">
+        <div class="project-navigation">
+          <div class="nav-arrow left-arrow">
+            <a href="project-4.html" class="navigation-arrow">
+              <i class="fas fa-arrow-left fa-2x"></i>
+            </a>
+          </div>
+          <div class="nav-arrow right-arrow">
+            <a href="project-6.html" class="navigation-arrow">
+              <i class="fas fa-arrow-right fa-2x"></i>
+            </a>
           </div>
         </div>
       </div>
-    </footer>
 
-    <script type="text/javascript">
-      var myID = document.getElementById("myID");
+      <footer class="global-footer">
+        <div class="footer-wrapper">
+          <div class="footer-content">
+            <div class="footer-left">
+              <h2>Spark a convo with me!</h2>
+              <div class="footer-description">
+                Feel free to reach out on any of these platforms!
+              </div>
+              <p class="fineprint">
+                &copy; 2024 Makayla Crenshaw. All rights reserved
+                <span class="heart">❤</span>
+              </p>
+            </div>
 
-      var myScrollFunc = function () {
-        var y = window.scrollY;
-        if (y >= 800) {
-          myID.className = "bottomMenu show";
-        } else {
-          myID.className = "bottomMenu hide";
-        }
-      };
+            <div class="footer-right">
+              <div class="socials-container">
+                <ul class="socials-list">
+                  <li class="social-item">
+                    <div class="social-box">
+                      <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                  </li>
+                  <li class="social-item">
+                    <div class="social-box">
+                      <a href="#"><i class="fab fa-behance"></i></a>
+                    </div>
+                  </li>
+                  <li class="social-item">
+                    <div class="social-box">
+                      <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  </li>
+                  <li class="social-item">
+                    <div class="social-box">
+                      <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
 
-      window.addEventListener("scroll", myScrollFunc);
-    </script>
+      <!-- Bottom Menu -->
+      <div id="myID" class="bottomMenu hide">Your menu content here</div>
+
+      <script type="text/javascript">
+        var myID = document.getElementById("myID");
+
+        var myScrollFunc = function () {
+          var y = window.scrollY;
+          if (y >= 800) {
+            myID.className = "bottomMenu show";
+          } else {
+            myID.className = "bottomMenu hide";
+          }
+        };
+
+        window.addEventListener("scroll", myScrollFunc);
+      </script>
   </body>
 </html>

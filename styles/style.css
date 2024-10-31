@@ -308,10 +308,9 @@ a:active {
   color: var(--alt-background-color);
 }
 
-.navigation-arrow:link {
-  -webkit-text-stroke-width: 1px; /* Change this to a smaller value */
-  -webkit-text-stroke-color: var(--accent-color);
-  color: transparent;
+.navigation-arrow:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: var(--hover-arrow-color); /* Use a contrasting hover color */
 }
 
 .navigation-links {
@@ -795,12 +794,12 @@ a:active {
 */
 
 .global-footer {
-  display: flex; /* Use flex for the main footer container */
-  flex-direction: column; /* Stack items in a column */
-  align-items: flex-start; /* Align all items to the left */
-  padding: 2rem; /* Keep consistent padding */
-  background-color: #291b85; /* Footer background color */
-  border-top-left-radius: 50px; /* Rounded corners */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
+  background-color: #291b85;
+  border-top-left-radius: 50px;
   border-top-right-radius: 50px;
 }
 
@@ -809,22 +808,22 @@ a:active {
 }
 
 .footer-content {
-  display: flex; /* Use flex for content layout */
-  justify-content: space-between; /* Space out the text and social icons */
-  align-items: center; /* Align items vertically */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
 }
 
 .socials-container {
-  display: flex; /* Use flex for social icons */
+  display: flex;
 }
 
 .socials-list {
-  list-style-type: none; /* Remove bullet points */
+  list-style-type: none;
   padding: 0;
-  margin: 0.5rem 0; /* Simplified margins */
-  display: flex; /* Use flexbox for the list items */
-  gap: 30px; /* Space between social icons */
+  margin: 0.5rem 0;
+  display: flex;
+  gap: 30px;
 }
 
 .social-item {
@@ -834,7 +833,7 @@ a:active {
 .social-box {
   font-size: 0rem;
   padding: 0;
-  text-align: center; /* Center align content inside social box */
+  text-align: center;
 }
 
 .social-box a {
@@ -879,8 +878,7 @@ a:active {
 ██████  ██████  ██    ██      ██ █████   ██         ██        ██████  ███████ ██   ███ █████   
 ██      ██   ██ ██    ██ ██   ██ ██      ██         ██        ██      ██   ██ ██    ██ ██      
 ██      ██   ██  ██████   █████  ███████  ██████    ██        ██      ██   ██  ██████  ███████ 
-                                                                */ /* Fade In Animation */
-
+                                                 
 /* what ive edited for my images boxes */
 
 .project-wrapper {
@@ -905,6 +903,11 @@ a:active {
   flex-direction: column;
   color: #fff;
   background: var(--project-sidebar-background-color);
+}
+
+.awards-section h2 {
+  text-align: center;
+  padding-bottom: 2rem;
 }
 
 .arrow {
@@ -990,6 +993,7 @@ a:active {
 
 .awardswon-list {
   text-align: center;
+  padding-bottom: 6rem;
 }
 
 /* Main Project Image Area */
@@ -1072,14 +1076,14 @@ a:active {
 }
 
 .section {
-  opacity: 0; /* Start hidden */
-  transition: opacity 0.05s linear; /* Smooth transition */
-  visibility: hidden; /* Prevent interaction when hidden */
+  opacity: 0;
+  transition: opacity 0.05s linear;
+  visibility: hidden;
 }
 
 .section.active {
-  opacity: 1; /* Fully visible */
-  visibility: visible; /* Allow interaction */
+  opacity: 1;
+  visibility: visible;
 }
 
 body {
@@ -1232,28 +1236,25 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 8rem;
-  position: relative;
-  margin: 2rem 0;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding-bottom: 3rem;
+  box-sizing: border-box;
 }
 
 .nav-arrow {
+  flex: 1;
   display: flex;
+  justify-content: center;
   align-items: center;
-  opacity: 1; /* Ensure arrows are always visible */
-  transition: color 0.3s ease; /* Smooth transition for color change */
 }
 
 .navigation-arrow {
   text-decoration: none;
   display: flex;
   align-items: center;
-  color: var(--default-arrow-color); /* Default arrow color */
-}
-
-/* Specific colors for hover state */
-.navigation-arrow:hover {
-  color: var(--hover-arrow-color); /* Change this to your desired hover color */
+  color: var(--default-arrow-color);
 }
 
 .left-arrow {
