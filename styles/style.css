@@ -173,7 +173,7 @@ h1 {
 h2 {
   font-size: 2.25rem;
   font-family: var(--heading-typeface);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: var(--h2-color);
   font-weight: 500;
   padding-top: 0;
@@ -217,7 +217,7 @@ h6 {
 .h7 {
   font-size: 6rem;
   color: var(--h6-color);
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
   font-weight: 700;
   padding: 1rem;
 }
@@ -233,6 +233,13 @@ p {
   line-height: 1.8;
   margin-bottom: 1rem;
   margin-top: 4rem;
+}
+
+.footer-description {
+  font-weight: 300;
+  font-size: 1.2rem;
+  margin-top: 0.4rem;
+  line-height: 1.9rem;
 }
 
 em {
@@ -417,7 +424,7 @@ a:active {
   text-align: center;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
-  padding-bottom: 10rem;
+  padding-bottom: 13rem;
 }
 
 .hero-headline-wrapper::before {
@@ -738,7 +745,9 @@ a:active {
   grid-template-columns: 1fr;
   grid-gap: 5rem;
   background: var(--background-color-about);
-  padding: 3.5rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-bottom: 16rem;
   flex: 1;
 }
 
@@ -762,6 +771,7 @@ a:active {
 .about-item-2 {
   grid-column: 1 / 2;
   grid-row: 2 / 3;
+  padding: 0;
 }
 
 .about-item-3 {
@@ -785,40 +795,36 @@ a:active {
 */
 
 .global-footer {
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem;
-  background-color: #291b85;
-  margin-top: 3rem;
-  border-top-left-radius: 50px;
+  display: flex; /* Use flex for the main footer container */
+  flex-direction: column; /* Stack items in a column */
+  align-items: flex-start; /* Align all items to the left */
+  padding: 2rem; /* Keep consistent padding */
+  background-color: #291b85; /* Footer background color */
+  border-top-left-radius: 50px; /* Rounded corners */
   border-top-right-radius: 50px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
 }
 
 .footer-wrapper {
-  padding-bottom: 2rem;
-}
-
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
 }
 
-.footer-text {
-  flex: 1;
+.footer-content {
+  display: flex; /* Use flex for content layout */
+  justify-content: space-between; /* Space out the text and social icons */
+  align-items: center; /* Align items vertically */
+  width: 100%;
+}
+
+.socials-container {
+  display: flex; /* Use flex for social icons */
 }
 
 .socials-list {
-  list-style-type: none;
+  list-style-type: none; /* Remove bullet points */
   padding: 0;
-  margin: 0.5rem 0 4.5rem;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
+  margin: 0.5rem 0; /* Simplified margins */
+  display: flex; /* Use flexbox for the list items */
+  gap: 30px; /* Space between social icons */
 }
 
 .social-item {
@@ -828,9 +834,7 @@ a:active {
 .social-box {
   font-size: 0rem;
   padding: 0;
-  border: none;
-  background: none;
-  text-align: center;
+  text-align: center; /* Center align content inside social box */
 }
 
 .social-box a {
@@ -848,10 +852,15 @@ a:active {
   margin-top: 1rem;
 }
 
+.back-to-top {
+  padding-top: 1rem;
+}
+
 .smooth-scroll,
 .fineprint {
   margin: 0;
   font-size: 0.9rem;
+  padding-bottom: 1.5rem;
 }
 
 .footer-links p {
@@ -963,8 +972,8 @@ a:active {
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   margin-top: 4rem;
-  padding-left: 11rem;
-  padding-right: 11rem;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
 }
 
 .info-box {
@@ -1050,14 +1059,16 @@ a:active {
 ██      ███████ ██   ██    ██    
 */
 
+/* Fade In */
+
 /* Homepage Animation */
 
 #branding-section {
-  padding-bottom: 3rem;
+  padding-bottom: 7rem;
 }
 
 #illustration-section {
-  padding-bottom: 3rem;
+  padding-bottom: 10rem;
 }
 
 .section {
@@ -1224,32 +1235,25 @@ body {
   padding-top: 8rem;
   position: relative;
   margin: 2rem 0;
-  display: flex;
-  flex-direction: row;
-  flex: 1;
-  align-items: flex-end;
-  justify-content: space-between;
 }
 
 .nav-arrow {
   display: flex;
   align-items: center;
-}
-
-.project-name {
-  margin: 0 0.5rem;
-  color: var(--hyperlink-color);
-  font-size: 1.5rem;
+  opacity: 1; /* Ensure arrows are always visible */
+  transition: color 0.3s ease; /* Smooth transition for color change */
 }
 
 .navigation-arrow {
   text-decoration: none;
   display: flex;
   align-items: center;
+  color: var(--default-arrow-color); /* Default arrow color */
 }
 
-.navigation-arrow:hover .project-name {
-  color: var(--accent-color);
+/* Specific colors for hover state */
+.navigation-arrow:hover {
+  color: var(--hover-arrow-color); /* Change this to your desired hover color */
 }
 
 .left-arrow {
@@ -1350,6 +1354,7 @@ body {
 
 /* Small sized devices (phones 500px and up) */
 
+/* Mobile devices (less than 500px) */
 @media (max-width: 500px) {
   .project-title {
     font-size: 1.2rem;
@@ -1368,12 +1373,9 @@ body {
   }
 
   .box-container {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
     gap: 10px;
-    padding: 15px;
-    overflow-x: auto;
+    padding: 10px;
+    overflow-x: scroll;
   }
 
   .info-box {
@@ -1423,6 +1425,11 @@ body {
     align-items: center;
   }
 
+  .hero-headline-wrapper {
+    margin-bottom: 4.5rem;
+    padding-top: 8rem;
+  }
+
   .footer-content {
     margin: 0 auto;
   }
@@ -1457,60 +1464,56 @@ body {
 }
 
 /* Medium devices (tablets, 768px and up) home page */
-
 @media (min-width: 768px) {
   .grid {
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
     padding: 1rem 3.5rem 4rem 3.5rem;
-  }
-  .global-footer {
-    text-align: center;
-  }
-
-  .footer-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 0rem;
-  }
-
-  .footer-content {
-    margin: 0 auto;
-  }
-
-  .footer-text {
-    margin-bottom: 10px;
-  }
-
-  .socials-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 10px;
-  }
-
-  .socials-list {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-
-  .social-item {
-    margin: 5px 0;
   }
 
   h2 {
     padding-top: 2rem;
   }
 
+  .h7 {
+    font-size: 5rem;
+  }
+
+  p {
+    padding-right: 1rem;
+  }
+
   .fineprint {
-    margin-top: 4rem;
+    margin-top: 2rem;
     font-size: 0.8rem;
+  }
+
+  .back-to-top a {
+    padding-top: 2rem;
+  }
+
+  .footer-text {
+    padding: 0 0rem 0 1rem;
+  }
+
+  .footer-content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .footer-wrapper {
+    padding-bottom: 0;
+  }
+
+  .wrapper {
+    line-height: 2.2rem;
+  }
+
+  .navigation-links a {
+    font-size: 1.15rem;
   }
 }
 
+/* Small and medium devices (less than 768px) */
 @media (max-width: 768px) {
   .navigation-links a:nth-child(2) {
     display: none;
@@ -1541,9 +1544,111 @@ body {
     font-size: 4.5rem;
   }
 
+  .footer-content {
+    display: block; /* Remove grid or column layout */
+  }
+
+  .global-footer {
+    text-align: center;
+  }
+
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0rem;
+  }
+
+  .footer-content {
+    margin: 0 auto;
+  }
+
+  .footer-text {
+    margin-bottom: 10px;
+  }
+
+  .socials-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .footer-description {
+    display: flex;
+    font-size: 1.2rem;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 2rem;
+  }
+
+  .socials-list {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .about-image img {
+    height: auto; /* Maintain aspect ratio */
+    max-width: none; /* Prevent the image from being too large */
+  }
+
+  .socials-list a {
+    font-size: 2rem;
+  }
+
+  .social-item {
+    margin: 5px 0;
+  }
+
+  .footer-text {
+    margin-bottom: 10px;
+  }
+
+  .socials-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center social icons */
+    margin-top: 1rem; /* Add some space between text and icons */
+  }
+
+  .social-box a {
+    display: flex; /* Center the icon */
+    justify-content: center; /* Center the icon */
+    align-items: center; /* Center the icon */
+    height: 100%; /* Fill the parent height */
+    width: 100%; /* Fill the parent width */
+  }
+
+  .socials-list {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Keep flex for horizontal alignment */
+    justify-content: center; /* Center social icons */
+    margin: 0; /* Remove default margin */
+  }
+
+  .socials-list a {
+    font-size: 2rem;
+  }
+
+  .social-item {
+    margin: 5px 0;
+  }
+
+  .social-box a {
+    display: flex; /* Center the icon */
+    justify-content: center; /* Center the icon */
+    align-items: center; /* Center the icon */
+    height: 100%; /* Fill the parent height */
+    width: 100%; /* Fill the parent width */
+  }
+
   .hero-headline-wrapper {
     font-size: 1.95rem;
-    padding-bottom: 2rem;
+    padding-bottom: 6rem;
   }
 
   .wrapper {
@@ -1557,12 +1662,13 @@ body {
     padding-left: 3rem;
     padding-right: 3rem;
   }
+
   .grid {
     grid-gap: 2.2rem;
   }
 }
 
-/* 768px and up, project divisions */
+/* Project divisions for smaller screens (768px and up) */
 @media (max-width: 768px) {
   .project-title {
     font-size: 1.45rem;
@@ -1607,13 +1713,123 @@ body {
   }
 
   .about {
-    padding: 2rem;
+    padding: 3.5rem;
   }
 
   p {
     margin-top: 3rem;
-    font-size: 1.1rem;
     padding-bottom: 2rem;
+  }
+
+  .about p {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
+  .h1 {
+    padding-top: 0rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .awardswon-list {
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .awardswon-item {
+    margin: 0;
+  }
+
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-content {
+    margin: 0 auto;
+  }
+
+  .footer-text {
+    margin-bottom: 10px;
+  }
+
+  .fineprint {
+    margin-top: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .work-wrapper {
+    padding-top: 2rem;
+  }
+}
+
+.grid {
+  grid-gap: 2.2rem;
+}
+
+/* 768px and up, project divisions */
+@media (max-width: 768px) {
+  .project-title {
+    font-size: 1.45rem;
+    padding: 0.65em 1em;
+    border-radius: 15px;
+  }
+
+  .project-description {
+    padding-top: 0.2em;
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .project-wrapper {
+    padding: 0.8rem;
+  }
+
+  .box-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    overflow-x: auto;
+    padding-bottom: 1.5rem;
+    margin-top: 0.2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .info-box {
+    border: 2.5px solid #fff;
+    border-radius: 11px;
+    padding: 0.6rem;
+    text-align: center;
+    width: 80%;
+    max-width: 120px;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .about {
+    padding: 3.5rem;
+  }
+
+  p {
+    margin-top: 3rem;
+    padding-bottom: 2rem;
+  }
+
+  .about p {
+    padding-left: 0rem;
+    padding-right: 0rem;
   }
 
   .h1 {
@@ -1652,7 +1868,7 @@ body {
 
   .global-footer {
     text-align: center;
-    padding: 3.5rem 1.5rem 0rem 0rem;
+    padding: 3.5rem 0rem 0rem 0rem;
   }
 
   .footer-wrapper {
@@ -1660,10 +1876,6 @@ body {
     flex-direction: column;
     align-items: center;
     padding-bottom: 0rem;
-  }
-
-  .footer-content {
-    margin: 0 auto;
   }
 
   .footer-text {
@@ -1745,105 +1957,31 @@ body {
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
   }
-  .footer-wrapper {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .footer-content {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-  }
-
-  .footer-text {
-    flex-grow: 1;
-    text-align: left;
-  }
-
-  .socials-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-left: auto;
-  }
-
-  .socials-list {
-    font-size: 3rem;
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    gap: 10px;
-  }
-
-  .social-item {
-    margin-left: 15px;
-  }
-
-  .info-box {
-    width: auto;
-    margin: 0;
-  }
-
-  .navigation-links a {
-    font-size: 1.4rem;
-  }
-  /* TODO: Add or adjust styles here for large devices. */
-
-  .holding-page-title {
-    font-size: 2rem;
-  }
-
-  h1 {
-    font-size: 4.275rem;
-  }
-
-  h2 {
-    font-size: 2.25rem;
-  }
-
-  h3 {
-    font-size: 1.625rem;
-  }
-
-  .logo {
-    width: 5rem;
-    /* TODO: Adjust the width of the logo on large devices here. */
-  }
-
-  .hero {
-    min-height: 100vh;
-  }
-
-  .hero-headline-wrapper {
-    margin-bottom: 6.5rem;
-    padding-top: 8rem;
-  }
-
-  /* Grayscale filter with full-colour on hover and tap */
-  .work-page-grid-item a.grayscale img {
-    filter: grayscale(100);
-  }
-
-  .work-page-grid-item > a.grayscale:active img,
-  .work-page-grid-item > a.grayscale:hover img {
-    filter: grayscale(0);
-  }
 
   .about {
     grid-template-columns: 1fr 1fr;
   }
 
   .global-footer {
-    padding: 4rem 4rem 0 4rem;
+    padding: 3rem 5rem 0 5rem;
     grid-template-columns: 1fr;
   }
 
   .about-item-1 {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+  }
+
+  .about {
+    display: flex; /* Ensure flex display */
+  }
+
+  .about-item-1 {
+    flex: 2; /* Adjust as needed */
+  }
+
+  .about-item-2 {
+    flex: 1.1; /* Adjust as needed */
   }
 
   .footer-item-1 {
@@ -1873,6 +2011,106 @@ body {
     align-self: end;
   }
 
+  .footer-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 0.7rem;
+    padding-right: 0rem;
+  }
+
+  .footer-text {
+    flex-grow: 1;
+    text-align: left;
+  }
+
+  .socials-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; /* Aligns items to the right */
+    margin-left: auto; /* This pushes the container to the right */
+    padding: 10px; /* Optional: Add padding if needed */
+    width: 50%; /* Make sure it occupies the full width of its parent */
+  }
+
+  .socials-list {
+    font-size: 3rem;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 10px;
+  }
+
+  .box-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin-top: 4rem;
+    padding-left: 16rem;
+    padding-right: 16rem;
+  }
+
+  .social-item {
+    margin-left: 15px;
+  }
+
+  .info-box {
+    width: auto;
+    margin: 0;
+  }
+
+  /* TODO: Add or adjust styles here for large devices. */
+
+  .holding-page-title {
+    font-size: 2rem;
+  }
+
+  h1 {
+    font-size: 4.275rem;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+  }
+
+  h3 {
+    font-size: 1.625rem;
+  }
+
+  .h7 {
+    font-size: 5rem;
+  }
+  .logo {
+    width: 5rem;
+    /* TODO: Adjust the width of the logo on large devices here. */
+  }
+
+  .hero {
+    min-height: 100vh;
+  }
+
+  .hero-headline-wrapper {
+    margin-bottom: 4.5rem;
+    padding-top: 8rem;
+  }
+
+  /* Grayscale filter with full-colour on hover and tap */
+  .work-page-grid-item a.grayscale img {
+    filter: grayscale(100);
+  }
+
+  .work-page-grid-item > a.grayscale:active img,
+  .work-page-grid-item > a.grayscale:hover img {
+    filter: grayscale(0);
+  }
+
   */
 
   /* Project Page Flex Direction on Large Devices */
@@ -1895,8 +2133,8 @@ body {
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
     margin-top: 4rem;
-    padding-left: 16rem;
-    padding-right: 16rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 
   /* Main Project Image Area on Large Devices */
@@ -1922,15 +2160,38 @@ body {
 @media (min-width: 1200px) {
   /* TODO: Add styles here for X-large devices. */
 
-  /* .grid {
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-  } */
+  .socials-list a {
+    font-size: 2.3rem;
+  }
+
   .grid {
     grid-template-columns: repeat(
-      3,
+      2,
       minmax(200px, 1fr)
-    ); /* Ensure it's still 3 columns */
+    ); /* Increase minimum size */
     padding: 0 5rem 5rem 5rem;
+    gap: 20px;
+  }
+
+  .section-title {
+    font-size: 3.7rem;
+  }
+
+  .h7 {
+    font-size: 7rem;
+  }
+
+  .wrapper {
+    padding: 1rem 2rem 5rem 2rem;
+  }
+
+  .about-item-2 p {
+    padding-right: 0.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.7rem;
   }
 }
 
