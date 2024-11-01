@@ -1345,6 +1345,8 @@ body {
   left: 0;
 }
 
+/* slide in */
+
 /*
 
 ███    ███ ███████ ██████  ██  █████       ██████  ██    ██ ███████ ██████  ██ ███████ ███████ 
@@ -1364,7 +1366,6 @@ body {
   }
 
   .project-description {
-    padding-top: 0.1em;
     font-size: 0.85rem;
     margin-bottom: 1.3rem;
   }
@@ -1374,11 +1375,21 @@ body {
   .info-box,
   .footer-wrapper {
     padding: 0.5rem;
+    display: flex;
+    flex-direction: column; /* Ensure vertical stacking */
+    align-items: center; /* Center-align the items */
   }
 
-  .box-container {
-    gap: 10px;
-    overflow-x: auto;
+  .box-container,
+  .grid {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    width: 100%; /* Make sure it takes the full width */
+  }
+
+  .box-container > .info-box, /* Ensure items are full width */
+  .grid > .project-item {
+    width: 100%; /* Set each item to take full width */
   }
 
   .info-box {
@@ -1386,14 +1397,8 @@ body {
     border-radius: 10px;
     padding: 0.5rem;
     text-align: center;
-    width: 90%;
-    max-width: 100px;
-    box-sizing: border-box;
-    position: relative;
-  }
-
-  p {
-    margin-top: 2rem;
+    width: 90%; /* Adjust width to fit better on small screens */
+    max-width: none; /* Remove max-width restriction */
   }
 
   h2 {
@@ -1402,124 +1407,97 @@ body {
     margin: 4rem 0 1rem;
   }
 
-  .awardswon-list {
-    text-align: center;
-    padding-left: 0;
-  }
-
-  .awardswon-item {
-    margin: 0;
-  }
-
   a:link {
     font-size: 1rem;
   }
 
-  .global-footer,
-  .footer-wrapper {
-    text-align: center;
-  }
-
-  .footer-wrapper {
-    flex-direction: column;
-  }
   .wrapper {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  .hero-headline-wrapper {
-    margin-bottom: 2.5rem;
-    padding-top: 5rem;
+    padding: 0 2rem;
   }
 
-  .footer-content {
-    margin: 0 auto;
+  .footer-wrapper {
+    flex-direction: column; /* Stack footer items vertically */
+    align-items: center; /* Center align the items */
   }
 
-  .footer-text {
-    margin-bottom: 10px;
-  }
-
-  .socials-container,
-  .socials-list {
+  .footer-links {
     display: flex;
-    justify-content: center;
-    margin-top: 10px;
-  }
-
-  .social-item {
-    margin: 5px 0;
+    flex-direction: column; /* Stack footer links vertically */
+    gap: 0.5rem; /* Space between links */
   }
 
   .fineprint {
-    margin-top: 10px;
-    font-size: 0.8rem;
-  }
-}
-
-/* Medium devices (tablets, 768px and up) home page */
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
-    padding: 1rem 3.5rem 4rem 3.5rem;
-  }
-
-  h2 {
-    padding-top: 2rem;
-  }
-
-  .h7 {
-    font-size: 5rem;
-  }
-
-  p {
-    padding-right: 1rem;
-  }
-
-  .fineprint {
-    margin-top: 2rem;
     font-size: 0.8rem;
   }
 
-  .back-to-top a {
-    padding-top: 2rem;
+  /* Hide the work link and ensure the about link is singular */
+  .navigation-links {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
   }
 
-  .footer-text {
-    padding: 0 0rem 0 1rem;
+  .navigation-links .work-link {
+    display: none; /* Hide Work link on small screens */
   }
 
-  .footer-content {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .footer-wrapper {
-    padding-bottom: 0;
-  }
-
-  .wrapper {
-    line-height: 2.2rem;
-  }
-
-  .navigation-links a {
-    font-size: 1.15rem;
+  .navigation-links .about-link {
+    display: block; /* Ensure About link is visible */
   }
 
   .hero-headline-wrapper {
-    margin-bottom: 4.5rem;
-    padding-top: 8rem;
+    padding-bottom: 4rem;
   }
 }
 
-/* Small and medium devices (less than 768px) */
+/* Medium and small devices (max-width: 768px) */
 @media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* Stack the grid items vertically */
+    padding: 1rem 3.5rem 4rem;
+  }
+  .project-title {
+    font-size: 1.45rem;
+    padding: 0.65em 1em;
+  }
+
   .navigation-links a:nth-child(2) {
     display: none;
   }
 
   .branding-navigation {
     justify-content: space-between;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+    padding: 0 2rem;
+  }
+
+  .box-container {
+    display: flex;
+    flex-direction: row; /* Stack vertically */
+    overflow: hidden; /* Prevent horizontal scrolling */
+  }
+
+  .project-wrapper {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .info-box {
+    border: 2.5px solid #fff;
+    border-radius: 11px;
+    padding: 0.6rem;
+    width: 80%;
+    max-width: 120px;
+  }
+
+  .navigation-links .work-link {
+    display: none; /* Hide Work link */
+  }
+
+  .navigation-links .about-link {
+    display: block; /* Ensure About link is visible */
   }
 
   .logo {
@@ -1531,16 +1509,64 @@ body {
   }
 
   .navigation-links a {
+    font-size: 1.3rem;
     margin-left: 0;
   }
 
-  .h3 {
-    font-size: 1.15rem;
-    line-height: 1.6rem;
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 0.5rem 0 1.5rem;
+  }
+
+  .about {
+    padding: 3.5rem;
+  }
+
+  .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-text,
+  .footer-content {
+    margin: 0 auto;
+  }
+
+  .work-wrapper {
+    padding-top: 4.5rem;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column; /* Stack grid items vertically */
+    padding: 1rem 1.8rem 1.8rem;
+    gap: 2.2rem;
+  }
+
+  h2 {
+    padding-top: 2rem;
   }
 
   .h7 {
-    font-size: 4.5rem;
+    font-size: 5rem;
+    padding-top: 8rem;
+  }
+
+  p {
+    padding-right: 1rem;
+  }
+
+  .wrapper {
+    font-size: 1.15rem;
+    line-height: 2rem;
+    padding-left: 2.2rem;
+    padding-right: 2.2rem;
   }
 
   .footer-content {
@@ -1566,45 +1592,21 @@ body {
     margin-bottom: 10px;
   }
 
-  .socials-container {
+  .footer-links {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 10px;
+    flex-direction: column;
+    gap: 0.5rem; /* Space between links */
   }
 
-  .footer-description {
+  .projects-container {
     display: flex;
-    font-size: 1.2rem;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-image {
     width: 100%;
-    padding-bottom: 2rem;
-  }
-
-  .socials-list {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-
-  .about-image img {
-    height: auto; /* Maintain aspect ratio */
-    max-width: none; /* Prevent the image from being too large */
-  }
-
-  .socials-list a {
-    font-size: 2rem;
-  }
-
-  .social-item {
-    margin: 5px 0;
-  }
-
-  .footer-text {
-    margin-bottom: 10px;
+    margin-bottom: 1rem; /* Adjust for spacing between images */
   }
 
   .socials-container {
@@ -1629,294 +1631,9 @@ body {
     margin: 0; /* Remove default margin */
   }
 
-  .socials-list a {
-    font-size: 2rem;
-  }
-
-  .social-item {
-    margin: 5px 0;
-  }
-
-  .social-box a {
-    display: flex; /* Center the icon */
-    justify-content: center; /* Center the icon */
-    align-items: center; /* Center the icon */
-    height: 100%; /* Fill the parent height */
-    width: 100%; /* Fill the parent width */
-  }
-
-  .hero-headline-wrapper {
-    font-size: 1.95rem;
-    padding-bottom: 6rem;
-  }
-
-  .wrapper {
-    font-size: 1.1rem;
-    line-height: 1.9rem;
-  }
-
-  .work-wrapper {
-    padding: 1.3rem;
-    padding-top: 7.5rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-
-  .grid {
-    grid-gap: 2.2rem;
-  }
-}
-
-/* Project divisions for smaller screens (768px and up) */
-@media (max-width: 768px) {
-  .project-title {
-    font-size: 1.45rem;
-    padding: 0.65em 1em;
-    border-radius: 15px;
-  }
-
-  .project-description {
-    padding-top: 0.2em;
-    font-size: 0.9rem;
-    margin-bottom: 0.2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .project-wrapper {
-    padding: 0.8rem;
-  }
-
-  .box-container {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 15px;
-    padding: 20px;
-    overflow-x: auto;
-    padding-bottom: 1.5rem;
-    margin-top: 0.2rem;
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-
-  .info-box {
-    border: 2.5px solid #fff;
-    border-radius: 11px;
-    padding: 0.6rem;
-    text-align: center;
-    width: 80%;
-    max-width: 120px;
-    box-sizing: border-box;
-    position: relative;
-  }
-
-  .about {
-    padding: 3.5rem;
-  }
-
-  p {
-    margin-top: 3rem;
-    padding-bottom: 2rem;
-  }
-
-  .about p {
-    padding-left: 0rem;
-    padding-right: 0rem;
-  }
-
-  .h1 {
-    padding-top: 0rem;
-  }
-
-  h2 {
-    font-size: 2.2rem;
-    text-align: center;
-    margin-top: 0.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .awardswon-list {
-    text-align: center;
-    padding-left: 0;
-  }
-
-  .awardswon-item {
-    margin: 0;
-  }
-
-  .footer-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .footer-content {
-    margin: 0 auto;
-  }
-
-  .footer-text {
-    margin-bottom: 10px;
-  }
-
-  .fineprint {
-    margin-top: 1rem;
-    font-size: 0.8rem;
-  }
-
-  .work-wrapper {
-    padding-top: 2rem;
-  }
-}
-
-.grid {
-  grid-gap: 2.2rem;
-}
-
-/* 768px and up, project divisions */
-@media (max-width: 768px) {
-  .project-title {
-    font-size: 1.45rem;
-    padding: 0.65em 1em;
-    border-radius: 15px;
-  }
-
-  .project-description {
-    padding-top: 0.2em;
-    font-size: 0.9rem;
-    margin-bottom: 0.2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .project-wrapper {
-    padding: 0.8rem;
-  }
-
-  .box-container {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 15px;
-    padding: 20px;
-    overflow-x: auto;
-    padding-bottom: 1.5rem;
-    margin-top: 0.2rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .info-box {
-    border: 2.5px solid #fff;
-    border-radius: 11px;
-    padding: 0.6rem;
-    text-align: center;
-    width: 80%;
-    max-width: 120px;
-    box-sizing: border-box;
-    position: relative;
-  }
-
-  .about {
-    padding: 3.5rem;
-  }
-
-  p {
-    margin-top: 3rem;
-    padding-bottom: 2rem;
-  }
-
-  .about p {
-    padding-left: 0rem;
-    padding-right: 0rem;
-  }
-
-  .h1 {
-    padding-top: 0rem;
-  }
-
-  h2 {
-    font-size: 2.2rem;
-    text-align: center;
-    margin-top: 0.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .awardswon-list {
-    text-align: center;
-    padding-left: 0;
-  }
-
-  .awardswon-item {
-    margin: 0;
-  }
-
-  .about-item-1 {
-    padding-top: 0.2rem;
-  }
-
-  a:link {
-    color: var(--hyperlink-color);
-    text-decoration: none;
-    font-size: 1.3rem;
-  }
-
-  .work-wrapper {
-    margin-bottom: 10rem;
-  }
-
-  .global-footer {
-    text-align: center;
-    padding: 3.5rem 0rem 0rem 0rem;
-  }
-
-  .footer-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 0rem;
-  }
-
-  .footer-text {
-    margin-bottom: 10px;
-  }
-
-  .socials-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin-top: 10px;
-  }
-
-  .socials-list {
-    font-size: 2rem;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-  }
-
-  .social-item {
-    margin: 5px 0;
-  }
-
-  .social-box a {
-    font-size: 2.3rem;
-  }
-
-  .fineprint {
-    margin-top: 2.5rem;
-    font-size: 0.8rem;
-  }
-
   .project-details {
     flex-direction: column;
-  }
-
-  .project-details {
     display: flex;
-    flex-direction: column;
     align-items: center;
   }
 
@@ -1939,11 +1656,99 @@ body {
     flex-direction: column;
     align-items: center;
   }
-  .project-name {
-    font-size: 1rem;
-    font-weight: 300;
+
+  .footer-description {
+    display: flex;
+    font-size: 1.2rem;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 2rem;
   }
-  .navigation-arrow:link {
+
+  .socials-list {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .fineprint {
+    font-size: 0.8rem;
+  }
+}
+
+/* Larger than 768px (min-width: 768px) */
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    padding: 1rem 3rem 3rem;
+  }
+
+  h2 {
+    padding-top: 2rem;
+  }
+
+  .h7 {
+    padding-top: 8rem;
+  }
+
+  p {
+    padding-right: 1rem;
+  }
+
+  .wrapper {
+    line-height: 2.2rem;
+  }
+
+  .navigation-links a {
+    font-size: 1.15rem;
+  }
+
+  .footer-wrapper {
+    padding-bottom: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  /* Shared styling for the global footer and social media links across all sizes */
+
+  footer {
+    padding: 1rem 0; /* Adjust for vertical padding */
+    font-size: 0.9rem; /* Adjust font size for readability on smaller screens */
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Space between links */
+  }
+
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-image {
+    width: 100%;
+    margin-bottom: 1rem; /* Adjust for spacing between images */
+  }
+
+  .socials-container,
+  .socials-list {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .social-item {
+    margin: 5px 0;
+  }
+
+  .fineprint {
     font-size: 0.8rem;
   }
 }
@@ -2050,12 +1855,7 @@ body {
   .box-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    margin-top: 4rem;
-    padding-left: 16rem;
-    padding-right: 16rem;
   }
-
   .social-item {
     margin-left: 15px;
   }
@@ -2064,48 +1864,6 @@ body {
     width: auto;
     margin: 0;
   }
-
-  /* TODO: Add or adjust styles here for large devices. */
-
-  .holding-page-title {
-    font-size: 2rem;
-  }
-
-  h1 {
-    font-size: 4.275rem;
-  }
-
-  h2 {
-    font-size: 2.25rem;
-  }
-
-  h3 {
-    font-size: 1.625rem;
-  }
-
-  .h7 {
-    font-size: 5rem;
-  }
-  .logo {
-    width: 5rem;
-    /* TODO: Adjust the width of the logo on large devices here. */
-  }
-
-  .hero {
-    min-height: 100vh;
-  }
-
-  /* Grayscale filter with full-colour on hover and tap */
-  .work-page-grid-item a.grayscale img {
-    filter: grayscale(100);
-  }
-
-  .work-page-grid-item > a.grayscale:active img,
-  .work-page-grid-item > a.grayscale:hover img {
-    filter: grayscale(0);
-  }
-
-  */
 
   /* Project Page Flex Direction on Large Devices */
   .project-wrapper {
@@ -2119,14 +1877,6 @@ body {
   }
 
   .project-description {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-  .box-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    margin-top: 4rem;
     padding-left: 6rem;
     padding-right: 6rem;
   }
@@ -2147,45 +1897,77 @@ body {
   .arrow {
     padding-right: 1rem;
   }
+
+  .holding-page-title {
+    font-size: 2rem;
+  }
+
+  h1 {
+    font-size: 4.275rem;
+  }
+
+  h2 {
+    font-size: 2.25rem;
+  }
+
+  h3 {
+    font-size: 1.625rem;
+  }
+
+  .h7 {
+    font-size: 5rem;
+    padding-top: 8rem;
+  }
+
+  .logo {
+    width: 5rem;
+  }
+
+  .hero {
+    min-height: 100vh;
+  }
+
+  /* Grayscale filter with full-colour on hover and tap */
+  .work-page-grid-item a.grayscale img {
+    filter: grayscale(100);
+  }
+
+  .work-page-grid-item > a.grayscale:active img,
+  .work-page-grid-item > a.grayscale:hover img {
+    filter: grayscale(0);
+  }
+
+  .image-wrapper {
+    padding: 0.2rem 0.4rem;
+    border: 0.4rem solid white;
+    border-radius: 20px;
+  }
 }
 
 /* X-Large devices (large desktops, 1200px and up)*/
 
 @media (min-width: 1200px) {
   /* TODO: Add styles here for X-large devices. */
-
-  .socials-list a {
-    font-size: 2.3rem;
-  }
-
   .grid {
     grid-template-columns: repeat(
       2,
       minmax(200px, 1fr)
     ); /* Increase minimum size */
-    padding: 0 5rem 5rem 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     gap: 30px;
   }
 
-  .section-title {
-    font-size: 3.7rem;
+  .project-title {
+    font-size: 2rem;
   }
 
-  .h7 {
-    font-size: 7rem;
+  .project-wrapper {
+    padding: 3rem;
   }
 
-  .wrapper {
-    padding: 1rem 2rem 5rem 2rem;
-  }
-
-  .about-item-2 p {
-    padding-right: 0.5rem;
-  }
-
-  p {
-    font-size: 1rem;
-    line-height: 1.7rem;
+  .work-wrapper {
+    padding: 2rem 2rem;
   }
 }
 
