@@ -237,9 +237,9 @@ p {
 
 .footer-description {
   font-weight: 300;
-  font-size: 1.2rem;
-  margin-top: 0.4rem;
+  font-size: 1.1rem;
   line-height: 1.9rem;
+  padding-bottom: 2rem;
 }
 
 em {
@@ -647,8 +647,9 @@ a:active {
 .work-wrapper {
   flex: 1;
   margin: 0.5rem;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .specialization-section {
@@ -690,9 +691,18 @@ a:active {
   opacity: 1;
 }
 
+.work-page-grid-item img {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.work-page-grid-item img.in-view {
+  opacity: 1;
+}
+
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 1.5rem;
 }
 
@@ -702,6 +712,11 @@ a:active {
   position: relative;
   border-radius: 25px;
   overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.work-page-grid-item:hover {
+  transform: scale(1.05);
 }
 
 /* Overlay */
@@ -714,14 +729,13 @@ a:active {
   width: 100%;
   height: 100%;
   opacity: 0;
-  transition: 0.75s ease;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 1em;
-  background-color: #645fff;
-  transition: opacity 0.3s, visibility 0.3s;
+  background-color: rgba(100, 95, 255, 0.8);
 }
 
 .work-page-grid-item:hover .overlay {
@@ -929,7 +943,7 @@ a:active {
 }
 
 .project-image {
-  background-color: #645fff;
+  /* background-color: #645fff; */
   display: inline-block;
   border-radius: 25px;
   overflow: hidden;
@@ -937,8 +951,6 @@ a:active {
 
 .large-box {
   width: 100%;
-  height: 550px;
-  background-color: #645fff;
 }
 
 .project-image img {
@@ -995,8 +1007,6 @@ a:active {
   text-align: center;
   padding-bottom: 6rem;
 }
-
-/* Main Project Image Area */
 
 /* 
 
@@ -1063,16 +1073,43 @@ a:active {
 ██      ███████ ██   ██    ██    
 */
 
-/* Fade In */
-
 /* Homepage Animation */
 
 #branding-section {
-  padding-bottom: 7rem;
+  padding-bottom: 12rem;
 }
 
 #illustration-section {
-  padding-bottom: 10rem;
+  padding-bottom: 12rem;
+}
+
+body.branding-active .hero-headline-wrapper::before,
+body.branding-active .hero-headline-wrapper,
+body.branding-active .global-footer {
+  background-color: #000028; /* Light grey for Branding */
+}
+
+/* Styles for Illustration section */
+body.illustration-active .hero-headline-wrapper::before,
+body.illustration-active .hero-headline-wrapper,
+body.illustration-active .global-footer {
+  background-color: #8e56e9; /* Light blue for Illustration */
+  color: #fff; /* Text color for illustration */
+}
+
+/* Transition */
+.hero-headline-wrapper,
+.global-footer {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Section-specific background colors */
+.portfolio.section {
+  display: none; /* Hide sections by default */
+}
+
+.portfolio.section.active {
+  display: block; /* Show the active section */
 }
 
 .section {
@@ -1091,10 +1128,6 @@ body {
   opacity: 1;
   transition: opacity 0.5s;
 }
-.dark-mode {
-  background-color: #343a40;
-  color: #ffffff;
-}
 
 .arrow-button {
   cursor: pointer;
@@ -1102,7 +1135,17 @@ body {
   margin: 2rem;
   color: #281761;
   transition: color 0.3s;
+  padding-top: 9rem;
 }
+
+.fa-arrow-left {
+  padding-left: 0.6rem;
+}
+
+.fa-arrow-right {
+  padding-right: 0.6rem;
+}
+
 .arrow-button:hover {
   color: #a047cc;
 }
@@ -1347,6 +1390,22 @@ body {
 
 /* slide in */
 
+.no-scroll {
+  overflow: hidden;
+}
+
+.project-image {
+  opacity: 0; /* Initially very hidden */
+  transform: translateY(50px); /* Start from much lower */
+  transition: opacity 1s ease, transform 1s ease; /* Adjust transition duration */
+}
+
+/* Class to apply when the element is in view */
+.in-view {
+  opacity: 1; /* Fully visible */
+  transform: translateY(0); /* Move back to original position */
+}
+
 /*
 
 ███    ███ ███████ ██████  ██  █████       ██████  ██    ██ ███████ ██████  ██ ███████ ███████ 
@@ -1446,6 +1505,11 @@ body {
 
   .hero-headline-wrapper {
     padding-bottom: 4rem;
+  }
+  .fa-arrow-right,
+  .fa-arrow-left {
+    /* padding-left: 0.4rem; */
+    position: fixed;
   }
 }
 
@@ -1550,7 +1614,7 @@ body {
   }
 
   h2 {
-    padding-top: 2rem;
+    padding-top: 1rem;
   }
 
   .h7 {
@@ -1709,8 +1773,11 @@ body {
 
   .footer-wrapper {
     padding-bottom: 0;
-    padding-left: 2rem;
-    padding-right: 2rem;
+  }
+
+  .global-footer {
+    padding: 3rem 5rem 0 5rem;
+    grid-template-columns: 1fr;
   }
 
   /* Shared styling for the global footer and social media links across all sizes */
@@ -1734,7 +1801,7 @@ body {
 
   .project-image {
     width: 100%;
-    margin-bottom: 1rem; /* Adjust for spacing between images */
+    margin-bottom: 0.2rem; /* Adjust for spacing between images */
   }
 
   .socials-container,
@@ -1967,7 +2034,7 @@ body {
   }
 
   .work-wrapper {
-    padding: 2rem 2rem;
+    padding: 2.6rem 2.6rem;
   }
 }
 
