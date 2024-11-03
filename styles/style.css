@@ -165,7 +165,7 @@ h1 {
   font-size: 2rem;
   font-family: var(--heading-typeface);
   margin-bottom: 1rem;
-  color: var(--h1-color);
+  color: #000028;
   font-weight: 500;
   padding-top: 4rem;
 }
@@ -228,11 +228,16 @@ h6 {
   margin-bottom: 4rem;
 }
 
+.about p {
+  color: #000028;
+}
+
 p {
   font-size: 1rem;
   line-height: 1.8;
   margin-bottom: 1rem;
   margin-top: 4rem;
+  color: #ffffff;
 }
 
 .footer-description {
@@ -812,7 +817,7 @@ a:active {
   flex-direction: column;
   align-items: flex-start;
   padding: 2rem;
-  background-color: #291b85;
+  background-color: #000028;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
 }
@@ -1000,7 +1005,7 @@ a:active {
 }
 
 .star {
-  color: #ffffff;
+  color: #000028;
 }
 
 .awardswon-list {
@@ -1086,15 +1091,14 @@ a:active {
 body.branding-active .hero-headline-wrapper::before,
 body.branding-active .hero-headline-wrapper,
 body.branding-active .global-footer {
-  background-color: #000028; /* Light grey for Branding */
+  background-color: #000028;
 }
 
-/* Styles for Illustration section */
 body.illustration-active .hero-headline-wrapper::before,
 body.illustration-active .hero-headline-wrapper,
 body.illustration-active .global-footer {
-  background-color: #8e56e9; /* Light blue for Illustration */
-  color: #fff; /* Text color for illustration */
+  background-color: #8e56e9;
+  color: #fff;
 }
 
 /* Transition */
@@ -1105,11 +1109,11 @@ body.illustration-active .global-footer {
 
 /* Section-specific background colors */
 .portfolio.section {
-  display: none; /* Hide sections by default */
+  display: none;
 }
 
 .portfolio.section.active {
-  display: block; /* Show the active section */
+  display: block;
 }
 
 .section {
@@ -1133,9 +1137,9 @@ body {
   cursor: pointer;
   font-size: 2rem;
   margin: 2rem;
-  color: #281761;
+  color: #000028;
   transition: color 0.3s;
-  padding-top: 9rem;
+  padding-top: 6rem;
 }
 
 .fa-arrow-left {
@@ -1297,7 +1301,15 @@ body {
   text-decoration: none;
   display: flex;
   align-items: center;
-  color: var(--default-arrow-color);
+  transition: color 0.3s;
+}
+
+.navigation-arrow:visited {
+  color: #000028; /* Keep the default color for visited state */
+}
+
+.navigation-arrow:hover {
+  color: #a047cc; /* Hover color for the arrows */
 }
 
 .left-arrow {
@@ -1395,15 +1407,14 @@ body {
 }
 
 .project-image {
-  opacity: 0; /* Initially very hidden */
-  transform: translateY(50px); /* Start from much lower */
-  transition: opacity 1s ease, transform 1s ease; /* Adjust transition duration */
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
 }
 
-/* Class to apply when the element is in view */
 .in-view {
-  opacity: 1; /* Fully visible */
-  transform: translateY(0); /* Move back to original position */
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /*
@@ -1435,20 +1446,20 @@ body {
   .footer-wrapper {
     padding: 0.5rem;
     display: flex;
-    flex-direction: column; /* Ensure vertical stacking */
-    align-items: center; /* Center-align the items */
+    flex-direction: column;
+    align-items: center;
   }
 
   .box-container,
   .grid {
     display: flex;
-    flex-direction: column; /* Stack items vertically */
-    width: 100%; /* Make sure it takes the full width */
+    flex-direction: column;
+    width: 100%;
   }
 
-  .box-container > .info-box, /* Ensure items are full width */
+  .box-container > .info-box,
   .grid > .project-item {
-    width: 100%; /* Set each item to take full width */
+    width: 100%;
   }
 
   .info-box {
@@ -1456,8 +1467,8 @@ body {
     border-radius: 10px;
     padding: 0.5rem;
     text-align: center;
-    width: 90%; /* Adjust width to fit better on small screens */
-    max-width: none; /* Remove max-width restriction */
+    width: 90%;
+    max-width: none;
   }
 
   h2 {
@@ -1475,14 +1486,14 @@ body {
   }
 
   .footer-wrapper {
-    flex-direction: column; /* Stack footer items vertically */
-    align-items: center; /* Center align the items */
+    flex-direction: column;
+    align-items: center;
   }
 
   .footer-links {
     display: flex;
     flex-direction: column; /* Stack footer links vertically */
-    gap: 0.5rem; /* Space between links */
+    gap: 0.5rem;
   }
 
   .fineprint {
@@ -1492,15 +1503,15 @@ body {
   /* Hide the work link and ensure the about link is singular */
   .navigation-links {
     display: flex;
-    flex-direction: column; /* Stack links vertically */
+    flex-direction: column;
   }
 
   .navigation-links .work-link {
-    display: none; /* Hide Work link on small screens */
+    display: none;
   }
 
   .navigation-links .about-link {
-    display: block; /* Ensure About link is visible */
+    display: block;
   }
 
   .hero-headline-wrapper {
@@ -1508,7 +1519,6 @@ body {
   }
   .fa-arrow-right,
   .fa-arrow-left {
-    /* padding-left: 0.4rem; */
     position: fixed;
   }
 }
@@ -1516,7 +1526,7 @@ body {
 /* Medium and small devices (max-width: 768px) */
 @media (max-width: 768px) {
   .grid {
-    grid-template-columns: 1fr; /* Stack the grid items vertically */
+    grid-template-columns: 1fr;
     padding: 1rem 3.5rem 4rem;
   }
   .project-title {
@@ -1539,8 +1549,8 @@ body {
 
   .box-container {
     display: flex;
-    flex-direction: row; /* Stack vertically */
-    overflow: hidden; /* Prevent horizontal scrolling */
+    flex-direction: row;
+    overflow: hidden;
   }
 
   .project-wrapper {
@@ -1557,11 +1567,11 @@ body {
   }
 
   .navigation-links .work-link {
-    display: none; /* Hide Work link */
+    display: none;
   }
 
   .navigation-links .about-link {
-    display: block; /* Ensure About link is visible */
+    display: block;
   }
 
   .logo {
@@ -1581,10 +1591,13 @@ body {
     font-size: 2.2rem;
   }
 
+  .h1 {
+    padding-top: 0rem;
+  }
   h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     text-align: center;
-    margin: 0.5rem 0 1.5rem;
+    margin: 0.5rem 0 0.5rem;
   }
 
   .about {
@@ -1608,8 +1621,8 @@ body {
 
   .grid {
     display: flex;
-    flex-direction: column; /* Stack grid items vertically */
-    padding: 1rem 1.8rem 1.8rem;
+    flex-direction: column;
+    padding: 1rem 0.7rem 0.7rem;
     gap: 2.2rem;
   }
 
@@ -1624,6 +1637,7 @@ body {
 
   p {
     padding-right: 1rem;
+    padding-bottom: 1.8rem;
   }
 
   .wrapper {
@@ -1634,7 +1648,7 @@ body {
   }
 
   .footer-content {
-    display: block; /* Remove grid or column layout */
+    display: block;
   }
 
   .global-footer {
@@ -1659,7 +1673,7 @@ body {
   .footer-links {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem; /* Space between links */
+    gap: 0.5rem;
   }
 
   .projects-container {
@@ -1670,29 +1684,37 @@ body {
 
   .project-image {
     width: 100%;
-    margin-bottom: 1rem; /* Adjust for spacing between images */
+    margin-bottom: 1rem;
   }
 
   .socials-container {
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center social icons */
-    margin-top: 1rem; /* Add some space between text and icons */
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5rem;
   }
 
   .social-box a {
-    display: flex; /* Center the icon */
-    justify-content: center; /* Center the icon */
-    align-items: center; /* Center the icon */
-    height: 100%; /* Fill the parent height */
-    width: 100%; /* Fill the parent width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
   }
 
   .socials-list {
-    list-style: none; /* Remove default list styling */
-    padding: 0; /* Remove default padding */
-    display: flex; /* Keep flex for horizontal alignment */
-    justify-content: center; /* Center social icons */
-    margin: 0; /* Remove default margin */
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .fa-arrow-right {
+    font-size: 1.8rem;
+  }
+
+  .fa-arrow-left {
+    font-size: 1.8rem;
   }
 
   .project-details {
@@ -1723,11 +1745,11 @@ body {
 
   .footer-description {
     display: flex;
-    font-size: 1.2rem;
+    font-size: 1rem;
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
   }
 
   .socials-list {
@@ -1740,6 +1762,8 @@ body {
 
   .fineprint {
     font-size: 0.8rem;
+    padding-top: 3.5rem;
+    padding-bottom: 0rem;
   }
 }
 
@@ -1768,7 +1792,7 @@ body {
   }
 
   .navigation-links a {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
   }
 
   .footer-wrapper {
@@ -1780,17 +1804,19 @@ body {
     grid-template-columns: 1fr;
   }
 
-  /* Shared styling for the global footer and social media links across all sizes */
-
   footer {
-    padding: 1rem 0; /* Adjust for vertical padding */
-    font-size: 0.9rem; /* Adjust font size for readability on smaller screens */
+    padding: 1rem 0;
+    font-size: 0.9rem;
+  }
+
+  .footer-left {
+    padding-right: 5rem;
   }
 
   .footer-links {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem; /* Space between links */
+    gap: 0.5rem;
   }
 
   .projects-container {
@@ -1801,7 +1827,7 @@ body {
 
   .project-image {
     width: 100%;
-    margin-bottom: 0.2rem; /* Adjust for spacing between images */
+    margin-bottom: 0.2rem;
   }
 
   .socials-container,
@@ -1816,7 +1842,15 @@ body {
   }
 
   .fineprint {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+  }
+
+  .fa-arrow-right {
+    padding-right: 0rem;
+  }
+
+  .fa-arrow-left {
+    padding-left: 0rem;
   }
 }
 
@@ -1841,18 +1875,20 @@ body {
   .about-item-1 {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
+    padding-top: 4.3rem;
   }
 
   .about {
-    display: flex; /* Ensure flex display */
+    display: flex;
+    padding-top: 3.5rem;
   }
 
   .about-item-1 {
-    flex: 2; /* Adjust as needed */
+    flex: 2;
   }
 
   .about-item-2 {
-    flex: 1.1; /* Adjust as needed */
+    flex: 1.1;
   }
 
   .footer-item-1 {
@@ -1892,7 +1928,6 @@ body {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding-left: 0.7rem;
     padding-right: 0rem;
   }
 
@@ -1904,10 +1939,10 @@ body {
   .socials-container {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end; /* Aligns items to the right */
-    margin-left: auto; /* This pushes the container to the right */
-    padding: 10px; /* Optional: Add padding if needed */
-    width: 50%; /* Make sure it occupies the full width of its parent */
+    justify-content: flex-end;
+    margin-left: auto;
+    padding: 10px;
+    width: 50%;
   }
 
   .socials-list {
@@ -2014,12 +2049,8 @@ body {
 /* X-Large devices (large desktops, 1200px and up)*/
 
 @media (min-width: 1200px) {
-  /* TODO: Add styles here for X-large devices. */
   .grid {
-    grid-template-columns: repeat(
-      2,
-      minmax(200px, 1fr)
-    ); /* Increase minimum size */
+    grid-template-columns: repeat(2, minmax(200px, 1fr));
     padding-left: 2rem;
     padding-right: 2rem;
     gap: 30px;

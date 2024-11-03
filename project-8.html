@@ -19,16 +19,16 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
 
-  <body class="work-page section-eight">
+  <body class="work-page">
     <div class="hero-background">
       <header class="hero-header">
-        <nav class="navigation-wrapper">
+        <div class="navigation-wrapper">
           <ul class="branding-navigation">
             <li class="logo">
               <a href="work.html">
                 <img
                   src="assets/pictures/logo-web.svg"
-                  alt="Makayla Crenshaw Logo"
+                  alt="Makayla Crenshaw logo"
                   style="width: 5rem; height: auto"
                 />
               </a>
@@ -38,7 +38,7 @@
               <a href="work.html" class="custom-navigation">Work</a>
             </li>
           </ul>
-        </nav>
+        </div>
       </header>
 
       <div class="project-wrapper eight">
@@ -102,12 +102,12 @@
     <div class="project-navigation-wrapper">
       <div class="project-navigation">
         <div class="nav-arrow left-arrow">
-          <a href="project-3.html" class="navigation-arrow">
+          <a href="project-7.html" class="navigation-arrow">
             <i class="fas fa-arrow-left fa-2x"></i>
           </a>
         </div>
         <div class="nav-arrow right-arrow">
-          <a href="project-4.html" class="navigation-arrow">
+          <a href="project-1.html" class="navigation-arrow">
             <i class="fas fa-arrow-right fa-2x"></i>
           </a>
         </div>
@@ -165,53 +165,36 @@
         </div>
       </div>
     </footer>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const images = document.querySelectorAll(".project-image");
+        const revealDelay = 100;
+        let lastScrollY = window.scrollY;
+        const revealImage = (image, index) => {
+          setTimeout(() => {
+            image.classList.add("in-view");
+          }, index * revealDelay);
+        };
 
-    <script type="text/javascript">
-      // Lightbox functionality
-      var lightbox = document.getElementById("lightbox");
-      var lightboxImage = document.getElementById("lightboxImage");
-      var projectImage = document.getElementById("projectImage");
-      var closeBtn = document.querySelector(".close");
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry, index) => {
+              if (entry.isIntersecting) {
+                revealImage(entry.target, index);
+              }
+            });
+          },
+          { threshold: 0.5 }
+        );
+        images.forEach((image, index) => {
+          observer.observe(image);
 
-      projectImage.onclick = function () {
-        lightbox.style.display = "block";
-        lightboxImage.src = projectImage.src; // Set the source of the lightbox image to the project image
-      };
-
-      closeBtn.onclick = function () {
-        lightbox.style.display = "none"; // Close the lightbox
-      };
-
-      // Add functionality for previous and next buttons if needed
-      var prevBtn = document.getElementById("prevBtn");
-      var nextBtn = document.getElementById("nextBtn");
-
-      prevBtn.onclick = function () {
-        // Logic for previous image (if applicable)
-      };
-
-      nextBtn.onclick = function () {
-        // Logic for next image (if applicable)
-      };
-
-      window.onclick = function (event) {
-        if (event.target === lightbox) {
-          lightbox.style.display = "none"; // Close the lightbox if clicking outside of it
-        }
-      };
-
-      var myID = document.getElementById("myID");
-
-      var myScrollFunc = function () {
-        var y = window.scrollY;
-        if (y >= 800) {
-          myID.className = "bottomMenu show";
-        } else {
-          myID.className = "bottomMenu hide";
-        }
-      };
-
-      window.addEventListener("scroll", myScrollFunc);
+          const rect = image.getBoundingClientRect();
+          if (rect.top < window.innerHeight && rect.bottom >= 0) {
+            revealImage(image, index);
+          }
+        });
+      });
     </script>
   </body>
 </html>

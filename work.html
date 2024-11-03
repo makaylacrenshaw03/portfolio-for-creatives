@@ -8,15 +8,22 @@
     />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Reset CSS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
     />
+
+    <!-- Font Awesome Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+
+    <!-- Local Stylesheet -->
     <link rel="stylesheet" href="./styles/style.css" />
+
     <style>
       /* Define specific background colors for each section */
       .work-page.branding-active {
@@ -83,7 +90,7 @@
               </figure>
               <a href="project-1.html">
                 <div class="overlay">
-                  <h1 class="overlay-title">Capstone Project</h1>
+                  <h1 class="overlay-title">FAQsofLife</h1>
                   <h4 class="overlay-description">Campaign & Web Design</h4>
                 </div>
               </a>
@@ -240,10 +247,6 @@
               <div class="footer-description">
                 Feel free to reach out on any of these platforms!
               </div>
-              <p class="fineprint">
-                &copy; 2024 Makayla Crenshaw. All rights reserved
-                <span class="heart">❤</span>
-              </p>
             </div>
 
             <div class="footer-right">
@@ -259,116 +262,127 @@
                   </li>
                   <li class="social-item">
                     <div class="social-box">
-                      <a href="#"><i class="fab fa-behance"></i></a>
+                      <a href="https://www.behance.net/makaylacrenshaw1/project"
+                        ><i class="fab fa-behance"></i
+                      ></a>
                     </div>
                   </li>
                   <li class="social-item">
                     <div class="social-box">
-                      <a href="#"><i class="fab fa-linkedin"></i></a>
+                      <a
+                        href="https://www.linkedin.com/in/makayla-crenshaw-7a4093234"
+                        ><i class="fab fa-linkedin"></i
+                      ></a>
                     </div>
                   </li>
                   <li class="social-item">
                     <div class="social-box">
-                      <a href="#"><i class="fas fa-envelope"></i></a>
+                      <a
+                        href="mailto:makayla_crenshaw@yahoo.ca"
+                        title="Email Makayla"
+                      >
+                        <i class="fas fa-envelope"></i
+                      ></a>
                     </div>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
+
+          <p class="fineprint">
+            &copy; 2024 Makayla Crenshaw. All rights reserved
+            <span class="heart">❤</span>
+          </p>
         </div>
       </footer>
     </div>
+  </body>
 
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const images = document.querySelectorAll(".work-page-grid-item img");
-        const revealDelay = 100; // Delay in ms between each reveal
-        const fadeOutDelay = 100; // Delay in ms between each fade out
-        let allRevealed = false; // Track if all images have been revealed
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const images = document.querySelectorAll(".work-page-grid-item img");
+      const revealDelay = 100; // Delay in ms between each reveal
+      const fadeOutDelay = 100; // Delay in ms between each fade out
+      let allRevealed = false; // Track if all images have been revealed
 
-        // Function to reveal images with staggered effect
-        const revealImage = (image, index) => {
-          setTimeout(() => {
-            image.classList.add("in-view");
-          }, index * revealDelay);
-        };
+      // Function to reveal images with staggered effect
+      const revealImage = (image, index) => {
+        setTimeout(() => {
+          image.classList.add("in-view");
+        }, index * revealDelay);
+      };
 
-        // Function to hide images with staggered effect
-        const hideImage = (image, index) => {
-          setTimeout(() => {
-            image.classList.remove("in-view");
-          }, index * fadeOutDelay);
-        };
+      // Function to hide images with staggered effect
+      const hideImage = (image, index) => {
+        setTimeout(() => {
+          image.classList.remove("in-view");
+        }, index * fadeOutDelay);
+      };
 
-        // Intersection Observer to trigger reveal/hide on scroll
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry, index) => {
-              const image = entry.target.querySelector("img");
-              if (entry.isIntersecting && !allRevealed) {
-                // Reveal image only when intersecting and not all revealed
-                revealImage(image, index);
-              } else if (!entry.isIntersecting && allRevealed) {
-                // Do not hide images if all are revealed
-                // Optionally, you can add any other logic here if needed
-              }
-            });
-          },
-          { threshold: 0.5 } // Trigger when 50% of the image is in view
-        );
+      // Intersection Observer to trigger reveal/hide on scroll
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry, index) => {
+            const image = entry.target.querySelector("img");
+            if (entry.isIntersecting && !allRevealed) {
+              // Reveal image only when intersecting and not all revealed
+              revealImage(image, index);
+            }
+          });
+        },
+        { threshold: 0.5 } // Trigger when 50% of the image is in view
+      );
 
-        // Observe each image
-        images.forEach((imageContainer, index) => {
-          observer.observe(imageContainer.parentElement); // Observe the parent <li> of the <img>
-          // Check if the first image is already in view
-          if (
-            index === 0 &&
-            imageContainer.getBoundingClientRect().top < window.innerHeight
-          ) {
-            revealImage(imageContainer, index);
-          }
-        });
+      // Observe each image
+      images.forEach((imageContainer, index) => {
+        observer.observe(imageContainer.parentElement); // Observe the parent <li> of the <img>
 
-        // Function to check if all images are revealed
-        const checkAllRevealed = () => {
-          if (
-            [...images].every((image) => image.classList.contains("in-view"))
-          ) {
-            allRevealed = true; // Set to true if all images have the "in-view" class
-          }
-        };
-
-        // Add a scroll event listener to check if all images are revealed
-        window.addEventListener("scroll", checkAllRevealed);
+        // Check if the first image is already in view
+        if (
+          index === 0 &&
+          imageContainer.getBoundingClientRect().top < window.innerHeight
+        ) {
+          revealImage(imageContainer, index);
+        }
       });
 
-      function toggleSections(section) {
-        const brandingSection = document.getElementById("branding-section");
-        const illustrationSection = document.getElementById(
-          "illustration-section"
+      // Function to check if all images are revealed
+      const checkAllRevealed = () => {
+        allRevealed = [...images].every((image) =>
+          image.classList.contains("in-view")
         );
-        const body = document.body;
+      };
 
-        // Fade out the current section
-        body.style.opacity = "0";
-        setTimeout(() => {
-          if (section === "illustration") {
-            brandingSection.classList.remove("active");
-            illustrationSection.classList.add("active");
-            body.classList.remove("branding-active");
-            body.classList.add("illustration-active");
-          } else {
-            illustrationSection.classList.remove("active");
-            brandingSection.classList.add("active");
-            body.classList.remove("illustration-active");
-            body.classList.add("branding-active");
-          }
+      // Add a scroll event listener to check if all images are revealed
+      window.addEventListener("scroll", checkAllRevealed);
+    });
 
-          // Fade in the new section
-          body.style.opacity = "1";
-        }, 500); // Match the timing with the CSS transition
-      }
-    </script>
-  </body>
+    function toggleSections(section) {
+      const brandingSection = document.getElementById("branding-section");
+      const illustrationSection = document.getElementById(
+        "illustration-section"
+      );
+      const body = document.body;
+
+      // Fade out the current section
+      body.style.opacity = "0";
+      setTimeout(() => {
+        if (section === "illustration") {
+          brandingSection.classList.remove("active");
+          illustrationSection.classList.add("active");
+          body.classList.remove("branding-active");
+          body.classList.add("illustration-active");
+        } else {
+          illustrationSection.classList.remove("active");
+          brandingSection.classList.add("active");
+          body.classList.remove("illustration-active");
+          body.classList.add("branding-active");
+        }
+
+        // Fade in the new section
+        body.style.opacity = "1";
+      }, 500); // Match the timing with the CSS transition
+    }
+  </script>
 </html>
