@@ -293,7 +293,7 @@ a:visited {
 }
 
 a:hover {
-  color: #ffffff;
+  color: #8e56e9;
 }
 
 a:focus {
@@ -418,7 +418,7 @@ a:active {
 
 .hero-headline-wrapper {
   position: relative;
-  background-color: #291b85;
+  background-color: #000028;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -494,7 +494,7 @@ a:active {
 
 .one {
   position: relative;
-  background-color: #571919;
+  background-color: #003b2d;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
 }
@@ -506,7 +506,7 @@ a:active {
   left: 0;
   right: 0;
   height: 110px;
-  background-color: #571919;
+  background-color: #003b2d;
   z-index: -1;
 }
 
@@ -857,7 +857,7 @@ a:active {
 
 .social-box a {
   text-decoration: none;
-  color: #e9e3ff;
+  color: #c7c1ff;
   font-size: 2rem;
   transition: color 0.3s;
 }
@@ -1078,7 +1078,7 @@ a:active {
 ██      ███████ ██   ██    ██    
 */
 
-/* Homepage Animation */
+/* Homepage Animation Themes*/
 
 #branding-section {
   padding-bottom: 12rem;
@@ -1151,7 +1151,7 @@ body {
 }
 
 .arrow-button:hover {
-  color: #a047cc;
+  color: #8e56e9;
 }
 
 .section {
@@ -1182,7 +1182,7 @@ body {
 /* Hover effect */
 .custom-navigation:hover {
   transform: translateY(-5px);
-  color: #ffffff;
+  color: #8e56e9;
 }
 
 .play-page {
@@ -1305,11 +1305,11 @@ body {
 }
 
 .navigation-arrow:visited {
-  color: #000028; /* Keep the default color for visited state */
+  color: #000028;
 }
 
 .navigation-arrow:hover {
-  color: #a047cc; /* Hover color for the arrows */
+  color: #8e56e9;
 }
 
 .left-arrow {
@@ -1438,9 +1438,9 @@ body {
   .project-description {
     font-size: 0.85rem;
     margin-bottom: 1.3rem;
+    padding: 0rem;
   }
 
-  .project-wrapper,
   .box-container,
   .info-box,
   .footer-wrapper {
@@ -1448,6 +1448,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .project-wrapper {
+    padding: 3rem;
   }
 
   .box-container,
@@ -1521,6 +1525,11 @@ body {
   .fa-arrow-left {
     position: fixed;
   }
+  .project-description {
+    font-size: 0.9rem;
+    padding: 0 1.7rem;
+    margin-top: 2.5rem;
+  }
 }
 
 /* Medium and small devices (max-width: 768px) */
@@ -1528,10 +1537,6 @@ body {
   .grid {
     grid-template-columns: 1fr;
     padding: 1rem 3.5rem 4rem;
-  }
-  .project-title {
-    font-size: 1.45rem;
-    padding: 0.65em 1em;
   }
 
   .navigation-links a:nth-child(2) {
@@ -1542,20 +1547,10 @@ body {
     justify-content: space-between;
   }
 
-  .project-description {
-    font-size: 0.9rem;
-    padding: 0 2rem;
-  }
-
   .box-container {
     display: flex;
     flex-direction: row;
     overflow: hidden;
-  }
-
-  .project-wrapper {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
   }
 
   .info-box {
@@ -1568,6 +1563,11 @@ body {
 
   .navigation-links .work-link {
     display: none;
+  }
+
+  .project-wrapper {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .navigation-links .about-link {
@@ -1633,11 +1633,6 @@ body {
   .h7 {
     font-size: 5rem;
     padding-top: 8rem;
-  }
-
-  p {
-    padding-right: 1rem;
-    padding-bottom: 1.8rem;
   }
 
   .wrapper {
@@ -1711,16 +1706,30 @@ body {
 
   .fa-arrow-right {
     font-size: 1.8rem;
+    padding-right: 0rem;
+    margin-right: 1.4rem;
   }
 
   .fa-arrow-left {
     font-size: 1.8rem;
+    padding-left: 0rem;
+    margin-left: 1.4rem;
+  }
+
+  .left-arrow {
+    padding-left: 1.8rem;
+  }
+
+  .right-arrow {
+    padding-right: 1.8rem;
   }
 
   .project-details {
     flex-direction: column;
     display: flex;
     align-items: center;
+    padding-left: 2.2rem;
+    padding-right: 2.2rem;
   }
 
   .project-image,
@@ -1750,6 +1759,10 @@ body {
     justify-content: center;
     width: 100%;
     padding-bottom: 1rem;
+  }
+
+  .project-title {
+    font-size: 1.3rem;
   }
 
   .socials-list {
@@ -1968,9 +1981,6 @@ body {
   }
 
   /* Project Page Flex Direction on Large Devices */
-  .project-wrapper {
-    flex-direction: column;
-  }
 
   /* Sidebar on Large Devices */
   .project-aside {
@@ -1978,9 +1988,13 @@ body {
     padding-right: 2rem;
   }
 
+  .project-wrapper {
+    flex-direction: column;
+  }
+
   .project-description {
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   /* Main Project Image Area on Large Devices */
@@ -2058,10 +2072,6 @@ body {
 
   .project-title {
     font-size: 2rem;
-  }
-
-  .project-wrapper {
-    padding: 3rem;
   }
 
   .work-wrapper {
