@@ -912,6 +912,7 @@ a:active {
 
 .project-info {
   text-align: center;
+  padding-top: 4rem;
 }
 
 /* Sidebar */
@@ -1550,7 +1551,6 @@ body {
   .box-container {
     display: flex;
     flex-direction: row;
-    overflow: hidden;
   }
 
   .info-box {
@@ -1759,10 +1759,6 @@ body {
     justify-content: center;
     width: 100%;
     padding-bottom: 1rem;
-  }
-
-  .project-title {
-    font-size: 1.3rem;
   }
 
   .socials-list {
