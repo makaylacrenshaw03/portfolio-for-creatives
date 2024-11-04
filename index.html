@@ -1,52 +1,388 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Free Creative Portfolio Template: Holding Page</title>
+    <title>Makayla Crenshaw Branding and Illustration Portfolio</title>
+    <meta
+      name="description"
+      content="Makayla Crenshaw is a Vancouver-based designer and illustrator with projects that feature innovative storytelling and thoughtful user experiences."
+    />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Reset CSS -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
     />
+
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- Local Stylesheet -->
     <link rel="stylesheet" href="./styles/style.css" />
+
     <style>
-      body {
-        opacity: 1;
-        transition: opacity 0.5s ease;
+      /* Define specific background colors for each section */
+      .work-page.branding-active {
+        background-color: #f5f2f2; /* Branding section color */
       }
-      body.fade-out {
-        opacity: 0;
+      .work-page.illustration-active {
+        background-color: #020219; /* Illustration section color */
+      }
+      /* Transition for smooth color changes and fading */
+      body {
+        transition: background-color 0.5s ease, opacity 0.5s ease;
+        opacity: 1; /* Ensure body is fully visible initially */
       }
     </style>
   </head>
-  <body class="holding-page">
-    <div class="holding-page-wrapper">
-      <div class="holding-page-inner-container">
-        <a href="work.html">
-          <figure class="holding-page-animation">
-            <img
-              src="assets/pictures/logo-web.svg"
-              alt="Portfolio Website Launching Soon"
-              style="width: 180px; height: auto"
-            />
-          </figure>
-          <p class="holding-page-title">A portfolio made from a spark</p>
-        </a>
+
+  <body class="work-page branding-active">
+    <div class="hero-background">
+      <header class="hero-header">
+        <div class="navigation-wrapper">
+          <ul class="branding-navigation">
+            <li class="logo">
+              <a href="index.html">
+                <img
+                  src="assets/pictures/logo-web.svg"
+                  alt="Makayla Crenshaw logo"
+                  style="width: 5rem; height: auto"
+                />
+              </a>
+            </li>
+            <li class="navigation-links">
+              <a href="about.html" class="custom-navigation">About</a>
+              <a href="index.html" class="custom-navigation">Work</a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <div class="hero-headline-wrapper">
+        <div class="h7">Makayla Crenshaw</div>
+        <div class="wrapper">
+          I specialize in illustration and branding, and love using both to tell
+          great stories that people remember.
+        </div>
       </div>
-      <!-- <div class="holding-page-footer">
-        <p class="fineprint">
-          &copy; 2024 Makayla Crenshaw. All rights reserved
-          <span class="heart">❤</span>
-        </p>
-      </div> -->
+
+      <main class="work-wrapper">
+        <!-- Branding Section -->
+        <section class="portfolio section active" id="branding-section">
+          <div class="section-title-wrapper">
+            <h2 class="section-title">Branding</h2>
+          </div>
+          <ul class="grid">
+            <!-- Portfolio projects here -->
+            <li class="work-page-grid-item">
+              <figure>
+                <img
+                  src="assets/pictures/progress.jpg"
+                  alt="Capstone Project"
+                  width="1500"
+                  height="1500"
+                  class="project-image"
+                />
+              </figure>
+              <a href="project-1.html">
+                <div class="overlay">
+                  <h1 class="overlay-title">FAQsofLife</h1>
+                  <h4 class="overlay-description">Campaign & Web Design</h4>
+                </div>
+              </a>
+            </li>
+            <li class="work-page-grid-item">
+              <figure>
+                <img
+                  src="assets/pictures/makayla-crenshaw-coastalcatch-packaging-design-branding.jpg"
+                  alt="Coastal Catch"
+                  width="1500"
+                  height="1500"
+                  class="project-image"
+                />
+              </figure>
+              <a href="project-2.html">
+                <div class="overlay">
+                  <h1 class="overlay-title">Coastal Catch</h1>
+                  <h4 class="overlay-description">Packaging Design</h4>
+                </div>
+              </a>
+            </li>
+            <li class="work-page-grid-item">
+              <figure>
+                <img
+                  src="assets/pictures/makayla-crenshaw-galaxtea-annual-report-branding-illustration-design.jpg"
+                  alt="GalaxTea"
+                  width="1500"
+                  height="1500"
+                  class="project-image"
+                />
+              </figure>
+              <a href="project-3.html">
+                <div class="overlay">
+                  <h1 class="overlay-title">GalaxTea</h1>
+                  <h4 class="overlay-description">Annual Report</h4>
+                </div>
+              </a>
+            </li>
+            <li class="work-page-grid-item">
+              <figure>
+                <img
+                  src="assets/pictures/makayla-crenshaw-holesome-donut-packaging-design-branding.jpg"
+                  alt="HoleSome Pastry"
+                  width="1500"
+                  height="1500"
+                  class="project-image"
+                />
+              </figure>
+              <a href="project-4.html">
+                <div class="overlay">
+                  <h1 class="overlay-title">HoleSome Pastry</h1>
+                  <h4 class="overlay-description">Packaging Design</h4>
+                </div>
+              </a>
+            </li>
+            <li class="work-page-grid-item">
+              <figure>
+                <img
+                  src="assets/pictures/makayla-crenshaw-spirit-energy-drink-packaging-design-branding.jpg"
+                  alt="Spirit Energy"
+                  width="1500"
+                  height="1500"
+                  class="project-image"
+                />
+              </figure>
+              <a href="project-5.html">
+                <div class="overlay">
+                  <h1 class="overlay-title">Spirit Energy</h1>
+                  <h4 class="overlay-description">Packaging Design</h4>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <i
+            class="fas fa-arrow-right arrow-button"
+            onclick="toggleSections('illustration')"
+            style="float: right"
+          ></i>
+        </section>
+
+        <!-- Illustration Section -->
+        <section class="portfolio section" id="illustration-section">
+          <div class="section-title-wrapper">
+            <h2 class="section-title">Illustration</h2>
+          </div>
+          <ul class="grid">
+            <li class="work-page-grid-item">
+              <figure>
+                <img
+                  src="assets/pictures/makayla-crenshaw-creative-morning-vancouver-portrait-illustration-uytae-lee.jpg"
+                  alt="Creative Mornings Vancouver portraiture of Uytae Lee"
+                  width="1500"
+                  height="1500"
+                  class="project-image"
+                />
+              </figure>
+              <a href="project-6.html">
+                <div class="overlay">
+                  <h1 class="overlay-title">Creative Mornings Vancouver</h1>
+                  <h4 class="overlay-description">Portrait Illustration</h4>
+                </div>
+              </a>
+            </li>
+            <li class="work-page-grid-item">
+              <figure>
+                <img
+                  src="assets/pictures/progress.jpg"
+                  alt="Alice in Cyberland"
+                  width="1500"
+                  height="1500"
+                  class="project-image"
+                />
+              </figure>
+              <a href="project-7.html">
+                <div class="overlay">
+                  <h1 class="overlay-title">Alice in Cyberland</h1>
+                  <h4 class="overlay-description">
+                    Concept Art for Video Game
+                  </h4>
+                </div>
+              </a>
+            </li>
+            <li class="work-page-grid-item">
+              <figure>
+                <img
+                  src="assets/pictures/makayla-crenshaw-aurora-borealis-illustration-animation.jpg"
+                  alt="Aurora Borealis Snowfall"
+                  width="1500"
+                  height="1500"
+                  class="project-image"
+                />
+              </figure>
+              <a href="project-8.html">
+                <div class="overlay">
+                  <h1 class="overlay-title">Aurora Borealis Snowfall</h1>
+                  <h4 class="overlay-description">Animation</h4>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <i
+            class="fas fa-arrow-left arrow-button"
+            onclick="toggleSections('branding')"
+            style="float: left"
+          ></i>
+        </section>
+      </main>
+
+      <footer class="global-footer">
+        <div class="footer-wrapper">
+          <div class="footer-content">
+            <div class="footer-left">
+              <h2>Spark a convo with me!</h2>
+              <div class="footer-description">
+                Feel free to reach out on any of these platforms!
+              </div>
+            </div>
+
+            <div class="footer-right">
+              <div class="socials-container">
+                <ul class="socials-list">
+                  <li class="social-item">
+                    <div class="social-box">
+                      <a
+                        href="https://www.instagram.com/makc.art?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                        ><i class="fab fa-instagram"></i
+                      ></a>
+                    </div>
+                  </li>
+                  <li class="social-item">
+                    <div class="social-box">
+                      <a href="https://www.behance.net/makaylacrenshaw1/project"
+                        ><i class="fab fa-behance"></i
+                      ></a>
+                    </div>
+                  </li>
+                  <li class="social-item">
+                    <div class="social-box">
+                      <a
+                        href="https://www.linkedin.com/in/makayla-crenshaw-7a4093234"
+                        ><i class="fab fa-linkedin"></i
+                      ></a>
+                    </div>
+                  </li>
+                  <li class="social-item">
+                    <div class="social-box">
+                      <a
+                        href="mailto:makayla_crenshaw@yahoo.ca"
+                        title="Email Makayla"
+                      >
+                        <i class="fas fa-envelope"></i
+                      ></a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <p class="fineprint">
+            &copy; 2024 Makayla Crenshaw. All rights reserved
+            <span class="heart">❤</span>
+          </p>
+        </div>
+      </footer>
     </div>
-    <script>
-      setTimeout(() => {
-        document.body.classList.add("fade-out"); // Add fade-out class
-        setTimeout(() => {
-          window.location.href = "work.html"; // Redirect after fade-out
-        }, 500); // Match with the duration of the fade-out
-      }, 4000); // Initial timeout before the transition
-    </script>
   </body>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const images = document.querySelectorAll(".work-page-grid-item img");
+      const revealDelay = 100; // Delay in ms between each reveal
+      const fadeOutDelay = 100; // Delay in ms between each fade out
+      let allRevealed = false; // Track if all images have been revealed
+
+      // Function to reveal images with staggered effect
+      const revealImage = (image, index) => {
+        setTimeout(() => {
+          image.classList.add("in-view");
+        }, index * revealDelay);
+      };
+
+      // Function to hide images with staggered effect
+      const hideImage = (image, index) => {
+        setTimeout(() => {
+          image.classList.remove("in-view");
+        }, index * fadeOutDelay);
+      };
+
+      // Intersection Observer to trigger reveal/hide on scroll
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry, index) => {
+            const image = entry.target.querySelector("img");
+            if (entry.isIntersecting && !allRevealed) {
+              // Reveal image only when intersecting and not all revealed
+              revealImage(image, index);
+            }
+          });
+        },
+        { threshold: 0.5 } // Trigger when 50% of the image is in view
+      );
+
+      // Observe each image
+      images.forEach((imageContainer, index) => {
+        observer.observe(imageContainer.parentElement); // Observe the parent <li> of the <img>
+
+        // Check if the first image is already in view
+        if (
+          index === 0 &&
+          imageContainer.getBoundingClientRect().top < window.innerHeight
+        ) {
+          revealImage(imageContainer, index);
+        }
+      });
+
+      // Function to check if all images are revealed
+      const checkAllRevealed = () => {
+        allRevealed = [...images].every((image) =>
+          image.classList.contains("in-view")
+        );
+      };
+
+      // Add a scroll event listener to check if all images are revealed
+      window.addEventListener("scroll", checkAllRevealed);
+    });
+
+    function toggleSections(section) {
+      const brandingSection = document.getElementById("branding-section");
+      const illustrationSection = document.getElementById(
+        "illustration-section"
+      );
+      const body = document.body;
+
+      // Fade out the current section
+      body.style.opacity = "0";
+      setTimeout(() => {
+        if (section === "illustration") {
+          brandingSection.classList.remove("active");
+          illustrationSection.classList.add("active");
+          body.classList.remove("branding-active");
+          body.classList.add("illustration-active");
+        } else {
+          illustrationSection.classList.remove("active");
+          brandingSection.classList.add("active");
+          body.classList.remove("illustration-active");
+          body.classList.add("branding-active");
+        }
+
+        // Fade in the new section
+        body.style.opacity = "1";
+      }, 500); // Match the timing with the CSS transition
+    }
+  </script>
 </html>
