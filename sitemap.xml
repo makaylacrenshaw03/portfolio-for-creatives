@@ -1,47 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-
-<!-- 
-  
-  By placing a formatted xml file with site map on your webserver, you enable Search Engine crawlers (like Google) to find out what pages are present and which have recently changed, and to crawl your site accordingly.
-
-  A sitemap is a way of organizing a website, identifying the URLs and the data under each section. Previously, the sitemaps were primarily geared for the users of the website. However, Google's XML format was designed for the search engines, allowing them to find the data faster and more efficiently.
-
-  1. Create a sitemap.xml file with Free Online Sitemap Generator www.xml-sitemaps.com 
-  2. Upload it into the domain root folder of your website (replace this file and push).
-  3. Then open Google Search console and add your sitemap URL.
-
--->
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
 <url>
-  <loc>https://portfolio-2022.netlify.app/</loc>
-  <lastmod>2021-11-18T08:55:17+00:00</lastmod>
+  <loc>https://makaylacrenshawdesign.com/</loc>
+  <lastmod>2024-11-04T23:16:33+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://portfolio-2022.netlify.app/index.html</loc>
-  <lastmod>2021-11-18T08:55:17+00:00</lastmod>
+  <loc>https://makaylacrenshawdesign.com/work</loc>
+  <lastmod>2024-11-04T23:16:33+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://portfolio-2022.netlify.app/about.html</loc>
-  <lastmod>2021-11-18T08:55:17+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://makaylacrenshawdesign.com/about</loc>
+  <lastmod>2024-11-04T23:16:33+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://portfolio-2022.netlify.app/project-1.html</loc>
-  <lastmod>2021-11-18T08:55:17+00:00</lastmod>
-  <priority>0.80</priority>
+  <loc>https://makaylacrenshawdesign.com/project-1</loc>
+  <lastmod>2024-11-04T23:16:33+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://portfolio-2022.netlify.app/project-2.html</loc>
-  <lastmod>2021-11-18T08:55:17+00:00</lastmod>
+  <loc>https://makaylacrenshawdesign.com/project-2</loc>
+  <lastmod>2024-11-04T23:16:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://makaylacrenshawdesign.com/project-3</loc>
+  <lastmod>2024-11-04T23:16:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://makaylacrenshawdesign.com/project-4</loc>
+  <lastmod>2024-11-04T23:16:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://makaylacrenshawdesign.com/project-5</loc>
+  <lastmod>2024-11-04T23:16:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://makaylacrenshawdesign.com/project-6</loc>
+  <lastmod>2024-11-04T23:16:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://makaylacrenshawdesign.com/project-7</loc>
+  <lastmod>2024-11-04T23:16:33+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://makaylacrenshawdesign.com/project-8</loc>
+  <lastmod>2024-11-04T23:16:33+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 

@@ -329,7 +329,7 @@ a:active {
 .navigation-arrow:active,
 .navigation-arrow:hover {
   color: var(--accent-color);
-  /* Remove stroke to avoid thickening effect */
+
   -webkit-text-stroke-width: 0;
 }
 
