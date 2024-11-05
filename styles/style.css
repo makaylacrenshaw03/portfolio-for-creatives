@@ -803,6 +803,35 @@ a:active {
   grid-row: 4 / 5;
 }
 
+.experience-section,
+.awards-section {
+  font-size: 2rem;
+  font-family: var(--heading-typeface);
+  margin-bottom: 1rem;
+  color: #000028;
+  font-weight: 500;
+  padding-right: 1rem;
+}
+
+.experience-section {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+/* Section title with padding */
+.section-title {
+  padding-bottom: 4rem; /* Add bottom padding */
+}
+
+.item {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  padding-bottom: 0.6rem;
+  line-height: 1.5; /* Adjust to control spacing between items */
+}
+
 /* Global Footer
 
 ███████  ██████   ██████  ████████ ███████ ██████  
@@ -1008,6 +1037,7 @@ a:active {
 
 .star {
   color: #000028;
+  margin-right: 10px;
 }
 
 .awardswon-list {
