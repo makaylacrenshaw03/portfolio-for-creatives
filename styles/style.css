@@ -220,6 +220,8 @@ h6 {
   margin-bottom: 0.6rem;
   font-weight: 700;
   padding: 1rem;
+  font-size: bold;
+  z-index: 10;
 }
 
 .stroke-shadow {
@@ -242,7 +244,7 @@ p {
 }
 
 .footer-description {
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.1rem;
   line-height: 1.9rem;
   padding-bottom: 2rem;
@@ -279,7 +281,7 @@ em {
 }
 
 .overlay-description {
-  color: var(--overlay-description-color);
+  color: #c7c1ff;
 }
 
 /* Hyperlink Styles */
@@ -392,7 +394,6 @@ a:active {
 }
 
 .hero-header {
-  position: sticky;
   top: 0;
   z-index: 1000;
   padding: 1rem;
@@ -403,6 +404,18 @@ a:active {
   align-items: center;
   list-style-type: none;
   padding: 1rem 2rem 1rem 2rem;
+}
+
+.branding-navigation .logo img {
+  position: relative;
+  z-index: 15; /* Ensures logo is above the hero background */
+  will-change: transform; /* Optimizes for smooth transform-based animations */
+  transition: transform 0.3s ease; /* Smooth transition for the animation */
+}
+
+.navigation-wrapper {
+  position: relative; /* Ensures nav contents are positioned above hero background */
+  z-index: 10; /* Higher than background image to keep on top */
 }
 
 .logo {
@@ -430,6 +443,7 @@ a:active {
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
   padding-bottom: 13rem;
+  z-index: 1; /* Ensure text stays above the image */
 }
 
 .hero-headline-wrapper::before {
@@ -674,10 +688,20 @@ a:active {
 }
 
 .title-section {
-  font-size: 3rem;
-  text-align: center;
-  padding: 2rem 2rem 4rem 2rem;
-  margin-top: 5rem;
+  border-radius: 15px; /* Rounds the corners with 25px radius */
+  padding: 10px 20px; /* Adds space inside the border */
+  display: inline-block; /* Makes sure the box wraps around the text */
+  color: #000028; /* Title text color */
+  font-size: 2rem; /* Adjust font size */
+  font-weight: bold; /* Adjust font weight */
+  margin: 20px 0; /* Adds space around the title */
+  text-align: center; /* Centers the text inside the box */
+  transition: all 0.3s ease; /* Adds smooth transition for hover effects */
+}
+.section-title {
+  padding-top: 1.5rem;
+  font-size: 2rem;
+  margin: 0;
 }
 
 .portfolio,
@@ -709,7 +733,7 @@ a:active {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 1.5rem;
+  grid-gap: 3rem;
 }
 
 .work-page-grid-item {
@@ -741,7 +765,7 @@ a:active {
   align-items: center;
   flex-direction: column;
   padding: 1em;
-  background-color: rgba(100, 95, 255, 0.8);
+  background-color: #000028;
 }
 
 .work-page-grid-item:hover .overlay {
@@ -826,8 +850,9 @@ a:active {
 .item {
   font-size: 1rem;
   font-weight: 400;
-  margin: 0;
-  padding: 0;
+  display: flex; /* Align star and text horizontally */
+  align-items: center; /* Center vertically */
+  margin: 5px 0;
   padding-bottom: 0.6rem;
   line-height: 1.5; /* Adjust to control spacing between items */
 }
@@ -976,6 +1001,7 @@ a:active {
   padding: 2rem;
   padding-left: 3.5rem;
   padding-right: 3.5rem;
+  padding-bottom: 4.5rem;
 }
 
 .project-image {
@@ -1020,11 +1046,12 @@ a:active {
 
 .box-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr); /* Default for larger screens */
   gap: 1rem;
   margin-top: 4rem;
   padding-left: 3.5rem;
   padding-right: 3.5rem;
+  padding-bottom: 2rem;
 }
 
 .info-box {
@@ -1126,11 +1153,60 @@ body.branding-active .global-footer {
   background-color: #000028;
 }
 
+body.branding-active .hero-headline-wrapper img {
+  position: absolute;
+  top: -110px;
+  left: 0;
+  width: 100vw;
+  height: calc(100% + 110px);
+  object-fit: cover;
+  object-position: center;
+  opacity: 20%;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  z-index: 0; /* Background image should be below content */
+}
+
+body.branding-active .hero-background {
+  position: relative; /* Set a relative positioning context for the image */
+  overflow: hidden; /* Prevents the image from overflowing the body */
+}
+
+.branding-navigation,
+.branding-navigation .custom-navigation {
+  color: #c7c1ff; /* Ensures text remains readable */
+  z-index: 10; /* Keeps links above image */
+}
+
 body.illustration-active .hero-headline-wrapper::before,
 body.illustration-active .hero-headline-wrapper,
 body.illustration-active .global-footer {
-  background-color: #8e56e9;
-  color: #fff;
+  background-color: #4d278a;
+}
+
+body.illustration-active .hero-headline-wrapper img {
+  position: absolute;
+  top: -110px;
+  left: 0;
+  width: 100vw;
+  height: calc(100% + 110px);
+  object-fit: cover;
+  object-position: center;
+  opacity: 20%;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  z-index: 0; /* Background image should be below content */
+}
+
+body.illustration-active .hero-background {
+  position: relative; /* Set a relative positioning context for the image */
+  overflow: hidden; /* Prevents the image from overflowing the body */
+}
+
+.illustration-navigation,
+.illustration-navigation .custom-navigation {
+  color: #c7c1ff; /* Ensures text remains readable */
+  z-index: 10; /* Keeps links above image */
 }
 
 /* Transition */
@@ -1175,11 +1251,11 @@ body {
 }
 
 .fa-arrow-left {
-  padding-left: 0.6rem;
+  padding-left: 1.1rem;
 }
 
 .fa-arrow-right {
-  padding-right: 0.6rem;
+  padding-right: 1.1rem;
 }
 
 .arrow-button:hover {
@@ -1194,10 +1270,12 @@ body {
 }
 
 .section-title-wrapper {
+  padding-top: 3.5rem;
   text-align: center;
   margin: 5rem 0;
 }
 .section-title {
+  padding-top: 1.5rem;
   font-size: 2rem;
   margin: 0;
 }
@@ -1459,71 +1537,78 @@ body {
 
 /* Small sized devices (phones 500px and up) */
 
-/* Mobile devices (less than 500px) */
+/* Mobile devices (max-width: 500px) */
 @media (max-width: 500px) {
+  .branding-navigation {
+    padding: 0.6rem;
+  }
   .project-title {
-    font-size: 1.2rem;
-    padding: 0.5em 0.8em;
-    border-radius: 15px;
+    font-size: 2rem; /* Smaller font size */
+    padding: 0.5em;
+    border-radius: 12px;
   }
 
   .project-description {
-    font-size: 0.85rem;
+    font-size: 0.85rem; /* Adjust font size for readability */
     margin-bottom: 1.3rem;
-    padding: 0rem;
+    padding: 0 1.2rem; /* Adequate padding for small screens */
   }
 
-  .box-container,
-  .info-box,
+  .section-title {
+    padding-bottom: 3rem;
+  }
+
+  p {
+    margin-top: 3rem;
+  }
+
   .footer-wrapper {
-    padding: 0.5rem;
+    padding: 1rem;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
   }
 
   .project-wrapper {
-    padding: 3rem;
+    padding: 2rem; /* Adjusted padding to prevent overflow */
   }
 
-  .box-container,
   .grid {
     display: flex;
     flex-direction: column;
     width: 100%;
   }
 
-  .box-container > .info-box,
   .grid > .project-item {
     width: 100%;
   }
 
-  .info-box {
-    border: 2px solid #c7c1ff;
-    border-radius: 10px;
-    padding: 0.5rem;
+  h2 {
+    font-size: 1.2rem; /* Slightly smaller heading */
     text-align: center;
-    width: 90%;
-    max-width: none;
+    margin: 2rem 0;
   }
 
-  h2 {
-    font-size: 1.4rem;
-    text-align: center;
-    margin: 4rem 0 1rem;
+  .h7 {
+    font-size: 3.5rem;
   }
 
   a:link {
-    font-size: 1rem;
+    font-size: 0.9rem; /* Adjust link size for small screens */
   }
 
-  .wrapper {
-    padding: 0 2rem;
+  .social-box a {
+    font-size: 1.5rem; /* Adjust social icons size for mobile */
   }
 
   .footer-wrapper {
     flex-direction: column;
     align-items: center;
+  }
+
+  .work-wrapper {
+    padding-top: 4rem; /* Less padding for better use of space */
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
   }
 
   .footer-links {
@@ -1532,11 +1617,15 @@ body {
     gap: 0.5rem;
   }
 
-  .fineprint {
+  .footer-description {
     font-size: 0.8rem;
   }
 
-  /* Hide the work link and ensure the about link is singular */
+  .fineprint {
+    padding-top: 1rem;
+  }
+
+  /* Hide work link on smaller devices */
   .navigation-links {
     display: flex;
     flex-direction: column;
@@ -1550,17 +1639,45 @@ body {
     display: block;
   }
 
-  .hero-headline-wrapper {
-    padding-bottom: 4rem;
-  }
-  .fa-arrow-right,
-  .fa-arrow-left {
-    position: fixed;
-  }
+  /* Adjust project description spacing */
   .project-description {
     font-size: 0.9rem;
-    padding: 0 1.7rem;
-    margin-top: 2.5rem;
+    margin-top: 2rem;
+  }
+
+  .about-item-1 {
+    padding-top: 0rem;
+  }
+
+  .info-box {
+    padding: 1rem;
+    font-size: 0.8rem;
+    line-height: 0.9rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .box-container {
+    grid-template-columns: repeat(2, 1fr); /* Two columns instead of four */
+    padding-left: 1rem; /* Reduce padding */
+    padding-right: 1rem; /* Reduce padding */
+  }
+
+  .project-info {
+    padding-top: 1rem;
+  }
+  .title-section,
+  .hero-headline-wrapper {
+    transition: all 0.3s ease; /* Smooth transition for size changes */
+  }
+
+  .title-section {
+    font-size: 1.9rem; /* Adjust title size */
+    padding: 1rem; /* Ensure enough padding */
+  }
+
+  .hero-headline-wrapper {
+    padding-bottom: 8.5rem;
   }
 }
 
@@ -1577,19 +1694,6 @@ body {
 
   .branding-navigation {
     justify-content: space-between;
-  }
-
-  .box-container {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .info-box {
-    border: 2.5px solid #fff;
-    border-radius: 11px;
-    padding: 0.6rem;
-    width: 80%;
-    max-width: 120px;
   }
 
   .navigation-links .work-link {
@@ -1619,10 +1723,11 @@ body {
   }
 
   .section-title {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
   }
 
   .h1 {
+    font-size: 1.5rem;
     padding-top: 0rem;
   }
   h2 {
@@ -1631,14 +1736,39 @@ body {
     margin: 0.5rem 0 0.5rem;
   }
 
-  .about {
-    padding: 3.5rem;
+  .wrapper {
+    font-size: 1rem;
+    padding: 0rem;
+    padding-top: 0.4rem;
   }
 
+  .about {
+    padding: 2.3rem;
+  }
+
+  .awards-section {
+    padding-bottom: 1rem;
+  }
   .footer-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .section-title-wrapper {
+    padding-top: 0rem;
+  }
+
+  .fa-arrow-right {
+    font-size: 1.8rem;
+    padding-right: 0rem;
+    margin-right: 1.4rem;
+  }
+
+  .fa-arrow-left {
+    font-size: 1.8rem;
+    padding-left: 0rem;
+    margin-left: 1.4rem;
   }
 
   .footer-text,
@@ -1646,31 +1776,32 @@ body {
     margin: 0 auto;
   }
 
-  .work-wrapper {
-    padding-top: 4.5rem;
-  }
-
   .grid {
     display: flex;
     flex-direction: column;
     padding: 1rem 0.7rem 0.7rem;
-    gap: 2.2rem;
   }
 
+  .project-description {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .info-box {
+    line-height: 1.2rem;
+  }
   h2 {
+    font-size: 1.8rem;
     padding-top: 1rem;
   }
 
   .h7 {
-    font-size: 5rem;
-    padding-top: 8rem;
+    font-size: 3.5rem;
+    padding-top: 5rem;
   }
 
-  .wrapper {
-    font-size: 1.15rem;
-    line-height: 2rem;
-    padding-left: 2.2rem;
-    padding-right: 2.2rem;
+  .title-section {
+    font-size: 1.9rem;
   }
 
   .footer-content {
@@ -1692,6 +1823,10 @@ body {
     margin: 0 auto;
   }
 
+  .box-container {
+    padding-left: 0.95rem;
+    padding-right: 0.95rem;
+  }
   .footer-text {
     margin-bottom: 10px;
   }
@@ -1700,6 +1835,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+  }
+
+  .social-box a {
+    font-size: 2rem;
   }
 
   .projects-container {
@@ -1737,13 +1876,11 @@ body {
 
   .fa-arrow-right {
     font-size: 1.8rem;
-    padding-right: 0rem;
     margin-right: 1.4rem;
   }
 
   .fa-arrow-left {
     font-size: 1.8rem;
-    padding-left: 0rem;
     margin-left: 1.4rem;
   }
 
@@ -1789,7 +1926,7 @@ body {
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    padding-bottom: 1rem;
+    padding-bottom: 1.6rem;
   }
 
   .socials-list {
@@ -1798,6 +1935,11 @@ body {
     padding: 0;
     margin: 0;
     list-style: none;
+  }
+
+  .hero-headline-wrapper {
+    padding: 2rem 4rem;
+    padding-bottom: 13rem;
   }
 
   .fineprint {
@@ -1811,12 +1953,18 @@ body {
 
 @media (min-width: 768px) {
   .grid {
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
-    padding: 1rem 3rem 3rem;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem 2.2rem 2.2rem;
   }
 
   h2 {
     padding-top: 2rem;
+  }
+
+  .footer-left h2 {
+    padding-right: 3rem;
+    line-height: 2.7rem;
+    margin-bottom: 0;
   }
 
   .h7 {
@@ -1827,8 +1975,15 @@ body {
     padding-right: 1rem;
   }
 
+  .box-container {
+    font-size: 0.6rem;
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+
   .wrapper {
     line-height: 2.2rem;
+    padding: 1rem 2rem 5rem 2rem;
   }
 
   .navigation-links a {
@@ -1837,10 +1992,12 @@ body {
 
   .footer-wrapper {
     padding-bottom: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .global-footer {
-    padding: 3rem 5rem 0 5rem;
+    padding: 3rem 3rem 0 3rem;
     grid-template-columns: 1fr;
   }
 
@@ -1883,14 +2040,6 @@ body {
 
   .fineprint {
     font-size: 0.75rem;
-  }
-
-  .fa-arrow-right {
-    padding-right: 0rem;
-  }
-
-  .fa-arrow-left {
-    padding-left: 0rem;
   }
 }
 
@@ -1962,6 +2111,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 0rem;
   }
 
   .footer-content {
@@ -1995,16 +2145,16 @@ body {
   }
 
   .box-container {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
-  }
-  .social-item {
-    margin-left: 15px;
+    padding: 2rem;
+    gap: 15px;
   }
 
   .info-box {
-    width: auto;
-    margin: 0;
+    padding: 1.2rem;
+  }
+  .social-item {
+    margin-left: 15px;
   }
 
   /* Project Page Flex Direction on Large Devices */
@@ -2027,6 +2177,7 @@ body {
   /* Main Project Image Area on Large Devices */
   .project-details {
     width: 100%;
+    padding-bottom: 10rem;
   }
 
   .project-image-container {
@@ -2057,17 +2208,16 @@ body {
     font-size: 1.625rem;
   }
 
-  .h7 {
-    font-size: 5rem;
-    padding-top: 8rem;
-  }
-
   .logo {
     width: 5rem;
   }
 
   .hero {
     min-height: 100vh;
+  }
+
+  .socials-container a {
+    font-size: 2.2rem;
   }
 
   /* Grayscale filter with full-colour on hover and tap */
@@ -2094,7 +2244,6 @@ body {
     grid-template-columns: repeat(2, minmax(200px, 1fr));
     padding-left: 2rem;
     padding-right: 2rem;
-    gap: 30px;
   }
 
   .project-title {
