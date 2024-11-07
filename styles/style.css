@@ -1247,7 +1247,7 @@ body {
 
 .arrow-button {
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1.8rem;
   margin: 2rem;
   color: #000028;
   transition: color 0.3s;
@@ -1256,10 +1256,13 @@ body {
 
 .fa-arrow-left {
   padding-left: 0rem;
+  transition: transform 0.3s ease;
+  margin-left: 1.2rem;
 }
 
 .fa-arrow-right {
   padding-right: 0rem;
+  transition: transform 0.3s ease;
 }
 
 .arrow-button:hover {
