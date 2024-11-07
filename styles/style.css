@@ -218,7 +218,7 @@ h6 {
   font-size: 6rem;
   color: var(--h6-color);
   margin-bottom: 0.6rem;
-  font-weight: 700;
+  font-weight: 600;
   padding: 1rem;
   font-size: bold;
   z-index: 10;
@@ -244,7 +244,7 @@ p {
 }
 
 .footer-description {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 1.1rem;
   line-height: 1.9rem;
   padding-bottom: 2rem;
@@ -256,6 +256,7 @@ em {
 
 .fineprint {
   font-size: 0.875rem;
+  color: #c7c1ff;
 }
 
 .hero-headline {
@@ -325,7 +326,7 @@ a:active {
   display: flex;
   gap: 2.5rem;
   margin-left: 20px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .navigation-arrow:active,
@@ -403,19 +404,19 @@ a:active {
   display: flex;
   align-items: center;
   list-style-type: none;
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 1rem 0.8rem 1rem 0.8rem;
 }
 
 .branding-navigation .logo img {
   position: relative;
-  z-index: 15; /* Ensures logo is above the hero background */
-  will-change: transform; /* Optimizes for smooth transform-based animations */
-  transition: transform 0.3s ease; /* Smooth transition for the animation */
+  z-index: 15;
+  will-change: transform;
+  transition: transform 0.3s ease;
 }
 
 .navigation-wrapper {
-  position: relative; /* Ensures nav contents are positioned above hero background */
-  z-index: 10; /* Higher than background image to keep on top */
+  position: relative;
+  z-index: 10;
 }
 
 .logo {
@@ -443,7 +444,7 @@ a:active {
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
   padding-bottom: 13rem;
-  z-index: 1; /* Ensure text stays above the image */
+  z-index: 1;
 }
 
 .hero-headline-wrapper::before {
@@ -685,20 +686,21 @@ a:active {
   line-height: 1.8rem;
   max-width: 1200px;
   padding: 1rem 4rem 5rem 4rem;
+  font-weight: 400;
 }
 
 .title-section {
   border-radius: 15px; /* Rounds the corners with 25px radius */
-  padding: 10px 20px; /* Adds space inside the border */
+  padding: 20px 20px 20px 20px; /* Adds space inside the border */
   display: inline-block; /* Makes sure the box wraps around the text */
-  color: #000028; /* Title text color */
-  font-size: 2.5rem; /* Adjust font size */
-  font-weight: 500;
-  margin: 20px 0;
-  text-align: center;
-  transition: all 0.3s ease;
-  color: #c7c1ff;
+  background-color: #000028; /* Changes background on hover */
+  color: #c7c1ff; /* Changes text color on hover */
+  font-size: 2rem; /* Adjust font size */
+  margin: 20px 0; /* Adds space around the title */
+  text-align: center; /* Centers the text inside the box */
+  transition: all 0.3s ease; /* Adds smooth transition for hover effects */
 }
+
 .section-title {
   padding-top: 1.5rem;
   font-size: 2rem;
@@ -935,6 +937,7 @@ a:active {
   margin: 0;
   font-size: 0.9rem;
   padding-bottom: 1.5rem;
+  font-weight: 300;
 }
 
 .footer-links p {
@@ -1426,13 +1429,13 @@ body {
 .left-arrow {
   position: absolute;
   left: 0;
-  padding-left: 3rem;
+  padding-left: 3.4rem;
 }
 
 .right-arrow {
   position: absolute;
   right: 0;
-  padding-right: 3rem;
+  padding-right: 3.4rem;
 }
 
 /* Logo animation here */
@@ -1797,7 +1800,7 @@ body {
   }
 
   .h7 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     padding-top: 5rem;
   }
 
@@ -1923,7 +1926,7 @@ body {
 
   .footer-description {
     display: flex;
-    font-size: 1rem;
+    font-size: 0.9rem;
     flex-direction: row;
     justify-content: center;
     width: 100%;
@@ -1963,7 +1966,8 @@ body {
   }
 
   .footer-left h2 {
-    padding-right: 3rem;
+    font-size: 2.2rem;
+    padding-right: 1rem;
     line-height: 2.7rem;
     margin-bottom: 0;
   }
