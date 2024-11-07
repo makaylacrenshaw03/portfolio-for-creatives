@@ -692,7 +692,7 @@ a:active {
   padding: 10px 20px; /* Adds space inside the border */
   display: inline-block; /* Makes sure the box wraps around the text */
   color: #000028; /* Title text color */
-  font-size: 2rem; /* Adjust font size */
+  font-size: 2.5rem; /* Adjust font size */
   font-weight: 500;
   margin: 20px 0;
   text-align: center;
@@ -734,7 +734,7 @@ a:active {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 1.9rem;
+  grid-gap: 1.5rem;
 }
 
 .work-page-grid-item {
@@ -1000,8 +1000,8 @@ a:active {
   gap: 0.8rem;
   width: 100%;
   padding: 2rem;
-  padding-left: 3.5rem;
-  padding-right: 3.5rem;
+  padding-left: 2.7rem;
+  padding-right: 2.7rem;
   padding-bottom: 4.5rem;
 }
 
@@ -1187,7 +1187,7 @@ body.illustration-active .global-footer {
 
 body.illustration-active .hero-headline-wrapper img {
   position: absolute;
-  top: -110px;
+  top: -120px;
   left: 0;
   width: 100vw;
   height: calc(100% + 110px);
@@ -1426,13 +1426,13 @@ body {
 .left-arrow {
   position: absolute;
   left: 0;
-  padding-left: 4rem;
+  padding-left: 3rem;
 }
 
 .right-arrow {
   position: absolute;
   right: 0;
-  padding-right: 4rem;
+  padding-right: 3rem;
 }
 
 /* Logo animation here */
@@ -1802,7 +1802,7 @@ body {
   }
 
   .title-section {
-    font-size: 1.9rem;
+    font-size: 1.7rem;
   }
 
   .footer-content {
