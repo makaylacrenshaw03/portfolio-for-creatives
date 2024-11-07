@@ -668,7 +668,7 @@ a:active {
   flex: 1;
   margin: 0.5rem;
   padding-left: 1rem;
-  padding-right: 1.5rem;
+  padding-right: 1rem;
   margin-bottom: 1.5rem;
 }
 
@@ -693,10 +693,11 @@ a:active {
   display: inline-block; /* Makes sure the box wraps around the text */
   color: #000028; /* Title text color */
   font-size: 2rem; /* Adjust font size */
-  font-weight: bold; /* Adjust font weight */
-  margin: 20px 0; /* Adds space around the title */
-  text-align: center; /* Centers the text inside the box */
-  transition: all 0.3s ease; /* Adds smooth transition for hover effects */
+  font-weight: 500;
+  margin: 20px 0;
+  text-align: center;
+  transition: all 0.3s ease;
+  color: #c7c1ff;
 }
 .section-title {
   padding-top: 1.5rem;
@@ -733,7 +734,7 @@ a:active {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 3rem;
+  grid-gap: 1.9rem;
 }
 
 .work-page-grid-item {
@@ -788,8 +789,8 @@ a:active {
   grid-template-columns: 1fr;
   grid-gap: 5rem;
   background: var(--background-color-about);
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding-left: 2.8rem;
+  padding-right: 2.8rem;
   padding-bottom: 16rem;
   flex: 1;
 }
@@ -1181,7 +1182,7 @@ body.branding-active .hero-background {
 body.illustration-active .hero-headline-wrapper::before,
 body.illustration-active .hero-headline-wrapper,
 body.illustration-active .global-footer {
-  background-color: #4d278a;
+  background-color: #000028;
 }
 
 body.illustration-active .hero-headline-wrapper img {
@@ -1251,11 +1252,11 @@ body {
 }
 
 .fa-arrow-left {
-  padding-left: 1.1rem;
+  padding-left: 0rem;
 }
 
 .fa-arrow-right {
-  padding-right: 1.1rem;
+  padding-right: 0rem;
 }
 
 .arrow-button:hover {
@@ -1954,7 +1955,7 @@ body {
 @media (min-width: 768px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
-    padding: 1rem 2.2rem 2.2rem;
+    padding: 1rem 0.5rem 0.5rem;
   }
 
   h2 {
@@ -2057,7 +2058,7 @@ body {
   }
 
   .global-footer {
-    padding: 3rem 5rem 0 5rem;
+    padding: 3rem 3rem 0 3rem;
     grid-template-columns: 1fr;
   }
 
@@ -2242,16 +2243,10 @@ body {
 @media (min-width: 1200px) {
   .grid {
     grid-template-columns: repeat(2, minmax(200px, 1fr));
-    padding-left: 2rem;
-    padding-right: 2rem;
   }
 
   .project-title {
     font-size: 2rem;
-  }
-
-  .work-wrapper {
-    padding: 2.6rem 2.6rem;
   }
 }
 
