@@ -143,6 +143,16 @@ svg {
   /* This is optional. Also try cover or leave out entirely. */
 }
 
+body {
+  cursor: url("assets/pictures/makayla-crenshaw-logo-star-cursor.png") 32 32,
+    auto;
+}
+
+/* Optionally, you can customize the cursor for specific elements */
+button {
+  cursor: pointer; /* Default pointer cursor for buttons */
+}
+
 /* Global & Mobile Typography 
 
 ████████ ██    ██ ██████   ██████   ██████  ██████   █████  ██████  ██   ██ ██    ██ 
@@ -971,7 +981,7 @@ a:active {
 
 .project-info {
   text-align: center;
-  padding-top: 4rem;
+  padding-top: 1rem;
 }
 
 /* Sidebar */
@@ -2000,7 +2010,7 @@ body {
 
   .footer-wrapper {
     padding-bottom: 0;
-    padding-left: 1rem;
+    padding-left: 0.5rem;
     padding-right: 1rem;
   }
 
