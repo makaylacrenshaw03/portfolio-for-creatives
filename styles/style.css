@@ -143,16 +143,6 @@ svg {
   /* This is optional. Also try cover or leave out entirely. */
 }
 
-body {
-  cursor: url("assets/pictures/makayla-crenshaw-logo-star-cursor.png") 32 32,
-    auto;
-}
-
-/* Optionally, you can customize the cursor for specific elements */
-button {
-  cursor: pointer; /* Default pointer cursor for buttons */
-}
-
 /* Global & Mobile Typography 
 
 ████████ ██    ██ ██████   ██████   ██████  ██████   █████  ██████  ██   ██ ██    ██ 
@@ -336,7 +326,7 @@ a:active {
   display: flex;
   gap: 2.5rem;
   margin-left: 20px;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .navigation-arrow:active,
@@ -414,7 +404,7 @@ a:active {
   display: flex;
   align-items: center;
   list-style-type: none;
-  padding: 1rem 0.8rem 1rem 0.8rem;
+  padding: 1rem 1rem 1rem 1rem;
 }
 
 .branding-navigation .logo img {
@@ -1203,7 +1193,7 @@ body.illustration-active .hero-headline-wrapper img {
   top: -120px;
   left: 0;
   width: 100vw;
-  height: calc(100% + 110px);
+  height: calc(100% + 120px);
   object-fit: cover;
   object-position: center;
   opacity: 20%;
