@@ -404,7 +404,7 @@ a:active {
   display: flex;
   align-items: center;
   list-style-type: none;
-  padding: 1rem 1rem 1rem 1rem;
+  padding: 1rem 1.1rem 1rem 1.1rem;
 }
 
 .branding-navigation .logo img {
@@ -668,8 +668,8 @@ a:active {
 .work-wrapper {
   flex: 1;
   margin: 0.5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 2.3rem;
+  padding-right: 2.3rem;
   margin-bottom: 1.5rem;
 }
 
@@ -690,15 +690,14 @@ a:active {
 }
 
 .title-section {
-  border-radius: 15px; /* Rounds the corners with 25px radius */
-  padding: 20px 20px 20px 20px; /* Adds space inside the border */
-  display: inline-block; /* Makes sure the box wraps around the text */
-  background-color: #000028; /* Changes background on hover */
-  color: #c7c1ff; /* Changes text color on hover */
-  font-size: 2rem; /* Adjust font size */
-  margin: 20px 0; /* Adds space around the title */
-  text-align: center; /* Centers the text inside the box */
-  transition: all 0.3s ease; /* Adds smooth transition for hover effects */
+  border-radius: 15px;
+  padding: 20px 20px 20px 20px;
+  display: inline-block;
+  color: #c7c1ff;
+  font-size: 2rem;
+  margin: 20px 0;
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
 .section-title {
@@ -736,7 +735,7 @@ a:active {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 1.5rem;
+  grid-gap: 2.2rem;
 }
 
 .work-page-grid-item {
@@ -847,17 +846,17 @@ a:active {
 
 /* Section title with padding */
 .section-title {
-  padding-bottom: 4rem; /* Add bottom padding */
+  padding-bottom: 4rem;
 }
 
 .item {
   font-size: 1rem;
   font-weight: 400;
-  display: flex; /* Align star and text horizontally */
-  align-items: center; /* Center vertically */
+  display: flex;
+  align-items: center;
   margin: 5px 0;
   padding-bottom: 0.6rem;
-  line-height: 1.5; /* Adjust to control spacing between items */
+  line-height: 1.5;
 }
 
 /* Global Footer
@@ -1168,18 +1167,18 @@ body.branding-active .hero-headline-wrapper img {
   opacity: 20%;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
-  z-index: 0; /* Background image should be below content */
+  z-index: 0;
 }
 
 body.branding-active .hero-background {
-  position: relative; /* Set a relative positioning context for the image */
-  overflow: hidden; /* Prevents the image from overflowing the body */
+  position: relative;
+  overflow: hidden;
 }
 
 .branding-navigation,
 .branding-navigation .custom-navigation {
-  color: #c7c1ff; /* Ensures text remains readable */
-  z-index: 10; /* Keeps links above image */
+  color: #c7c1ff;
+  z-index: 10;
 }
 
 body.illustration-active .hero-headline-wrapper::before,
@@ -1199,18 +1198,18 @@ body.illustration-active .hero-headline-wrapper img {
   opacity: 20%;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
-  z-index: 0; /* Background image should be below content */
+  z-index: 0;
 }
 
 body.illustration-active .hero-background {
-  position: relative; /* Set a relative positioning context for the image */
-  overflow: hidden; /* Prevents the image from overflowing the body */
+  position: relative;
+  overflow: hidden;
 }
 
 .illustration-navigation,
 .illustration-navigation .custom-navigation {
-  color: #c7c1ff; /* Ensures text remains readable */
-  z-index: 10; /* Keeps links above image */
+  color: #c7c1ff;
+  z-index: 10;
 }
 
 /* Transition */
@@ -1260,6 +1259,15 @@ body {
   margin-left: 1.2rem;
 }
 
+.work-page-arrow {
+  color: #8e56e9;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.arrow-button.work-page-arrow:hover {
+  color: #e5d4ff;
+}
+
 .fa-arrow-right {
   padding-right: 0rem;
   transition: transform 0.3s ease;
@@ -1277,7 +1285,7 @@ body {
 }
 
 .section-title-wrapper {
-  padding-top: 3.5rem;
+  padding-top: 0.5rem;
   text-align: center;
   margin: 5rem 0;
 }
@@ -1600,11 +1608,11 @@ body {
   }
 
   a:link {
-    font-size: 0.9rem; /* Adjust link size for small screens */
+    font-size: 0.9rem;
   }
 
   .social-box a {
-    font-size: 1.5rem; /* Adjust social icons size for mobile */
+    font-size: 1.5rem;
   }
 
   .footer-wrapper {
@@ -1613,14 +1621,14 @@ body {
   }
 
   .work-wrapper {
-    padding-top: 4rem; /* Less padding for better use of space */
+    padding-top: 4rem;
     padding-left: 0.3rem;
     padding-right: 0.3rem;
   }
 
   .footer-links {
     display: flex;
-    flex-direction: column; /* Stack footer links vertically */
+    flex-direction: column;
     gap: 0.5rem;
   }
 
@@ -1665,9 +1673,9 @@ body {
   }
 
   .box-container {
-    grid-template-columns: repeat(2, 1fr); /* Two columns instead of four */
-    padding-left: 1rem; /* Reduce padding */
-    padding-right: 1rem; /* Reduce padding */
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .project-info {
@@ -1675,12 +1683,12 @@ body {
   }
   .title-section,
   .hero-headline-wrapper {
-    transition: all 0.3s ease; /* Smooth transition for size changes */
+    transition: all 0.3s ease;
   }
 
   .title-section {
-    font-size: 1.9rem; /* Adjust title size */
-    padding: 1rem; /* Ensure enough padding */
+    font-size: 1.9rem;
+    padding: 1rem;
   }
 
   .hero-headline-wrapper {
@@ -1724,8 +1732,13 @@ body {
     display: block;
   }
 
+  .branding-navigation .logo img {
+    max-width: 90%;
+    height: auto;
+  }
+
   .navigation-links a {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     margin-left: 0;
   }
 
@@ -1764,6 +1777,8 @@ body {
 
   .section-title-wrapper {
     padding-top: 0rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 
   .fa-arrow-right {
@@ -1792,6 +1807,7 @@ body {
   .project-description {
     padding-left: 1rem;
     padding-right: 1rem;
+    text-align: left;
   }
 
   .info-box {
@@ -1802,13 +1818,24 @@ body {
     padding-top: 1rem;
   }
 
+  .global-footer {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
   .h7 {
     font-size: 4rem;
     padding-top: 5rem;
   }
 
   .title-section {
-    font-size: 1.7rem;
+    font-size: 2rem;
+  }
+
+  .work-wrapper {
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    margin-bottom: 0.5rem;
   }
 
   .footer-content {
@@ -1817,6 +1844,14 @@ body {
 
   .global-footer {
     text-align: center;
+  }
+
+  #branding-section {
+    padding-bottom: 10rem;
+  }
+
+  #illustration-section {
+    padding-bottom: 10rem;
   }
 
   .footer-wrapper {
@@ -1884,11 +1919,13 @@ body {
   .fa-arrow-right {
     font-size: 1.8rem;
     margin-right: 1.4rem;
+    padding-top: 8rem;
   }
 
   .fa-arrow-left {
     font-size: 1.8rem;
     margin-left: 1.4rem;
+    padding-top: 8rem;
   }
 
   .left-arrow {
@@ -1929,7 +1966,7 @@ body {
 
   .footer-description {
     display: flex;
-    font-size: 0.9rem;
+    font-size: 1rem;
     flex-direction: row;
     justify-content: center;
     width: 100%;
@@ -1942,6 +1979,7 @@ body {
     padding: 0;
     margin: 0;
     list-style: none;
+    gap: 25px;
   }
 
   .hero-headline-wrapper {
@@ -1972,7 +2010,8 @@ body {
     font-size: 2.2rem;
     padding-right: 1rem;
     line-height: 2.7rem;
-    margin-bottom: 0;
+    margin-bottom: 0rem;
+    padding-top: 0rem;
   }
 
   .h7 {
@@ -1991,7 +2030,7 @@ body {
 
   .wrapper {
     line-height: 2.2rem;
-    padding: 1rem 2rem 5rem 2rem;
+    padding: 1rem 5rem 5rem 5rem;
   }
 
   .navigation-links a {
@@ -2065,7 +2104,7 @@ body {
   }
 
   .global-footer {
-    padding: 3rem 3rem 0 3rem;
+    padding: 4rem 4.2rem 0 4.2rem;
     grid-template-columns: 1fr;
   }
 
