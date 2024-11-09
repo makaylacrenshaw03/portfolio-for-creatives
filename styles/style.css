@@ -1146,6 +1146,10 @@ a:active {
   padding-bottom: 12rem;
 }
 
+#branding-section .title-section {
+  color: #000028; /* Default color */
+}
+
 #illustration-section {
   padding-bottom: 12rem;
 }
@@ -1760,6 +1764,8 @@ body {
     font-size: 1rem;
     padding: 0rem;
     padding-top: 0.4rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .about {
@@ -1983,8 +1989,8 @@ body {
   }
 
   .hero-headline-wrapper {
-    padding: 2rem 4rem;
-    padding-bottom: 13rem;
+    padding: 2rem 0.5rem;
+    padding-bottom: 10rem;
   }
 
   .fineprint {
@@ -2030,7 +2036,6 @@ body {
 
   .wrapper {
     line-height: 2.2rem;
-    padding: 1rem 5rem 5rem 5rem;
   }
 
   .navigation-links a {
