@@ -19,9 +19,18 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="icon" href="assets/pictures/favicon.png" type="image/png" sizes="16x16"/>
-
-    <link rel="icon" href="assets/pictures/favicon-big.png" type="image/png" sizes="32x32"/>
+    <link
+      rel="icon"
+      href="assets/pictures/favicon.png"
+      type="image/png"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      href="assets/pictures/favicon-big.png"
+      type="image/png"
+      sizes="32x32"
+    />
 
     <style>
       .no-scroll {
@@ -66,7 +75,7 @@
             </p>
             <div class="box-container">
               <div class="info-box">Packaging Design</div>
-              <div class="info-box">Brand Identityn</div>
+              <div class="info-box">Brand Identity</div>
               <div class="info-box">Illustration</div>
               <div class="info-box">Visual Storytelling</div>
             </div>
@@ -91,29 +100,31 @@
             class="project-image"
           />
         </div>
-        
+
         <div class="project-image">
           <img
             src="assets/pictures/makayla-crenshaw-holesome-donut-packaging-design-branding.jpg"
-            alt="HoleSome Pastry Donut Packaging Design"
+            alt="HoleSome Pastry Donut Packaging Design Boxes"
             width="1500"
             height="1125"
             class="project-image"
           />
         </div>
+
         <div class="project-image">
           <img
             src="assets/pictures/makayla-crenshaw-holesome-pastry-small-box-packaging-design.jpg"
-            alt="HoleSome Pastry Donut Packaging Design"
+            alt="HoleSome Pastry Small Donut Box Packaging Design"
             width="1500"
             height="1125"
             class="project-image"
           />
         </div>
+
         <div class="project-image">
           <img
             src="assets/pictures/makayla-crenshaw-holesome-pastry-large-box-packaging-design.jpg"
-            alt="HoleSome Pastry Donut Packaging Design"
+            alt="HoleSome Pastry Large Donut Box Packaging Design"
             width="1500"
             height="1125"
             class="project-image"
@@ -124,7 +135,7 @@
           <div class="project-image">
             <img
               src="assets/pictures/holesomepastry-croissant-packaging.jpg"
-              alt="HoleSome Pastry Outdoor Signage Design"
+              alt="HoleSome Pastry Packaging Sleeve Branding"
               class="project-image"
             />
           </div>
@@ -136,10 +147,11 @@
             />
           </div>
         </div>
+
         <div class="project-image">
           <img
             src="assets/pictures/holesomepastry-outdoor-signage-branding-design.jpg"
-            alt="HoleSome Pastry Concept Sketches"
+            alt="HoleSome Pastry Outdoor Signage Branding"
             class="project-image"
           />
         </div>
@@ -161,16 +173,7 @@
           </div>
         </div>
       </main>
-
-      <!-- <div class="awards-section">
-        <h2>Awards & Recognition</h2>
-        <ul class="awardswon-list">
-          <li class="item"><span class="star">★</span>Insert Here</li>
-          <li class="item"><span class="star">★</span>Insert Here</li>
-          <li class="item"><span class="star">★</span>Insert here</li>
-        </ul>
-      </div>
-    </div> -->
+    </div>
 
     <!-- Project Navigation -->
     <div class="project-navigation-wrapper">
@@ -205,23 +208,25 @@
                   <div class="social-box">
                     <a
                       href="https://www.instagram.com/makc.art?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                      ><i class="fab fa-instagram"></i
-                    ></a>
+                    >
+                      <i class="fab fa-instagram"></i>
+                    </a>
                   </div>
                 </li>
                 <li class="social-item">
                   <div class="social-box">
-                    <a href="https://www.behance.net/makaylacrenshaw1"
-                      ><i class="fab fa-behance"></i
-                    ></a>
+                    <a href="https://www.behance.net/makaylacrenshaw1">
+                      <i class="fab fa-behance"></i>
+                    </a>
                   </div>
                 </li>
                 <li class="social-item">
                   <div class="social-box">
                     <a
                       href="https://www.linkedin.com/in/makayla-crenshaw-7a4093234"
-                      ><i class="fab fa-linkedin"></i
-                    ></a>
+                    >
+                      <i class="fab fa-linkedin"></i>
+                    </a>
                   </div>
                 </li>
                 <li class="social-item">
@@ -229,8 +234,9 @@
                     <a
                       href="mailto:makayla_crenshaw@yahoo.ca"
                       title="Email Makayla"
-                      ><i class="fas fa-envelope"></i
-                    ></a>
+                    >
+                      <i class="fas fa-envelope"></i>
+                    </a>
                   </div>
                 </li>
               </ul>
@@ -250,6 +256,7 @@
         const images = document.querySelectorAll(".project-image");
         const revealDelay = 100;
         let lastScrollY = window.scrollY;
+
         const revealImage = (image, index) => {
           setTimeout(() => {
             image.classList.add("in-view");
@@ -266,9 +273,9 @@
           },
           { threshold: 0.5 }
         );
+
         images.forEach((image, index) => {
           observer.observe(image);
-
           const rect = image.getBoundingClientRect();
           if (rect.top < window.innerHeight && rect.bottom >= 0) {
             revealImage(image, index);

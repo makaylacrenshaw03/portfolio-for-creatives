@@ -17,9 +17,18 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="icon" href="assets/pictures/favicon.png" type="image/png" sizes="16x16"/>
-
-    <link rel="icon" href="assets/pictures/favicon-big.png" type="image/png" sizes="32x32"/>
+    <link
+      rel="icon"
+      href="assets/pictures/favicon.png"
+      type="image/png"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      href="assets/pictures/favicon-big.png"
+      type="image/png"
+      sizes="32x32"
+    />
   </head>
 
   <body class="work-page">
@@ -64,12 +73,21 @@
       </div>
 
       <main class="project-details">
-        <div class="project-image project-feature-box" style="padding:56.25% 0 0 0;position:relative;">
+        <div
+          class="project-image project-feature-box"
+          style="padding: 56.25% 0 0 0; position: relative"
+        >
           <iframe
             src="https://player.vimeo.com/video/1027260776?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
             frameborder="0"
             allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-            style="position:absolute;top:0;left:0;width:100%;height:100%;"
+            style="
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+            "
             title="Aurora Borealis Animation"
           ></iframe>
         </div>
@@ -77,7 +95,7 @@
         <div class="project-image">
           <img
             src="assets/pictures/makayla-crenshaw-aurora-borealis-illustration-animation.jpg"
-            alt="Spirit Energy project Instagram Ad"
+            alt="Aurora Borealis Snowfall Animation Illustration"
             width="1500"
             height="1500"
             class="project-image"
@@ -100,28 +118,19 @@
         </div>
       </div>
 
-      <!-- <div class="awards-section">
-        <h2>Awards & Recognition</h2>
-        <ul class="awardswon-list">
-          <li class="item"><span class="star">★</span>Insert Here</li>
-          <li class="item"><span class="star">★</span>Insert Here</li>
-          <li class="item"><span class="star">★</span>Insert here</li>
-        </ul>
-      </div>
-    </div> -->
-
-    <!-- Project Navigation -->
-    <div class="project-navigation-wrapper">
-      <div class="project-navigation">
-        <div class="nav-arrow left-arrow">
-          <a href="project-7.html" class="navigation-arrow">
-            <i class="fas fa-arrow-left fa-2x"></i>
-          </a>
-        </div>
-        <div class="nav-arrow right-arrow">
-          <a href="project-1.html" class="navigation-arrow">
-            <i class="fas fa-arrow-right fa-2x"></i>
-          </a>
+      <!-- Project Navigation -->
+      <div class="project-navigation-wrapper">
+        <div class="project-navigation">
+          <div class="nav-arrow left-arrow">
+            <a href="project-7.html" class="navigation-arrow">
+              <i class="fas fa-arrow-left fa-2x"></i>
+            </a>
+          </div>
+          <div class="nav-arrow right-arrow">
+            <a href="project-1.html" class="navigation-arrow">
+              <i class="fas fa-arrow-right fa-2x"></i>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -191,11 +200,13 @@
         </p>
       </div>
     </footer>
+
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         const images = document.querySelectorAll(".project-image");
         const revealDelay = 100;
         let lastScrollY = window.scrollY;
+
         const revealImage = (image, index) => {
           setTimeout(() => {
             image.classList.add("in-view");

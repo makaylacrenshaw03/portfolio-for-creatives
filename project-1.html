@@ -18,9 +18,18 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="icon" href="assets/pictures/favicon.png" type="image/png" sizes="16x16"/>
-
-    <link rel="icon" href="assets/pictures/favicon-big.png" type="image/png" sizes="32x32"/>
+    <link
+      rel="icon"
+      href="assets/pictures/favicon.png"
+      type="image/png"
+      sizes="16x16"
+    />
+    <link
+      rel="icon"
+      href="assets/pictures/favicon-big.png"
+      type="image/png"
+      sizes="32x32"
+    />
   </head>
 
   <body class="work-page">
@@ -77,37 +86,12 @@
         <div class="project-image">
           <img
             src="assets/pictures/makayla-crenshaw-faqsoflife-capstone-branding-design.jpg"
-            alt="Coastal Catch packaging design branding"
+            alt="FAQsofLife Mobile App Mockup"
             width="1500"
             height="1125"
-            class="project-image"
           />
         </div>
-
-        <!-- Lightbox HTML Structure -->
-        <div class="lightbox" id="lightbox">
-          <span class="close">&times;</span>
-          <div class="lightbox-content">
-            <img
-              class="lightbox-image"
-              id="lightboxImage"
-              src=""
-              alt="Lightbox image"
-            />
-            <a class="prev" id="prevBtn">&#10094;</a>
-            <a class="next" id="nextBtn">&#10095;</a>
-          </div>
-        </div>
       </main>
-
-      <!-- <div class="awards-section">
-        <h2>Awards & Recognition</h2>
-        <ul class="awardswon-list">
-          <li class="item"><span class="star">★</span>Insert Here</li>
-          <li class="item"><span class="star">★</span>Insert Here</li>
-          <li class="item"><span class="star">★</span>Insert Here</li>
-        </ul>
-      </div> -->
 
       <!-- Project Navigation -->
       <div class="project-navigation">
@@ -186,41 +170,34 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
       const images = document.querySelectorAll(".project-image");
-      const revealDelay = 100; // Delay in ms between each reveal
-      let lastScrollY = window.scrollY; // Track the last scroll position
+      const revealDelay = 100;
+      let lastScrollY = window.scrollY;
 
-      // Function to reveal images with staggered effect
       const revealImage = (image, index) => {
         setTimeout(() => {
           image.classList.add("in-view");
         }, index * revealDelay);
       };
 
-      // Intersection Observer to trigger reveal on scroll
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-              // Reveal image when it comes into view, regardless of scroll direction
               revealImage(entry.target, index);
             }
           });
         },
         { threshold: 0.5 }
-      ); // Trigger when 50% of the image is in view
+      );
 
-      // Observe each image and check if it is already in view on load
       images.forEach((image, index) => {
         observer.observe(image);
 
-        // Check if the image is already in view on load
         const rect = image.getBoundingClientRect();
         if (rect.top < window.innerHeight && rect.bottom >= 0) {
-          // If image is in view, reveal it immediately
           revealImage(image, index);
         }
       });
     });
   </script>
-</body>
 </html>

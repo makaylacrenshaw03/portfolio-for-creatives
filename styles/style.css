@@ -672,7 +672,7 @@ a:active {
   margin: 0.5rem;
   padding-left: 2.3rem;
   padding-right: 2.3rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 5.5rem;
 }
 
 .specialization-section {
@@ -1253,10 +1253,10 @@ body {
 .arrow-button {
   cursor: pointer;
   font-size: 1.8rem;
-  margin: 2rem;
   color: #000028;
   transition: color 0.3s;
-  padding-top: 3.5rem;
+  padding-top: 0.5rem;
+  margin: 1.5rem;
 }
 
 .fa-arrow-left {
@@ -1277,6 +1277,7 @@ body {
 .fa-arrow-right {
   padding-right: 0rem;
   transition: transform 0.3s ease;
+  margin-right: 1.2rem;
 }
 
 .arrow-button:hover {
@@ -2008,7 +2009,7 @@ body {
 @media (min-width: 768px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
-    padding: 1rem 0.5rem 0.5rem;
+    padding: 1rem 0.5rem 4rem;
   }
 
   h2 {
