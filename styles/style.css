@@ -787,6 +787,7 @@ a:active {
                                            
 */
 
+
 .about {
   display: grid;
   grid-template-columns: 1fr;
@@ -796,6 +797,10 @@ a:active {
   padding-right: 2.8rem;
   padding-bottom: 16rem;
   flex: 1;
+}
+
+.about-page .custom-navigation {
+  color: #100128 !important;
 }
 
 .about-item-1 {
