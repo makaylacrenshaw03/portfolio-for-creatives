@@ -1052,6 +1052,24 @@ a:active {
   padding: 3rem;
 }
 
+.responsive-iframe {
+  position: relative;
+  width: 100%;
+  padding-bottom: 75%; /* 1125 / 1500 = 0.75 */
+  height: 0;
+  overflow: hidden;
+  max-width: 1500px; /* optional: limits it on large screens */
+  margin: 0 auto; /* centers it */
+}
+
+.responsive-iframe iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* project boxes */
 
 .box-container {
