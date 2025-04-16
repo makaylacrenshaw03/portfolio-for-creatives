@@ -2231,8 +2231,9 @@ body {
   }
 
   .project-description {
-    padding-left: 3rem;
-    padding-right: 3rem;
+    max-width: 700px;       /* keeps the content from stretching too wide */
+    margin: 0 auto;         /* centers it on the page */
+    padding-top: 5rem;
   }
 
   /* Main Project Image Area on Large Devices */
